@@ -25,6 +25,8 @@ class Scraper:
         url = self._make_url_absolute(url)
         if params:
             url = f"{url}.php"
+            if "class_" in params:
+                params["class"] = params.pop("class_")
             url = self._make_url_with_params(url, **params)
         self.__init_with_url(url)
 
