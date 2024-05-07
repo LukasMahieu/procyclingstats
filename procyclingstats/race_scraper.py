@@ -26,6 +26,7 @@ class Race(Scraper):
     }
 
     """
+
     def year(self) -> int:
         """
         Parse year when the race occured from HTML.
@@ -62,10 +63,9 @@ class Race(Scraper):
 
         :return: 2 chars long country code in uppercase.
         """
-        nationality_html = self.html.css_first(
-            ".page-title > .main > span.flag")
-        flag_class = nationality_html.attributes['class']
-        return flag_class.split(" ")[1].upper() # type: ignore
+        nationality_html = self.html.css_first(".page-title > .main > span.flag")
+        flag_class = nationality_html.attributes["class"]
+        return flag_class.split(" ")[1].upper()  # type: ignore
 
     def edition(self) -> int:
         """
@@ -73,8 +73,7 @@ class Race(Scraper):
 
         :return: Edition as int.
         """
-        edition_html = self.html.css_first(
-            ".page-title > .main > span + font")
+        edition_html = self.html.css_first(".page-title > .main > span + font")
         if edition_html is not None:
             return int(edition_html.text()[:-2])
         raise ExpectedParsingError("Race cancelled, edition unavailable.")
@@ -85,8 +84,7 @@ class Race(Scraper):
 
         :return: Startdate in ``DD-MM-YYYY`` format.
         """
-        startdate_html = self.html.css_first(
-            ".infolist > li > div:nth-child(2)")
+        startdate_html = self.html.css_first(".infolist > li > div:nth-child(2)")
         return startdate_html.text()
 
     def enddate(self) -> str:
@@ -154,13 +152,21 @@ class Race(Scraper):
             return []
 
         fields = parse_table_fields_args(args, available_fields)
-        stages_table_html = self.html.css_first("div:not(.mg_r2) > div > \
-            span > table.basic")
+        stages_table_html = self.html.css_first(
+            "div:not(.mg_r2) > div > \
+            span > table.basic"
+        )
         if not stages_table_html:
             return []
         # remove rest day table rows
         for stage_e in stages_table_html.css("tbody > tr"):
-            not_p_icon = stage_e.css_first(".icon.profile.p")
+            not_p_icon = not (
+                stage_e.css_first(".icon.profile.p1")
+                or stage_e.css_first(".icon.profile.p2")
+                or stage_e.css_first(".icon.profile.p3")
+                or stage_e.css_first(".icon.profile.p4")
+                or stage_e.css_first(".icon.profile.p5")
+            )
             if not_p_icon:
                 stage_e.remove()
 
@@ -173,7 +179,7 @@ class Race(Scraper):
             dates = table_parser.parse_extra_column(0, get_day_month)
             table_parser.extend_table("date", dates)
         return table_parser.table
-    
+
     def stages_winners(self, *args) -> List[Dict[str, str]]:
         """
         Parses stages winners from HTML (available only on stage races). When
@@ -201,8 +207,10 @@ class Race(Scraper):
 
         fields = parse_table_fields_args(args, available_fields)
         orig_fields = fields
-        winners_html = self.html.css("div:not(.mg_r2) > div > \
-            span > table.basic")[1]
+        winners_html = self.html.css(
+            "div:not(.mg_r2) > div > \
+            span > table.basic"
+        )[1]
         if not winners_html:
             return []
         # remove rest day table rows
@@ -211,7 +219,7 @@ class Race(Scraper):
             if not stage_name:
                 stage_e.remove()
         table_parser = TableParser(winners_html)
-    
+
         casual_f_to_parse = [f for f in fields if f != "stage_name"]
         try:
             table_parser.parse(casual_f_to_parse)
@@ -224,19 +232,19 @@ class Race(Scraper):
             nats = table_parser.nationality()
             j = 0
             for i in range(len(table_parser.table)):
-                if j < len(nats) and \
-                    table_parser.table[i]['rider_url'].split("/")[1]:
-                    table_parser.table[i]['nationality'] = nats[j]
+                if j < len(nats) and table_parser.table[i]["rider_url"].split("/")[1]:
+                    table_parser.table[i]["nationality"] = nats[j]
                     j += 1
                 else:
-                    table_parser.table[i]['nationality'] = None
-                
+                    table_parser.table[i]["nationality"] = None
+
                 if "rider_url" not in orig_fields:
                     table_parser.table[i].pop("rider_url")
-                    
+
         if "stage_name" in fields:
-            stage_names = [val for val in
-                table_parser.parse_extra_column(0, str) if val]
+            stage_names = [
+                val for val in table_parser.parse_extra_column(0, str) if val
+            ]
             table_parser.extend_table("stage_name", stage_names)
-                    
+
         return table_parser.table
