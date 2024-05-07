@@ -9,17 +9,28 @@ from .errors import ExpectedParsingError
 
 class Scraper:
     """Base class for all scraping classes."""
+
     BASE_URL: str = "https://www.procyclingstats.com/"
 
-    _public_nonparsing_methods = (
-        "update_html",
-        "parse",
-        "relative_url"
-    )
+    _public_nonparsing_methods = ("update_html", "parse", "relative_url")
     """Public methods that aren't called by `parse` method."""
 
-    def __init__(self, url: str, html: Optional[str] = None,
-                 update_html: bool = True) -> None:
+    def __init__(self, url: str, **params) -> None:
+        """
+        Initializes a scraper object with an endpoint and parameters to dynamically build the URL.
+
+        :param url: (Relative) URL or endpoint on the base site to be accessed.
+        :param params: Keyword arguments representing query parameters to construct the URL dynamically.
+        """
+        url = self._make_url_absolute(url)
+        if params:
+            url = f"{url}.php"
+            url = self._make_url_with_params(url, **params)
+        self.__init_with_url(url)
+
+    def __init_with_url(
+        self, url: str, html: Optional[str] = None, update_html: bool = True
+    ) -> None:
         """
         Creates scraper object that is by default ready for HTML parsing. Call
         parsing methods to parse data from HTML.
@@ -37,7 +48,7 @@ class Scraper:
             e.g. 'Page not found' is contained in the HTML.
         """
         # validate given URL
-        self._url = self._make_url_absolute(url)
+        self._url = url
         self._html = None
         if html:
             self._html = HTMLParser(html)
@@ -47,9 +58,22 @@ class Scraper:
         if update_html:
             self.update_html()
             if not self._html_valid():
-                raise ValueError(
-                    f"HTML from given URL is invalid: '{self.url}'")
+                raise ValueError(f"HTML from given URL is invalid: '{self.url}'")
             self._set_up_html()
+
+    def _make_url_with_params(self, endpoint: str, **params) -> str:
+        """
+        Constructs a complete URL from the endpoint and provided parameters.
+
+        :param endpoint: Endpoint of the website to attach to the base URL.
+        :param params: Dictionary of query parameters.
+        :return: Fully constructed URL.
+        """
+        query = "&".join(
+            f"{key}={value}" for key, value in params.items() if value is not None
+        )
+        url = f"{endpoint.strip('/')}"
+        return f"{url}?{query}" if query else url
 
     def __repr__(self) -> str:
         return f"{type(self).__name__}(url='{self.url}')"
@@ -68,8 +92,9 @@ class Scraper:
         """
         if self._html is None:
             raise AttributeError(
-                "In order to access HTML, update it using " +
-                "`self.update_html` method.")
+                "In order to access HTML, update it using "
+                + "`self.update_html` method."
+            )
         return self._html
 
     def relative_url(self) -> str:
@@ -85,14 +110,15 @@ class Scraper:
         Calls request to `self.url` and updates `self.html` to HTMLParser
         object created from returned HTML.
         """
-        html_str = requests.get(self._url).text \
-            # pylint: disable=missing-timeout
+        html_str = requests.get(self._url).text
+        # pylint: disable=missing-timeout
         self._html = HTMLParser(html_str)
 
-    def parse(self,
-            exceptions_to_ignore: Tuple[
-            Type[Exception], ...] = (ExpectedParsingError,),
-            none_when_unavailable: bool = True) -> Dict[str, Any]:
+    def parse(
+        self,
+        exceptions_to_ignore: Tuple[Type[Exception], ...] = (ExpectedParsingError,),
+        none_when_unavailable: bool = True,
+    ) -> Dict[str, Any]:
         """
         Creates JSON like dict with parsed data by calling all parsing methods.
         Keys in dict are methods names and values parsed data
@@ -134,8 +160,10 @@ class Scraper:
         methods = inspect.getmembers(self, predicate=inspect.ismethod)
         parsing_methods = []
         for method_name, method in methods:
-            if (method_name[0] != "_"
-                and method_name not in self._public_nonparsing_methods):
+            if (
+                method_name[0] != "_"
+                and method_name not in self._public_nonparsing_methods
+            ):
                 parsing_methods.append((method_name, method))
         return parsing_methods
 
@@ -172,11 +200,12 @@ class Scraper:
             assert page_title != "Page not found"
 
             page_title2 = self.html.css_first("div.page-content > div").text()
-            assert page_title2 != ("Due to technical difficulties this page " +
-            "is temporarily unavailable.")
+            assert page_title2 != (
+                "Due to technical difficulties this page "
+                + "is temporarily unavailable."
+            )
 
-            page_title3 = self.html.css_first(
-                ".page-title > .main > h1").text()
+            page_title3 = self.html.css_first(".page-title > .main > h1").text()
             assert page_title3 != "Start"
             return True
         except AssertionError:

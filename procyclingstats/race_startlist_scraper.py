@@ -40,6 +40,7 @@ class RaceStartlist(Scraper):
         ]
     }
     """
+
     def startlist(self, *args: str) -> List[Dict[str, Any]]:
         """
         Parses startlist from HTML. When startlist is individual (without
@@ -67,7 +68,7 @@ class RaceStartlist(Scraper):
             "team_name",
             "team_url",
             "nationality",
-            "rider_number"
+            "rider_number",
         )
         fields = parse_table_fields_args(args, available_fields)
         startlist_html = self.html.css_first("table.basic")
@@ -79,16 +80,13 @@ class RaceStartlist(Scraper):
             startlist_parser.parse(casual_fields)
             # adds rider number to table if needed
             if "rider_number" in fields:
-                numbers = startlist_parser.parse_extra_column(0,
-                    lambda x: int(x) if x else None)
+                numbers = startlist_parser.parse_extra_column(
+                    0, lambda x: int(x) if x else None
+                )
                 startlist_parser.extend_table("rider_number", numbers)
             return startlist_parser.table
 
-        casual_rider_fields = [
-            "rider_name",
-            "rider_url",
-            "nationality"
-        ]
+        casual_rider_fields = ["rider_name", "rider_url", "nationality"]
         table = []
         startlist_html = self.html.css_first(".startlist_v4")
         for team_html in startlist_html.css(".ridersCont"):
@@ -109,12 +107,11 @@ class RaceStartlist(Scraper):
             # add team names to the table if needed
             if "team_name" in fields:
                 team_name = team_html.css_first("a").text()
-                team_names = [team_name for _ in range(
-                    len(table_parser.table))]
+                team_names = [team_name for _ in range(len(table_parser.table))]
                 table_parser.extend_table("team_name", team_names)
             # add team urls to the table if needed
             if "team_url" in fields:
-                team_url = team_html.css_first("a").attributes['href']
+                team_url = team_html.css_first("a").attributes["href"]
                 team_urls = [team_url for _ in range(len(table_parser.table))]
                 table_parser.extend_table("team_url", team_urls)
             # add team table to startlist table
