@@ -13,13 +13,6 @@ class Calendar(Scraper):
     def calendar(self, *args: str) -> List[Dict[str, Any]]:
         """
         Parses calendar from HTML.
-
-        :param year: Year of the calendar.
-        :param level: Level of the calendar.
-        :param classification: Classification of the calendar.
-        :param args: Fields that should be contained in returned table. When
-            no args are passed, all fields are parsed.
-
         """
         available_fields = (
             "date",

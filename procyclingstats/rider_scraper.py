@@ -25,6 +25,7 @@ class Rider(Scraper):
         ...
     }
     """
+
     def birthdate(self) -> str:
         """
         Parses rider's birthdate from HTML.
@@ -47,13 +48,18 @@ class Rider(Scraper):
         # normal layout
         try:
             place_of_birth_html = self.html.css_first(
-                ".rdr-info-cont > span > span > a")
+                ".rdr-info-cont > span > span > a"
+            )
             return place_of_birth_html.text()
         # special layout
         except AttributeError:
-            place_of_birth_html = self.html.css_first(
-                ".rdr-info-cont > span > span > span > a")
-            return place_of_birth_html.text()
+            try:
+                place_of_birth_html = self.html.css_first(
+                    ".rdr-info-cont > span > span > span > a"
+                )
+                return place_of_birth_html.text()
+            except AttributeError:
+                return ""
 
     def name(self) -> str:
         """
@@ -75,8 +81,11 @@ class Rider(Scraper):
             return float(weight_html.text().split(" ")[1])
         # special layout
         except (AttributeError, IndexError):
-            weight_html = self.html.css(".rdr-info-cont > span > span")[1]
-            return float(weight_html.text().split(" ")[1])
+            try:
+                weight_html = self.html.css(".rdr-info-cont > span > span")[1]
+                return float(weight_html.text().split(" ")[1])
+            except (AttributeError, IndexError):
+                return 0.0
 
     def height(self) -> float:
         """
@@ -90,9 +99,11 @@ class Rider(Scraper):
             return float(height_html.text().split(" ")[1])
         # special layout
         except (AttributeError, IndexError):
-            height_html = self.html.css_first(
-                ".rdr-info-cont > span > span > span")
-            return float(height_html.text().split(" ")[1])
+            try:
+                height_html = self.html.css_first(".rdr-info-cont > span > span > span")
+                return float(height_html.text().split(" ")[1])
+            except (AttributeError, IndexError):
+                return 0.0
 
     def nationality(self) -> str:
         """
@@ -104,11 +115,10 @@ class Rider(Scraper):
         # normal layout
         nationality_html = self.html.css_first(".rdr-info-cont > .flag")
         if nationality_html is None:
-        # special layout
-            nationality_html = self.html.css_first(
-                ".rdr-info-cont > span > span")
-        flag_class = nationality_html.attributes['class']
-        return flag_class.split(" ")[-1].upper() # type:ignore
+            # special layout
+            nationality_html = self.html.css_first(".rdr-info-cont > span > span")
+        flag_class = nationality_html.attributes["class"]
+        return flag_class.split(" ")[-1].upper()  # type:ignore
 
     def image_url(self) -> Optional[str]:
         """
@@ -119,7 +129,7 @@ class Rider(Scraper):
         image_html = self.html.css_first("div.rdr-img-cont > a > img")
         if not image_html:
             return None
-        return image_html.attributes['src']
+        return image_html.attributes["src"]
 
     def teams_history(self, *args: str) -> List[Dict[str, Any]]:
         """
@@ -146,30 +156,34 @@ class Rider(Scraper):
             "until",
             "team_name",
             "team_url",
-            "class"
+            "class",
         )
         fields = parse_table_fields_args(args, available_fields)
         seasons_html_table = self.html.css_first("ul.list.rdr-teams")
         table_parser = TableParser(seasons_html_table)
-        casual_fields = [f for f in fields
-                         if f in ("season", "team_name", "team_url")]
+        casual_fields = [f for f in fields if f in ("season", "team_name", "team_url")]
         if casual_fields:
             table_parser.parse(casual_fields)
         # add classes for row validity checking
-        classes = table_parser.parse_extra_column(2,
+        classes = table_parser.parse_extra_column(
+            2,
             lambda x: x.replace("(", "").replace(")", "").replace(" ", "")
-            if x and "retired" not in x.lower() else None)
+            if x and "retired" not in x.lower()
+            else None,
+        )
         table_parser.extend_table("class", classes)
         if "since" in fields:
-            until_dates = table_parser.parse_extra_column(-2,
-                lambda x: get_day_month(x) if "as from" in x else "01-01")
+            until_dates = table_parser.parse_extra_column(
+                -2, lambda x: get_day_month(x) if "as from" in x else "01-01"
+            )
             table_parser.extend_table("since", until_dates)
         if "until" in fields:
-            until_dates = table_parser.parse_extra_column(-2,
-                lambda x: get_day_month(x) if "until" in x else "12-31")
+            until_dates = table_parser.parse_extra_column(
+                -2, lambda x: get_day_month(x) if "until" in x else "12-31"
+            )
             table_parser.extend_table("until", until_dates)
 
-        table = [row for row in table_parser.table if row['class']]
+        table = [row for row in table_parser.table if row["class"]]
         # remove class field if isn't needed
         if "class" not in fields:
             for row in table:
@@ -190,11 +204,7 @@ class Rider(Scraper):
         :raises ValueError: When one of args is of invalid value.
         :return: Table with wanted fields.
         """
-        available_fields = (
-            "season",
-            "points",
-            "rank"
-        )
+        available_fields = ("season", "points", "rank")
         fields = parse_table_fields_args(args, available_fields)
         points_table_html = self.html.css_first("table.rdr-season-stats")
         table_parser = TableParser(points_table_html)
@@ -210,5 +220,5 @@ class Rider(Scraper):
         """
         specialty_html = self.html.css(".pps > ul > li > .pnt")
         pnts = [int(e.text()) for e in specialty_html]
-        keys = ["one_day_races", "gc", "time_trial", "sprint", "climber"]
+        keys = ["one_day_races", "gc", "time_trial", "sprint", "climber", "hills"]
         return dict(zip(keys, pnts))

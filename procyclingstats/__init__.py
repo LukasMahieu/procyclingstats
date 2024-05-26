@@ -12,6 +12,7 @@ from .stage_scraper import Stage
 from .team_scraper import Team
 from .calendar_scraper import Calendar
 from .table_parser import TableParser
+from .stage_features_scraper import StageFeatures
 
 __all__ = [
     "Scraper",
@@ -25,6 +26,7 @@ __all__ = [
     "Team",
     "Calendar",
     "TableParser",
+    "StageFeatures",
 ]
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
