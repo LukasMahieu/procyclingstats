@@ -1,4 +1,6 @@
 from typing import Any, Callable, Dict, List, Literal, Optional, Tuple, Union
+import re
+
 
 from selectolax.parser import Node
 
@@ -14,16 +16,9 @@ class TableParser:
     :param html_table: HTML table to be parsed from.
     """
 
-    table_row_dict: Dict[str, str] = {
-        "tbody": "tr",
-        "table": "tr",
-        "ul": "li"
-    }
+    table_row_dict: Dict[str, str] = {"tbody": "tr", "table": "tr", "ul": "li"}
     """Finds out what is the table row tag."""
-    row_column_tag_dict: Dict[str, str] = {
-        "tr": "td",
-        "li": "div"
-    }
+    row_column_tag_dict: Dict[str, str] = {"tr": "td", "li": "div"}
     """Finds out what is the table row column tag."""
 
     def __init__(self, html_table: Node) -> None:
@@ -41,8 +36,11 @@ class TableParser:
 
         self.a_elements = self.html_table.css("a")
         self.table_length = len(self.html_table.css(self.table_row_tag))
-        self.row_length = len(self.html_table.css(
-            f"{self.table_row_tag}:first-child > {self.row_column_tag}"))
+        self.row_length = len(
+            self.html_table.css(
+                f"{self.table_row_tag}:first-child > {self.row_column_tag}"
+            )
+        )
 
     def parse(self, fields: Union[List[str], Tuple[str, ...]]) -> None:
         """
@@ -121,7 +119,8 @@ class TableParser:
         """
         if len(values) != len(self.table) and self.table:
             raise ValueError(
-                "Given values has to be the same length as table rows count")
+                "Given values has to be the same length as table rows count"
+            )
         if self.table:
             for row, value in zip(self.table, values):
                 row[field_name] = value
@@ -129,10 +128,13 @@ class TableParser:
             for value in values:
                 self.table.append({field_name: value})
 
-    def parse_extra_column(self, index_or_header_value: Union[int, str],
-                     func: Callable = int,
-                     separator: str = "",
-                     get_href: bool = False) -> List[Any]:
+    def parse_extra_column(
+        self,
+        index_or_header_value: Union[int, str],
+        func: Callable = int,
+        separator: str = "",
+        get_href: bool = False,
+    ) -> List[Any]:
         """
         Parses values from given column.
 
@@ -152,7 +154,7 @@ class TableParser:
         if index < 0:
             index = self.row_length + index
         elements = self.html_table.css(
-        f"{self.table_row_tag} > {self.row_column_tag}:nth-child({index+1})"
+            f"{self.table_row_tag} > {self.row_column_tag}:nth-child({index+1})"
         )
 
         values = []
@@ -161,7 +163,7 @@ class TableParser:
             if get_href:
                 a_element = element.css_first("a")
                 if a_element:
-                    text = a_element.attributes['href']
+                    text = a_element.attributes["href"]
                 else:
                     text = ""
             values.append(func(text))
@@ -177,15 +179,17 @@ class TableParser:
         try:
             return self.parse_extra_column("Team", str, get_href=True)
         except Exception:
-            return self._filter_a_elements("team", True,
-                lambda x: True if x.text() != "view" else False)
+            return self._filter_a_elements(
+                "team", True, lambda x: True if x.text() != "view" else False
+            )
 
     def team_name(self) -> List[str]:
         try:
             return self.parse_extra_column("Team", str, get_href=False)
         except Exception:
-            return self._filter_a_elements("team", False,
-                lambda x: True if x.text() != "view" else False)
+            return self._filter_a_elements(
+                "team", False, lambda x: True if x.text() != "view" else False
+            )
 
     def stage_url(self) -> List[str]:
         return self._filter_a_elements("race", True)
@@ -202,8 +206,7 @@ class TableParser:
         nations_texts = self._filter_a_elements("nation", False)
         # return text only when is not numeric, so doesn't represent number of
         # wins of the nation
-        return [text for text in nations_texts
-                if not text.isnumeric() and text != "-"]
+        return [text for text in nations_texts if not text.isnumeric() and text != "-"]
 
     def climb_url(self) -> List[str]:
         """
@@ -225,16 +228,14 @@ class TableParser:
 
     def age(self) -> List[Optional[int]]:
         ages_elements = self.html_table.css(".age")
-        return [int(age_e.text()) if age_e.text() else None
-            for age_e in ages_elements]
+        return [int(age_e.text()) if age_e.text() else None for age_e in ages_elements]
 
     def nationality(self) -> List[str]:
         flags_elements = self.html_table.css(".flag")
         flags = []
         for flag_e in flags_elements:
-            if (flag_e.attributes['class'] and
-                    " " in flag_e.attributes['class']):
-                flags.append(flag_e.attributes['class'].split(" ")[1].upper())
+            if flag_e.attributes["class"] and " " in flag_e.attributes["class"]:
+                flags.append(flag_e.attributes["class"].split(" ")[1].upper())
         return flags
 
     def time(self) -> List[Optional[str]]:
@@ -264,36 +265,41 @@ class TableParser:
         """
         bonuses_elements = self.html_table.css(".bonis")
         bonuses = []
+        time_pattern = re.compile(r"(-?\d+)(?::(\d{2}))?″")
+
         for bonus_e in bonuses_elements:
-            bonus = bonus_e.text().replace("″", "").replace(" ", "")
-            if not bonus:
+            bonus_text = bonus_e.text().replace("″", "").replace(" ", "")
+            if not bonus_text:
                 bonus = "0:00:00"
             else:
-                seconds = "00"
-                minutes = "00"
-                splitted = bonus.split(":")
-                if len(splitted) > 1:
-                    minutes = splitted[0]
-                    if len(minutes) == 1:
-                        minutes = "0" + minutes
-                    seconds = splitted[1]
+                match = time_pattern.match(bonus_text)
+                if match:
+                    sign, minutes, seconds = match.groups()
+                    if seconds is None:
+                        # It's just seconds
+                        seconds = int(sign)
+                        sign = "" if seconds >= 0 else "-"
+                        seconds = abs(seconds)
+                        minutes = 0
+                    else:
+                        minutes = int(sign)
+                        seconds = int(seconds)
+                        sign = "" if minutes >= 0 else "-"
+
+                    hours = 0  # We assume there are no hours as per the format
+                    bonus = f"{sign}{hours}:{minutes:02}:{seconds:02}"
                 else:
-                    seconds = splitted[0]
-                    if len(seconds) == 1:
-                        seconds = "0" + seconds
-                bonus = f"0:{minutes}:{seconds}"
+                    bonus = "0:00:00"
             bonuses.append(bonus)
         if not bonuses:
             bonuses = ["0:00:00" for _ in range(self.table_length)]
         return bonuses
 
-    def profile_icon(self) -> List[Literal[
-        "p0", "p1", "p2", "p3", "p4", "p5"
-    ]]:
+    def profile_icon(self) -> List[Literal["p0", "p1", "p2", "p3", "p4", "p5"]]:
         icons_elements = self.html_table.css(".icon.profile")
         profiles = []
         for icon_e in icons_elements:
-            classes = icon_e.attributes['class']
+            classes = icon_e.attributes["class"]
             if classes and len(classes.split(" ")) >= 3:
                 profiles.append(classes.split(" ")[-1])
         return profiles
@@ -314,39 +320,40 @@ class TableParser:
             else:
                 seasons.append(None)
         return seasons
-    
+
     def rider_number(self) -> List[Optional[int]]:
         bibs_elements = self.html_table.css(".bibs")
-        return [int(bib_e.text()) if bib_e.text().isnumeric() else None \
-            for bib_e in bibs_elements]
+        return [
+            int(bib_e.text()) if bib_e.text().isnumeric() else None
+            for bib_e in bibs_elements
+        ]
 
     def rank(self) -> List[Optional[int]]:
         possible_columns = ["Rnk", "pos", "Result", "#"]
         for column_name in possible_columns:
             try:
-                return self.parse_extra_column(column_name,
-                    lambda x: int(x) if x.isnumeric() else None)
+                return self.parse_extra_column(
+                    column_name, lambda x: int(x) if x.isnumeric() else None
+                )
             except ValueError:
                 pass
         raise ValueError("Rank column wasn't found.")
 
-    def status(self) -> List[Literal[
-        "DF", "DNF", "DNS", "OTL", "DSQ"
-    ]]:
-        return self.parse_extra_column("Rnk",
-            lambda x: "DF" if x.isnumeric() else x)
+    def status(self) -> List[Literal["DF", "DNF", "DNS", "OTL", "DSQ"]]:
+        return self.parse_extra_column("Rnk", lambda x: "DF" if x.isnumeric() else x)
 
     def prev_rank(self) -> List[Optional[int]]:
         try:
-            return self.parse_extra_column("Prev",
-                lambda x: int(x) if x else None)
+            return self.parse_extra_column("Prev", lambda x: int(x) if x else None)
         except ValueError:
             return [None for _ in range(self.table_length)]
 
     def uci_points(self) -> List[Optional[float]]:
         try:
-            return self.parse_extra_column("UCI",
-                lambda x: float(x) if x and x.replace('.', '', 1).isdigit() else 0)
+            return self.parse_extra_column(
+                "UCI",
+                lambda x: float(x) if x and x.replace(".", "", 1).isdigit() else 0,
+            )
         except ValueError:
             return [0 for _ in range(self.table_length)]
 
@@ -355,14 +362,14 @@ class TableParser:
             return self.parse_extra_column("Pnt", lambda x: int(x) if x else 0)
         except ValueError:
             try:
-                return self.parse_extra_column("PCS points",
-                    lambda x: int(x) if x  and x.isdigit() else 0)
+                return self.parse_extra_column(
+                    "PCS points", lambda x: int(x) if x and x.isdigit() else 0
+                )
             except ValueError:
                 return [0 for _ in range(self.table_length)]
 
     def points(self) -> List[int]:
-        return self.parse_extra_column("Points", lambda x:
-            float(x) if x else 0)
+        return self.parse_extra_column("Points", lambda x: float(x) if x else 0)
 
     def class_(self) -> List[str]:
         """
@@ -375,20 +382,16 @@ class TableParser:
         return self.parse_extra_column("Class", str)
 
     def first_places(self) -> List[Optional[int]]:
-        return self.parse_extra_column("Wins", lambda x:
-            int(x) if x.isnumeric() else 0)
+        return self.parse_extra_column("Wins", lambda x: int(x) if x.isnumeric() else 0)
 
     def second_places(self) -> List[Optional[int]]:
-        return self.parse_extra_column("2nd", lambda x:
-            int(x) if x.isnumeric() else 0)
+        return self.parse_extra_column("2nd", lambda x: int(x) if x.isnumeric() else 0)
 
     def third_places(self) -> List[Optional[int]]:
-        return self.parse_extra_column("3rd", lambda x:
-            int(x) if x.isnumeric() else 0)
+        return self.parse_extra_column("3rd", lambda x: int(x) if x.isnumeric() else 0)
 
     def distance(self) -> List[float]:
-        return self.parse_extra_column("KMs", lambda x:
-            float(x) if x else None)
+        return self.parse_extra_column("KMs", lambda x: float(x) if x else None)
 
     def date(self) -> List[str]:
         return self.parse_extra_column("Date", str)
@@ -407,12 +410,12 @@ class TableParser:
     def _get_column_index_from_header(self, column_name: str) -> int:
         if self.header is None:
             raise ExpectedParsingError(
-                f"Can not parse '{column_name}' column without table header")
+                f"Can not parse '{column_name}' column without table header"
+            )
         for i, column_name_e in enumerate(self.header.css("th")):
             if column_name.lower() in column_name_e.text().lower():
                 return i
-        raise ValueError(
-            f"'{column_name}' column isn't in table header")
+        raise ValueError(f"'{column_name}' column isn't in table header")
 
     def _make_times_absolute(self, time_field: str = "time") -> None:
         """
@@ -426,18 +429,18 @@ class TableParser:
         for i, row in enumerate(self.table[1:]):
             if row[time_field]:
                 try:
-                    row[time_field] = add_times(first_time, row['time'])
+                    row[time_field] = add_times(first_time, row["time"])
                 # if time is in invalid format
                 except Exception:
                     if i == 0:
                         row[time_field] = "0:00:00"
                     # set the same time as previous rider
                     else:
-                        row[time_field] = self.table[1:][i - 1]['time']
+                        row[time_field] = self.table[1:][i - 1]["time"]
 
-
-    def _filter_a_elements(self, keyword: str, get_href: bool,
-            validator: Callable = lambda x: True) -> List[str]:
+    def _filter_a_elements(
+        self, keyword: str, get_href: bool, validator: Callable = lambda x: True
+    ) -> List[str]:
         """
         Filters from all a elements these which has at the beggining of their
         href given keyword and gets their href or text.
@@ -451,7 +454,7 @@ class TableParser:
         """
         filtered_values = []
         for a_element in self.a_elements:
-            href = a_element.attributes['href']
+            href = a_element.attributes["href"]
             if href and href.split("/")[0] == keyword and validator(a_element):
                 if get_href:
                     filtered_values.append(href)
