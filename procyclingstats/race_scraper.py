@@ -82,7 +82,7 @@ class Race(Scraper):
         """
         Parses race startdate from HTML.
 
-        :return: Startdate in ``DD-MM-YYYY`` format.
+        :return: Startdate in ``YYYY-MM-DD`` format.
         """
         startdate_html = self.html.css_first(".infolist > li > div:nth-child(2)")
         return startdate_html.text()
@@ -91,7 +91,7 @@ class Race(Scraper):
         """
         Parses race enddate from HTML.
 
-        :return: Enddate in ``DD-MM-YYYY`` format.
+        :return: Enddate in ``YYYY-MM-DD`` format.
         """
         enddate_html = self.html.css(".infolist > li > div:nth-child(2)")[1]
         return enddate_html.text()
@@ -170,6 +170,9 @@ class Race(Scraper):
             if not_p_icon:
                 stage_e.remove()
 
+        # removes last row from stages table
+        for row in stages_table_html.css("tr.sum"):
+            row.remove()
         table_parser = TableParser(stages_table_html)
         casual_f_to_parse = [f for f in fields if f != "date"]
         table_parser.parse(casual_f_to_parse)
