@@ -151,7 +151,7 @@ class Stage(Scraper):
         """
         race_ranking = self._stage_info_by_label("Race ranking")
         if race_ranking:
-            return int(race_ranking)
+            return str(race_ranking)
         return None
 
     def date(self) -> str:
