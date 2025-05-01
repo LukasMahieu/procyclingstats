@@ -1,5 +1,7 @@
 import calendar
 from typing import Any, Dict, List, Optional
+import re
+from procyclingstats.errors import UnexpectedParsingError
 
 from .scraper import Scraper
 from .table_parser import TableParser
@@ -9,7 +11,7 @@ from .utils import get_day_month, parse_table_fields_args
 class Rider(Scraper):
     """
     Scraper for rider HTML page.
-    
+
     To parse results from specific season, pass URL with the season, e.g.
     ``rider/tadej-pogacar/2021``, and use the ``Rider.results`` method. But it
     might be easier to just use the ``RiderResults`` scraping class for that
@@ -136,24 +138,69 @@ class Rider(Scraper):
             return None
         return image_html.attributes["src"]
 
+    # def teams_history(self, *args: str) -> List[Dict[str, Any]]:
+    #     """
+    #     Parses rider's team history throughout career.
+
+    #     :param args: Fields that should be contained in returned table. When
+    #         no args are passed, all fields are parsed.
+
+    #         - team_name:
+    #         - team_url:
+    #         - season:
+    #         - class: Team's class, e.g. ``WT``.
+    #         - since: First day for rider in current season in the team in
+    #           ``MM-DD`` format, most of the time ``01-01``.
+    #         - until: Last day for rider in current season in the team in
+    #           ``MM-DD`` format, most of the time ``12-31``.
+
+    #     :raises ValueError: When one of args is of invalid value.
+    #     :return: Table with wanted fields.
+    #     """
+    #     available_fields = (
+    #         "season",
+    #         "since",
+    #         "until",
+    #         "team_name",
+    #         "team_url",
+    #         "class",
+    #     )
+    #     fields = parse_table_fields_args(args, available_fields)
+    #     seasons_html_table = self.html.css_first("ul.list.rdr-teams")
+    #     table_parser = TableParser(seasons_html_table)
+    #     casual_fields = [f for f in fields if f in ("season", "team_name", "team_url")]
+    #     if casual_fields:
+    #         table_parser.parse(casual_fields)
+    #     # add classes for row validity checking
+    #     classes = table_parser.parse_extra_column(
+    #         2,
+    #         lambda x: x.replace("(", "").replace(")", "").replace(" ", "")
+    #         if x and "retired" not in x.lower()
+    #         else None,
+    #     )
+    #     table_parser.extend_table("class", classes)
+    #     if "since" in fields:
+    #         until_dates = table_parser.parse_extra_column(
+    #             -2, lambda x: get_day_month(x) if "as from" in x else "01-01"
+    #         )
+    #         table_parser.extend_table("since", until_dates)
+    #     if "until" in fields:
+    #         until_dates = table_parser.parse_extra_column(
+    #             -2, lambda x: get_day_month(x) if "until" in x else "12-31"
+    #         )
+    #         table_parser.extend_table("until", until_dates)
+
+    #     table = [row for row in table_parser.table if row["class"]]
+    #     # remove class field if isn't needed
+    #     if "class" not in fields:
+    #         for row in table:
+    #             row.pop("class")
+    #     return table
+
     def teams_history(self, *args: str) -> List[Dict[str, Any]]:
         """
-        Parses rider's team history throughout career.
-
-        :param args: Fields that should be contained in returned table. When
-            no args are passed, all fields are parsed.
-
-            - team_name:
-            - team_url:
-            - season:
-            - class: Team's class, e.g. ``WT``.
-            - since: First day for rider in current season in the team in
-              ``MM-DD`` format, most of the time ``01-01``.
-            - until: Last day for rider in current season in the team in
-              ``MM-DD`` format, most of the time ``12-31``.
-
-        :raises ValueError: When one of args is of invalid value.
-        :return: Table with wanted fields.
+        Parses rider's team history. Manually extracts season, team_name,
+        team_url, then reuses TableParser for class/since/until.
         """
         available_fields = (
             "season",
@@ -164,35 +211,64 @@ class Rider(Scraper):
             "class",
         )
         fields = parse_table_fields_args(args, available_fields)
-        seasons_html_table = self.html.css_first("ul.list.rdr-teams")
-        table_parser = TableParser(seasons_html_table)
-        casual_fields = [f for f in fields if f in ("season", "team_name", "team_url")]
-        if casual_fields:
-            table_parser.parse(casual_fields)
-        # add classes for row validity checking
-        classes = table_parser.parse_extra_column(
+
+        # 1) find the UL list (old selector + fallback)
+        seasons_html_list = self.html.css_first("ul.list.rdr-teams")
+        if seasons_html_list is None:
+            for ul in self.html.css("ul"):
+                first_li = ul.css_first("li")
+                if first_li and re.match(r"^\s*\d{4}\s*$", first_li.text()):
+                    seasons_html_list = ul
+                    break
+        if seasons_html_list is None:
+            raise UnexpectedParsingError(
+                "Could not find the Teams history list on this page."
+            )
+
+        # 2) set up parser on that <ul>
+        parser = TableParser(seasons_html_list)
+
+        # 3) MANUAL pull of season / team_name / team_url
+        seasons = parser.parse_extra_column(0, lambda x: x.strip())
+        team_names = parser.parse_extra_column(1, lambda x: x.strip())
+        team_urls = parser.parse_extra_column(1, lambda x: x.strip(), get_href=True)
+
+        # 4) build the initial table
+        parser.table = [
+            {"season": s, "team_name": tn, "team_url": tu}
+            for s, tn, tu in zip(seasons, team_names, team_urls)
+        ]
+
+        # 5) now apply your old “extra” logic:
+        #    class
+        classes = parser.parse_extra_column(
             2,
             lambda x: x.replace("(", "").replace(")", "").replace(" ", "")
             if x and "retired" not in x.lower()
             else None,
         )
-        table_parser.extend_table("class", classes)
+        parser.extend_table("class", classes)
+
+        #    since
         if "since" in fields:
-            until_dates = table_parser.parse_extra_column(
+            since_dates = parser.parse_extra_column(
                 -2, lambda x: get_day_month(x) if "as from" in x else "01-01"
             )
-            table_parser.extend_table("since", until_dates)
+            parser.extend_table("since", since_dates)
+
+        #    until
         if "until" in fields:
-            until_dates = table_parser.parse_extra_column(
+            until_dates = parser.parse_extra_column(
                 -2, lambda x: get_day_month(x) if "until" in x else "12-31"
             )
-            table_parser.extend_table("until", until_dates)
+            parser.extend_table("until", until_dates)
 
-        table = [row for row in table_parser.table if row["class"]]
-        # remove class field if isn't needed
+        # 6) filter out retired rows and drop “class” if not requested
+        table = [row for row in parser.table if row.get("class")]
         if "class" not in fields:
             for row in table:
-                row.pop("class")
+                row.pop("class", None)
+
         return table
 
     def points_per_season_history(self, *args: str) -> List[Dict[str, Any]]:
@@ -227,7 +303,7 @@ class Rider(Scraper):
         pnts = [int(e.text()) for e in specialty_html]
         keys = ["one_day_races", "gc", "time_trial", "sprint", "climber", "hills"]
         return dict(zip(keys, pnts))
-    
+
     def season_results(self, *args: str) -> List[Dict[str, Any]]:
         """
         Parses rider's results from season specified in URL. If no URL is
@@ -259,7 +335,7 @@ class Rider(Scraper):
             "distance",
             "date",
             "pcs_points",
-            "uci_points"
+            "uci_points",
         )
         fields = parse_table_fields_args(args, available_fields)
         casual_fields = ["stage_url", "stage_name"]
@@ -271,7 +347,7 @@ class Rider(Scraper):
         for tr in results_html.css("tbody > tr"):
             if not tr.css("td")[1].text():
                 tr.remove()
-                
+
         table_parser = TableParser(results_html)
         if casual_fields:
             table_parser.parse(casual_fields)
@@ -289,24 +365,29 @@ class Rider(Scraper):
             except AttributeError:
                 pass
         if "result" in fields:
-            results = table_parser.parse_extra_column("Result", lambda x:
-                int(x) if x.isnumeric() else None)
+            results = table_parser.parse_extra_column(
+                "Result", lambda x: int(x) if x.isnumeric() else None
+            )
             table_parser.extend_table("result", results)
         if "gc_position" in fields:
-            gc_positions = table_parser.parse_extra_column(2, lambda x:
-                int(x) if x.isnumeric() else None)
+            gc_positions = table_parser.parse_extra_column(
+                2, lambda x: int(x) if x.isnumeric() else None
+            )
             table_parser.extend_table("gc_position", gc_positions)
         if "distance" in fields:
-            distances = table_parser.parse_extra_column("Distance", lambda x:
-                float(x) if x.split(".")[0].isnumeric() else None)
+            distances = table_parser.parse_extra_column(
+                "Distance", lambda x: float(x) if x.split(".")[0].isnumeric() else None
+            )
             table_parser.extend_table("distance", distances)
         if "pcs_points" in fields:
-            pcs_points = table_parser.parse_extra_column("PCS", lambda x:
-                float(x) if x.isnumeric() else 0)
+            pcs_points = table_parser.parse_extra_column(
+                "PCS", lambda x: float(x) if x.isnumeric() else 0
+            )
             table_parser.extend_table("pcs_points", pcs_points)
         if "uci_points" in fields:
-            uci_points = table_parser.parse_extra_column("UCI", lambda x:
-                float(x) if x.isnumeric() else 0)
+            uci_points = table_parser.parse_extra_column(
+                "UCI", lambda x: float(x) if x.isnumeric() else 0
+            )
             table_parser.extend_table("uci_points", uci_points)
-            
+
         return table_parser.table

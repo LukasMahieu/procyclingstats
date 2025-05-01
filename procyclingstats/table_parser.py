@@ -154,7 +154,7 @@ class TableParser:
         if index < 0:
             index = self.row_length + index
         elements = self.html_table.css(
-            f"{self.table_row_tag} > {self.row_column_tag}:nth-child({index+1})"
+            f"{self.table_row_tag} > {self.row_column_tag}:nth-child({index + 1})"
         )
 
         values = []
@@ -191,11 +191,70 @@ class TableParser:
                 "team", False, lambda x: True if x.text() != "view" else False
             )
 
-    def stage_url(self) -> List[str]:
-        return self._filter_a_elements("race", True)
+    def stage_url(self) -> List[Optional[str]]:
+        """
+        One URL per row from the Stage column (handles both <a href> and
+        <span data-url>, with a row‐wide fallback).
+        """
+        urls: List[Optional[str]] = []
+        for row in self.html_table.css(self.table_row_tag):
+            href: Optional[str] = None
 
-    def stage_name(self) -> List[str]:
-        return self._filter_a_elements("race", False)
+            # try to target the "Stage" cell by index if there's a header
+            try:
+                idx = self._get_column_index_from_header("Stage")
+            except Exception:
+                idx = None
+
+            if idx is not None:
+                # nth-child is 1‐based
+                cell = row.css_first(f"{self.row_column_tag}:nth-child({idx + 1})")
+                if cell:
+                    a = cell.css_first("a")
+                    if a and a.attrs.get("href"):
+                        href = a.attrs["href"]
+                    else:
+                        span = cell.css_first("span[data-url]")
+                        if span:
+                            href = span.attrs["data-url"]
+
+            # fallback: any link‐like element in this row whose URL has "/stage"
+            if not href:
+                for elt in row.css("a, span[data-url]"):
+                    candidate = elt.attrs.get("href") or elt.attrs.get("data-url")
+                    if candidate and "/stage" in candidate:
+                        href = candidate
+                        break
+
+            urls.append(href)
+        return urls
+
+    def stage_name(self) -> List[Optional[str]]:
+        """
+        One visible name per row from the Stage column. Matches whatever
+        element gave stage_url().
+        """
+        names: List[Optional[str]] = []
+        # reuse your new stage_url output
+        url_list = self.stage_url()
+
+        for row, url in zip(self.html_table.css(self.table_row_tag), url_list):
+            if not url:
+                names.append(None)
+                continue
+
+            # find the same element we grabbed the URL from
+            selector = f"a[href='{url}'], span[data-url='{url}']"
+            elt = row.css_first(selector)
+            names.append(elt.text().strip() if elt else None)
+
+        return names
+
+    # def stage_url(self) -> List[str]:
+    #     return self._filter_a_elements("race", True)
+
+    # def stage_name(self) -> List[str]:
+    #     return self._filter_a_elements("race", False)
 
     def nation_url(self) -> List[str]:
         nations_urls = self._filter_a_elements("nation", True)
