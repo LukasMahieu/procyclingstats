@@ -119,9 +119,6 @@ class Stage(Scraper):
             return "TTT"
         return "RR"
 
-    def winning_attack_length(self):
-        return None
-
     def vertical_meters(self) -> Optional[int]:
         """
         Parses vertical meters gained throughout the stage from HTML.
@@ -132,6 +129,19 @@ class Stage(Scraper):
         if vert_meters:
             return int(vert_meters)
         return None
+
+    def avg_temperature(self) -> Optional[float]:
+        """
+        Parses average temperature during the stage from the HTML.
+
+        :return: Average temperature in degree celsius as float.
+        """
+        temp_str1 = self._stage_info_by_label("Avg. temp")
+        temp_str2 = self._stage_info_by_label("Average temp")
+        if temp_str1:
+            return float(temp_str1.split(" ")[0])
+        elif temp_str2:
+            return float(temp_str2.split(" ")[0])
 
     def race_ranking(self) -> Optional[int]:
         """
@@ -225,18 +235,6 @@ class Stage(Scraper):
         speed_str = self._stage_info_by_label("Avg. speed winner")
         if speed_str:
             return float(speed_str.split(" ")[0])
-        else:
-            return None
-
-    def avg_temperature(self) -> Optional[float]:
-        """
-        Parses average temperature from HTML.
-
-        :return: avg temperature, e.g. ``20``.
-        """
-        temp_str = self._stage_info_by_label("Avg. temperature")
-        if temp_str:
-            return float(temp_str.split(" ")[0])
         else:
             return None
 
@@ -365,6 +363,11 @@ class Stage(Scraper):
                 for row in table:
                     row.pop("rider_url")
         else:
+            # remove rows that aren't results
+            for row in results_table_html.css("tbody > tr"):
+                columns = row.css("td")
+                if len(columns) <= 2 and columns[0].text() == "":
+                    row.remove()
             table_parser = TableParser(results_table_html)
             table_parser.parse(fields)
             table = table_parser.table
