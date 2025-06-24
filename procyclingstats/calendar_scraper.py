@@ -16,6 +16,8 @@ class Calendar(Scraper):
         """
         available_fields = (
             "date",
+            "race_name",
+            "race_url", 
             "stage_name",
             "stage_url",
             "rider_name",

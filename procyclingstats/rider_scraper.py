@@ -375,9 +375,19 @@ class Rider(Scraper):
             )
             table_parser.extend_table("gc_position", gc_positions)
         if "distance" in fields:
-            distances = table_parser.parse_extra_column(
-                "Distance", lambda x: float(x) if x.split(".")[0].isnumeric() else None
-            )
+
+            def _parse_distance(text: str) -> Optional[float]:
+                tokens = text.strip().split()
+                if not tokens:
+                    return None
+                # take the last token (actual distance, or the only one if no shortening)
+                val = tokens[-1]
+                try:
+                    return float(val)
+                except ValueError:
+                    return None
+
+            distances = table_parser.parse_extra_column("Distance", _parse_distance)
             table_parser.extend_table("distance", distances)
         if "pcs_points" in fields:
             pcs_points = table_parser.parse_extra_column(

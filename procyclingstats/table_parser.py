@@ -59,6 +59,8 @@ class TableParser:
             - team_name
             - stage_url
             - stage_name
+            - race_url
+            - race_name
             - nation_url
             - nation_name
             - age
@@ -284,6 +286,22 @@ class TableParser:
         :return: List of all climb names from table.
         """
         return self._filter_a_elements("location", False)
+
+    def race_url(self) -> List[str]:
+        """
+        Parses all race elements hrefs from HTML.
+
+        :return: List of all race URLs from table.
+        """
+        return self._filter_a_elements("race", True)
+
+    def race_name(self) -> List[str]:
+        """
+        Parses all race elements text values from HTML.
+
+        :return: List of all race names from table.
+        """
+        return self._filter_a_elements("race", False)
 
     def age(self) -> List[Optional[int]]:
         ages_elements = self.html_table.css(".age")

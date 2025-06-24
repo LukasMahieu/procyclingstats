@@ -52,6 +52,7 @@ class RiderResults(Scraper):
         ...
     }
     """
+
     def _html_valid(self) -> bool:
         """
         Extends Scraper method for validating HTMLs.
@@ -61,8 +62,7 @@ class RiderResults(Scraper):
         try:
             assert super()._html_valid()
             page_title = self.html.css_first(".page-content > h2").text()
-            assert page_title in ("All results",
-                "Top results final 5k analysis")
+            assert page_title in ("All results", "Top results final 5k analysis")
             return True
         except AssertionError:
             return False
@@ -73,7 +73,7 @@ class RiderResults(Scraper):
         if not results_table_html:
             return
         for row in results_table_html.css("tr"):
-            if "class" in row.attributes and row.attributes['class'] == "sum":
+            if "class" in row.attributes and row.attributes["class"] == "sum":
                 row.decompose()
 
     def results(self, *args: str) -> List[Dict[str, Any]]:
@@ -107,18 +107,31 @@ class RiderResults(Scraper):
             "class",
             "distance",
             "pcs_points",
-            "uci_points"
+            "uci_points",
         )
         if self.html.css_first(".page-content > h2").text() != "All results":
-            error_msg = ("This object doesn't support 'results' method. " +
-                "Create one from rider's default results table to call this " +
-                "method")
+            error_msg = (
+                "This object doesn't support 'results' method. "
+                + "Create one from rider's default results table to call this "
+                + "method"
+            )
             raise ExpectedParsingError(error_msg)
 
         fields = parse_table_fields_args(args, available_fields)
         results_table_html = self.html.css_first("table")
         table_parser = TableParser(results_table_html)
         table_parser.parse(fields)
+
+        if "stage_url" in fields or "stage_name" in fields:
+            race_urls = table_parser.parse_extra_column("Race", str, get_href=True)
+            race_names = table_parser.parse_extra_column("Race", str)
+
+            for i, row in enumerate(table_parser.table):
+                # if this was a one-day (no stage link), backfill from Race
+                if row.get("stage_url") is None:
+                    row["stage_url"] = race_urls[i]
+                if row.get("stage_name") is None:
+                    row["stage_name"] = race_names[i]
         return table_parser.table
 
     def final_n_km_results(self, *args: str) -> List[Dict[str, Any]]:
@@ -150,18 +163,23 @@ class RiderResults(Scraper):
             "nationality",
             "class",
             "vertical_meters",
-            "average_percentage"
+            "average_percentage",
         )
-        if (self.html.css_first(".page-content > h2").text() !=
-                "Top results final 5k analysis"):
-            error_msg = ("This object doesn't support 'final_n_km_results'" +
-            "method. Create one from rider's final n km results table to " +
-            " call this  method")
+        if (
+            self.html.css_first(".page-content > h2").text()
+            != "Top results final 5k analysis"
+        ):
+            error_msg = (
+                "This object doesn't support 'final_n_km_results'"
+                + "method. Create one from rider's final n km results table to "
+                + " call this  method"
+            )
             raise ExpectedParsingError(error_msg)
 
         fields = parse_table_fields_args(args, available_fields)
-        casual_fields = [f for f in fields
-            if f not in ("vertical_meters", "average_percentage")]
+        casual_fields = [
+            f for f in fields if f not in ("vertical_meters", "average_percentage")
+        ]
 
         results_table_html = self.html.css_first("div:nth-child(4) table")
         table_parser = TableParser(results_table_html)

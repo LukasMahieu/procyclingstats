@@ -198,17 +198,31 @@ class Scraper:
         :return: True if given HTML is valid, otherwise False.
         """
         try:
-            page_title = self.html.css_first(".page-title > .main > h1").text()
-            assert page_title != "Page not found"
-
-            page_title2 = self.html.css_first("div.page-content > div").text()
-            assert page_title2 != (
-                "Due to technical difficulties this page "
-                + "is temporarily unavailable."
+            # Check for "Page not found" in various possible title locations
+            page_title_elem = (
+                self.html.css_first(".page-title > .main > h1") or
+                self.html.css_first(".content h1") or
+                self.html.css_first("h1")
             )
+            if page_title_elem:
+                page_title = page_title_elem.text()
+                assert page_title != "Page not found"
+                assert page_title != "Start"
 
-            page_title3 = self.html.css_first(".page-title > .main > h1").text()
-            assert page_title3 != "Start"
+            # Check for technical difficulties message
+            page_content_elem = self.html.css_first("div.page-content > div")
+            if page_content_elem:
+                page_title2 = page_content_elem.text()
+                assert page_title2 != (
+                    "Due to technical difficulties this page "
+                    + "is temporarily unavailable."
+                )
+
+            # Additional check for common error indicators in the page text
+            html_text = self.html.text()
+            assert "Page not found" not in html_text
+            assert "temporarily unavailable" not in html_text
+            
             return True
-        except AssertionError:
+        except (AssertionError, AttributeError):
             return False
