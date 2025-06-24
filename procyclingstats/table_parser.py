@@ -427,10 +427,16 @@ class TableParser:
 
     def uci_points(self) -> List[Optional[float]]:
         try:
-            return self.parse_extra_column(
-                "UCI",
-                lambda x: float(x) if x and x.replace(".", "", 1).isdigit() else 0,
-            )
+            def safe_parse_uci(x):
+                if not x or x.strip() == "-":
+                    return 0
+                try:
+                    # Handle European decimal format (comma as decimal separator)
+                    cleaned = x.strip().replace(",", ".")
+                    return float(cleaned)
+                except ValueError:
+                    return 0
+            return self.parse_extra_column("UCI", safe_parse_uci)
         except ValueError:
             return [0 for _ in range(self.table_length)]
 
@@ -446,7 +452,16 @@ class TableParser:
                 return [0 for _ in range(self.table_length)]
 
     def points(self) -> List[int]:
-        return self.parse_extra_column("Points", lambda x: float(x) if x else 0)
+        def safe_parse_points(x):
+            if not x or x.strip() == "-":
+                return 0
+            try:
+                # Handle European decimal format (comma as decimal separator)
+                cleaned = x.strip().replace(",", ".")
+                return float(cleaned)
+            except ValueError:
+                return 0
+        return self.parse_extra_column("Points", safe_parse_points)
 
     def class_(self) -> List[str]:
         """
@@ -468,7 +483,16 @@ class TableParser:
         return self.parse_extra_column("3rd", lambda x: int(x) if x.isnumeric() else 0)
 
     def distance(self) -> List[float]:
-        return self.parse_extra_column("KMs", lambda x: float(x) if x else None)
+        def safe_parse_distance(x):
+            if not x or x.strip() == "-":
+                return None
+            try:
+                # Handle European decimal format (comma as decimal separator)
+                cleaned = x.strip().replace(",", ".")
+                return float(cleaned)
+            except ValueError:
+                return None
+        return self.parse_extra_column("KMs", safe_parse_distance)
 
     def date(self) -> List[str]:
         return self.parse_extra_column("Date", str)

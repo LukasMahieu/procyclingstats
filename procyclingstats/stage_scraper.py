@@ -84,14 +84,21 @@ class Stage(Scraper):
         # is a stage race
         return len(self.html.css(".restabs")) == 0
 
-    def distance(self) -> float:
+    def distance(self) -> Optional[float]:
         """
         Parses stage distance from HTML.
 
         :return: Stage distance in kms.
         """
         distance = self._stage_info_by_label("Distance")
-        return float(distance.split(" km")[0])
+        if distance and distance.strip() != "-":
+            try:
+                # Handle European decimal format (comma as decimal separator)
+                cleaned = distance.split(" km")[0].strip().replace(",", ".")
+                return float(cleaned)
+            except (ValueError, IndexError):
+                return None
+        return None
 
     def profile_icon(self) -> Literal["p0", "p1", "p2", "p3", "p4", "p5"]:
         """
@@ -138,10 +145,11 @@ class Stage(Scraper):
         """
         temp_str1 = self._stage_info_by_label("Avg. temp")
         temp_str2 = self._stage_info_by_label("Average temp")
-        if temp_str1:
+        if temp_str1 and temp_str1.strip() != "-":
             return float(temp_str1.split(" ")[0])
-        elif temp_str2:
+        elif temp_str2 and temp_str2.strip() != "-":
             return float(temp_str2.split(" ")[0])
+        return None
 
     def race_ranking(self) -> Optional[int]:
         """
@@ -233,7 +241,7 @@ class Stage(Scraper):
         :return: avg speed winner, e.g. ``44.438``.
         """
         speed_str = self._stage_info_by_label("Avg. speed winner")
-        if speed_str:
+        if speed_str and speed_str.strip() != "-":
             return float(speed_str.split(" ")[0])
         else:
             return None
@@ -323,10 +331,13 @@ class Stage(Scraper):
         # remove other result tables from html
         # because of one day races self._table_index isn't used here
         categories = self.html.css(self._tables_path)
+        # Handle cancelled stages with no results table
+        if not categories:
+            return []
         results_table_html = categories[0]
         # Results table is empty
         if not results_table_html or not results_table_html.css_first("tbody > tr"):
-            raise ExpectedParsingError("Results table not in page HTML")
+            return []
         # parse TTT table
         if self.stage_type() == "TTT":
             table = self._ttt_results(results_table_html, fields)

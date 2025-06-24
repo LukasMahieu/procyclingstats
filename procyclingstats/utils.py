@@ -73,8 +73,24 @@ def time_to_timedelta(time: str) -> datetime.timedelta:
     :param time: Time to convert.
     :return: Timedelta object.
     """
-    [hours, minutes, seconds] = [int(value) for value in time.split(":")]
-    return datetime.timedelta(hours=hours, minutes=minutes, seconds=seconds)
+    try:
+        # Clean up the time string and handle malformed data
+        cleaned_time = time.strip()
+        
+        # Check for obviously malformed data that doesn't look like time
+        if not cleaned_time or cleaned_time == "-" or "," in cleaned_time:
+            return datetime.timedelta(0)
+            
+        # Split by colon and validate we have 3 parts
+        time_parts = cleaned_time.split(":")
+        if len(time_parts) != 3:
+            return datetime.timedelta(0)
+            
+        [hours, minutes, seconds] = [int(value.strip()) for value in time_parts]
+        return datetime.timedelta(hours=hours, minutes=minutes, seconds=seconds)
+    except (ValueError, IndexError):
+        # Return zero timedelta for any parsing errors
+        return datetime.timedelta(0)
 
 def format_time(time: str) -> str:
     """
