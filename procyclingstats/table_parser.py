@@ -172,26 +172,58 @@ class TableParser:
         return values
 
     def rider_url(self) -> List[str]:
-        return self._filter_a_elements("rider", True)
+        rider_urls = self._filter_a_elements("rider", True)
+        # Handle mismatch between table rows and rider elements
+        if len(rider_urls) != self.table_length:
+            # Pad with empty strings if we have fewer rider URLs than table rows
+            while len(rider_urls) < self.table_length:
+                rider_urls.append("")
+            # Truncate if we have more rider URLs than table rows
+            rider_urls = rider_urls[:self.table_length]
+        return rider_urls
 
     def rider_name(self) -> List[str]:
-        return self._filter_a_elements("rider", False)
+        rider_names = self._filter_a_elements("rider", False)
+        # Handle mismatch between table rows and rider elements
+        if len(rider_names) != self.table_length:
+            # Pad with empty strings if we have fewer rider names than table rows
+            while len(rider_names) < self.table_length:
+                rider_names.append("")
+            # Truncate if we have more rider names than table rows
+            rider_names = rider_names[:self.table_length]
+        return rider_names
 
     def team_url(self) -> List[str]:
         try:
             return self.parse_extra_column("Team", str, get_href=True)
         except Exception:
-            return self._filter_a_elements(
+            team_urls = self._filter_a_elements(
                 "team", True, lambda x: True if x.text() != "view" else False
             )
+            # Handle mismatch between table rows and team elements
+            if len(team_urls) != self.table_length:
+                # Pad with empty strings if we have fewer team URLs than table rows
+                while len(team_urls) < self.table_length:
+                    team_urls.append("")
+                # Truncate if we have more team URLs than table rows
+                team_urls = team_urls[:self.table_length]
+            return team_urls
 
     def team_name(self) -> List[str]:
         try:
             return self.parse_extra_column("Team", str, get_href=False)
         except Exception:
-            return self._filter_a_elements(
+            team_names = self._filter_a_elements(
                 "team", False, lambda x: True if x.text() != "view" else False
             )
+            # Handle mismatch between table rows and team elements
+            if len(team_names) != self.table_length:
+                # Pad with empty strings if we have fewer team names than table rows
+                while len(team_names) < self.table_length:
+                    team_names.append("")
+                # Truncate if we have more team names than table rows
+                team_names = team_names[:self.table_length]
+            return team_names
 
     def stage_url(self) -> List[Optional[str]]:
         """

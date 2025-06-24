@@ -89,31 +89,49 @@ class RaceStartlist(Scraper):
         casual_rider_fields = ["rider_name", "rider_url", "nationality"]
         table = []
         startlist_html = self.html.css_first(".startlist_v4")
+        if not startlist_html:
+            return table
+            
         for team_html in startlist_html.css(".ridersCont"):
-            riders_table = team_html.css_first("ul")
-            table_parser = TableParser(riders_table)
-            rider_f_to_parse = [f for f in casual_rider_fields if f in fields]
-            table_parser.parse(rider_f_to_parse)
-            # add rider numbers to the table if needed
-            if "rider_number" in fields:
-                numbers = []
-                for row in riders_table.css("li > .bib"):
-                    num = row.text(deep=False).split(" ")[0]
-                    if num.isnumeric():
-                        numbers.append(int(num))
-                    else:
-                        numbers.append(None)
-                table_parser.extend_table("rider_number", numbers)
-            # add team names to the table if needed
-            if "team_name" in fields:
-                team_name = team_html.css_first("a").text()
-                team_names = [team_name for _ in range(len(table_parser.table))]
-                table_parser.extend_table("team_name", team_names)
-            # add team urls to the table if needed
-            if "team_url" in fields:
-                team_url = team_html.css_first("a").attributes["href"]
-                team_urls = [team_url for _ in range(len(table_parser.table))]
-                table_parser.extend_table("team_url", team_urls)
-            # add team table to startlist table
-            table.extend(table_parser.table)
+            try:
+                riders_table = team_html.css_first("ul")
+                if not riders_table:
+                    continue
+                    
+                table_parser = TableParser(riders_table)
+                rider_f_to_parse = [f for f in casual_rider_fields if f in fields]
+                table_parser.parse(rider_f_to_parse)
+                
+                # add rider numbers to the table if needed
+                if "rider_number" in fields:
+                    numbers = []
+                    for row in riders_table.css("li > .bib"):
+                        num = row.text(deep=False).split(" ")[0]
+                        if num.isnumeric():
+                            numbers.append(int(num))
+                        else:
+                            numbers.append(None)
+                    table_parser.extend_table("rider_number", numbers)
+                    
+                # add team names to the table if needed
+                if "team_name" in fields:
+                    team_link = team_html.css_first("a")
+                    if team_link:
+                        team_name = team_link.text()
+                        team_names = [team_name for _ in range(len(table_parser.table))]
+                        table_parser.extend_table("team_name", team_names)
+                        
+                # add team urls to the table if needed
+                if "team_url" in fields:
+                    team_link = team_html.css_first("a")
+                    if team_link and "href" in team_link.attributes:
+                        team_url = team_link.attributes["href"]
+                        team_urls = [team_url for _ in range(len(table_parser.table))]
+                        table_parser.extend_table("team_url", team_urls)
+                        
+                # add team table to startlist table
+                table.extend(table_parser.table)
+            except Exception:
+                # Skip problematic teams instead of failing completely
+                continue
         return table
