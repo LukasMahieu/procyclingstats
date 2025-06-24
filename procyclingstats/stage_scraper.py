@@ -140,7 +140,7 @@ class Stage(Scraper):
         :return: Race Ranking
         """
         race_ranking = self._stage_info_by_label("Race ranking")
-        if race_ranking:
+        if race_ranking and race_ranking.lower() != "n/a":
             return int(race_ranking)
         return None
 
