@@ -33,7 +33,13 @@ class Race(Scraper):
 
         :return: Year when the race occured.
         """
-        return int(self.html.css_first("span.hideIfMobile").text())
+        year_element = self.html.css_first("span.hideIfMobile")
+        if not year_element:
+            raise ExpectedParsingError("Race year unavailable.")
+        year_text = year_element.text().strip()
+        # Extract just the year part (e.g., "2025" from "2025 \xa0 » \xa0 112th ")
+        year_part = year_text.split()[0]
+        return int(year_part)
 
     def name(self) -> str:
         """
@@ -42,6 +48,8 @@ class Race(Scraper):
         :return: Name of the race, e.g. ``Tour de France``.
         """
         display_name_html = self.html.css_first(".page-title > .main > h1")
+        if not display_name_html:
+            raise ExpectedParsingError("Race name unavailable.")
         return display_name_html.text()
 
     def is_one_day_race(self) -> bool:
@@ -64,6 +72,8 @@ class Race(Scraper):
         :return: 2 chars long country code in uppercase.
         """
         nationality_html = self.html.css_first(".page-title > .main > span.flag")
+        if not nationality_html:
+            raise ExpectedParsingError("Race nationality unavailable.")
         flag_class = nationality_html.attributes["class"]
         return flag_class.split(" ")[1].upper()  # type: ignore
 
@@ -85,6 +95,8 @@ class Race(Scraper):
         :return: Startdate in ``YYYY-MM-DD`` format.
         """
         startdate_html = self.html.css_first(".infolist > li > div:nth-child(2)")
+        if not startdate_html:
+            raise ExpectedParsingError("Race startdate unavailable (race may not have occurred yet).")
         return startdate_html.text()
 
     def enddate(self) -> str:
@@ -93,7 +105,10 @@ class Race(Scraper):
 
         :return: Enddate in ``YYYY-MM-DD`` format.
         """
-        enddate_html = self.html.css(".infolist > li > div:nth-child(2)")[1]
+        enddate_elements = self.html.css(".infolist > li > div:nth-child(2)")
+        if len(enddate_elements) < 2:
+            raise ExpectedParsingError("Race enddate unavailable (race may not have occurred yet).")
+        enddate_html = enddate_elements[1]
         return enddate_html.text()
 
     def category(self) -> str:
@@ -102,7 +117,10 @@ class Race(Scraper):
 
         :return: Race category e.g. ``Men Elite``.
         """
-        category_html = self.html.css(".infolist > li > div:nth-child(2)")[2]
+        category_elements = self.html.css(".infolist > li > div:nth-child(2)")
+        if len(category_elements) < 3:
+            raise ExpectedParsingError("Race category unavailable (race may not have occurred yet).")
+        category_html = category_elements[2]
         return category_html.text()
 
     def uci_tour(self) -> str:
@@ -111,7 +129,10 @@ class Race(Scraper):
 
         :return: UCI Tour of the race e.g. ``UCI Worldtour``.
         """
-        uci_tour_html = self.html.css(".infolist > li > div:nth-child(2)")[3]
+        uci_tour_elements = self.html.css(".infolist > li > div:nth-child(2)")
+        if len(uci_tour_elements) < 4:
+            raise ExpectedParsingError("UCI Tour unavailable (race may not have occurred yet).")
+        uci_tour_html = uci_tour_elements[3]
         return uci_tour_html.text()
 
     def prev_editions_select(self) -> List[Dict[str, str]]:
