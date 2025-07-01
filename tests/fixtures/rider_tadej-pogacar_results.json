@@ -1,0 +1,2113 @@
+{
+  "categories_select": [
+    {
+      "text": "-",
+      "value": null
+    },
+    {
+      "text": "ME - Men Elite",
+      "value": "1"
+    },
+    {
+      "text": "WE - Women Elite",
+      "value": "2"
+    },
+    {
+      "text": "MU - Men U23",
+      "value": "3"
+    },
+    {
+      "text": "MJ - Men Juniors",
+      "value": "4"
+    },
+    {
+      "text": "WJ - Women Juniors",
+      "value": "6"
+    },
+    {
+      "text": "-",
+      "value": "0"
+    },
+    {
+      "text": "WU - Women U23",
+      "value": "7"
+    },
+    {
+      "text": "ME + WE",
+      "value": "8"
+    },
+    {
+      "text": "MJ + WJ",
+      "value": "9"
+    },
+    {
+      "text": "MU17",
+      "value": "10"
+    },
+    {
+      "text": "WU17",
+      "value": "11"
+    },
+    {
+      "text": "MU17 - 2nd years",
+      "value": "22"
+    },
+    {
+      "text": "MU17 - 1st years",
+      "value": "21"
+    },
+    {
+      "text": "WU17 - 1st years",
+      "value": "23"
+    },
+    {
+      "text": "WU17 - 2nd years",
+      "value": "24"
+    }
+  ],
+  "final_n_km_results": null,
+  "nations_select": [
+    {
+      "text": "-",
+      "value": null
+    },
+    {
+      "text": "Albania",
+      "value": "al"
+    },
+    {
+      "text": "Algeria",
+      "value": "dz"
+    },
+    {
+      "text": "Andorra",
+      "value": "ad"
+    },
+    {
+      "text": "Angola",
+      "value": "ao"
+    },
+    {
+      "text": "Argentina",
+      "value": "ar"
+    },
+    {
+      "text": "Australia",
+      "value": "au"
+    },
+    {
+      "text": "Austria",
+      "value": "at"
+    },
+    {
+      "text": "Azerbaijan",
+      "value": "az"
+    },
+    {
+      "text": "Belarus",
+      "value": "by"
+    },
+    {
+      "text": "Belgium",
+      "value": "be"
+    },
+    {
+      "text": "Belize",
+      "value": "bz"
+    },
+    {
+      "text": "Bermuda",
+      "value": "bm"
+    },
+    {
+      "text": "Botswana",
+      "value": "bw"
+    },
+    {
+      "text": "Brazil",
+      "value": "br"
+    },
+    {
+      "text": "Bulgaria",
+      "value": "bg"
+    },
+    {
+      "text": "Burkina Faso",
+      "value": "bf"
+    },
+    {
+      "text": "Cameroon",
+      "value": "cm"
+    },
+    {
+      "text": "Canada",
+      "value": "ca"
+    },
+    {
+      "text": "Chile",
+      "value": "cl"
+    },
+    {
+      "text": "China",
+      "value": "cn"
+    },
+    {
+      "text": "Colombia",
+      "value": "co"
+    },
+    {
+      "text": "Costa Rica",
+      "value": "cr"
+    },
+    {
+      "text": "Croatia",
+      "value": "hr"
+    },
+    {
+      "text": "Cuba",
+      "value": "cu"
+    },
+    {
+      "text": "Cura\u00e7ao",
+      "value": "cw"
+    },
+    {
+      "text": "Cyprus",
+      "value": "cy"
+    },
+    {
+      "text": "Czech Republic",
+      "value": "cz"
+    },
+    {
+      "text": "Denmark",
+      "value": "dk"
+    },
+    {
+      "text": "Dominican Republic",
+      "value": "do"
+    },
+    {
+      "text": "Ecuador",
+      "value": "ec"
+    },
+    {
+      "text": "El Salvador",
+      "value": "sv"
+    },
+    {
+      "text": "Eritrea",
+      "value": "er"
+    },
+    {
+      "text": "Estonia",
+      "value": "ee"
+    },
+    {
+      "text": "Ethiopia",
+      "value": "et"
+    },
+    {
+      "text": "Finland",
+      "value": "fi"
+    },
+    {
+      "text": "France",
+      "value": "fr"
+    },
+    {
+      "text": "Georgia",
+      "value": "ge"
+    },
+    {
+      "text": "Germany",
+      "value": "de"
+    },
+    {
+      "text": "Great Britain",
+      "value": "gb"
+    },
+    {
+      "text": "Greece",
+      "value": "gr"
+    },
+    {
+      "text": "Guatemala",
+      "value": "gt"
+    },
+    {
+      "text": "Hongkong",
+      "value": "hk"
+    },
+    {
+      "text": "Hungary",
+      "value": "hu"
+    },
+    {
+      "text": "India",
+      "value": "in"
+    },
+    {
+      "text": "Indonesia",
+      "value": "id"
+    },
+    {
+      "text": "Iran",
+      "value": "ir"
+    },
+    {
+      "text": "Ireland",
+      "value": "ie"
+    },
+    {
+      "text": "Israel",
+      "value": "il"
+    },
+    {
+      "text": "Italy",
+      "value": "it"
+    },
+    {
+      "text": "Ivory Coast",
+      "value": "ci"
+    },
+    {
+      "text": "Japan",
+      "value": "jp"
+    },
+    {
+      "text": "Kazakhstan",
+      "value": "kz"
+    },
+    {
+      "text": "Kenya",
+      "value": "ke"
+    },
+    {
+      "text": "Kosovo",
+      "value": "xk"
+    },
+    {
+      "text": "Kuwait",
+      "value": "kw"
+    },
+    {
+      "text": "Laos",
+      "value": "la"
+    },
+    {
+      "text": "Latvia",
+      "value": "lv"
+    },
+    {
+      "text": "Lebanon",
+      "value": "lb"
+    },
+    {
+      "text": "Lithuania",
+      "value": "lt"
+    },
+    {
+      "text": "Luxembourg",
+      "value": "lu"
+    },
+    {
+      "text": "Malaysia",
+      "value": "my"
+    },
+    {
+      "text": "Mauritius",
+      "value": "mu"
+    },
+    {
+      "text": "Mexico",
+      "value": "mx"
+    },
+    {
+      "text": "Moldova",
+      "value": "md"
+    },
+    {
+      "text": "Mongolia",
+      "value": "mn"
+    },
+    {
+      "text": "Montenegro",
+      "value": "me"
+    },
+    {
+      "text": "Morocco",
+      "value": "ma"
+    },
+    {
+      "text": "Namibia",
+      "value": "na"
+    },
+    {
+      "text": "Netherlands",
+      "value": "nl"
+    },
+    {
+      "text": "New Zealand",
+      "value": "nz"
+    },
+    {
+      "text": "North Macedonia",
+      "value": "mk"
+    },
+    {
+      "text": "Norway",
+      "value": "no"
+    },
+    {
+      "text": "Pakistan",
+      "value": "pk"
+    },
+    {
+      "text": "Panama",
+      "value": "pa"
+    },
+    {
+      "text": "Philippines",
+      "value": "ph"
+    },
+    {
+      "text": "Poland",
+      "value": "pl"
+    },
+    {
+      "text": "Portugal",
+      "value": "pt"
+    },
+    {
+      "text": "Puerto Rico",
+      "value": "pr"
+    },
+    {
+      "text": "Romania",
+      "value": "ro"
+    },
+    {
+      "text": "Russia",
+      "value": "ru"
+    },
+    {
+      "text": "Rwanda",
+      "value": "rw"
+    },
+    {
+      "text": "Serbia",
+      "value": "rs"
+    },
+    {
+      "text": "Singapore",
+      "value": "sg"
+    },
+    {
+      "text": "Slovakia",
+      "value": "sk"
+    },
+    {
+      "text": "Slovenia",
+      "value": "si"
+    },
+    {
+      "text": "South Africa",
+      "value": "za"
+    },
+    {
+      "text": "South Korea",
+      "value": "kr"
+    },
+    {
+      "text": "Spain",
+      "value": "es"
+    },
+    {
+      "text": "Sweden",
+      "value": "se"
+    },
+    {
+      "text": "Switzerland",
+      "value": "ch"
+    },
+    {
+      "text": "Syria",
+      "value": "sy"
+    },
+    {
+      "text": "Taiwan",
+      "value": "tw"
+    },
+    {
+      "text": "Thailand",
+      "value": "th"
+    },
+    {
+      "text": "Tunisia",
+      "value": "tn"
+    },
+    {
+      "text": "T\u00fcrkiye",
+      "value": "tr"
+    },
+    {
+      "text": "Uganda",
+      "value": "ug"
+    },
+    {
+      "text": "Ukraine",
+      "value": "ua"
+    },
+    {
+      "text": "United Arab Emirates",
+      "value": "ae"
+    },
+    {
+      "text": "United States",
+      "value": "us"
+    },
+    {
+      "text": "Uruguay",
+      "value": "uy"
+    },
+    {
+      "text": "Uzbekistan",
+      "value": "uz"
+    },
+    {
+      "text": "Venezuela",
+      "value": "ve"
+    }
+  ],
+  "pages_select": [
+    {
+      "text": "1-100",
+      "value": "0"
+    },
+    {
+      "text": "101-200",
+      "value": "100"
+    },
+    {
+      "text": "201-300",
+      "value": "200"
+    },
+    {
+      "text": "301-400",
+      "value": "300"
+    },
+    {
+      "text": "401-500",
+      "value": "400"
+    },
+    {
+      "text": "501-600",
+      "value": "500"
+    },
+    {
+      "text": "601-642",
+      "value": "600"
+    }
+  ],
+  "races_select": [
+    {
+      "text": "-",
+      "value": null
+    },
+    {
+      "text": "Amgen Tour of California",
+      "value": "1071"
+    },
+    {
+      "text": "Amstel Gold Race",
+      "value": "1033"
+    },
+    {
+      "text": "Bretagne Classic - Ouest-France",
+      "value": "1048"
+    },
+    {
+      "text": "Cadel Evans Great Ocean Road Race",
+      "value": "1965"
+    },
+    {
+      "text": "Carpathian Couriers Race U-23",
+      "value": "1394"
+    },
+    {
+      "text": "Cl\u00e1sica Ciclista San Sebasti\u00e1n",
+      "value": "1028"
+    },
+    {
+      "text": "Course de la Paix Juniors",
+      "value": "1063"
+    },
+    {
+      "text": "Crit\u00e9rium du Dauphin\u00e9",
+      "value": "1034"
+    },
+    {
+      "text": "Croatia-Slovenia",
+      "value": "1325"
+    },
+    {
+      "text": "Donostia San Sebastian Klasikoa",
+      "value": "1028"
+    },
+    {
+      "text": "Dwars door Vlaanderen - A travers la Flandre ME",
+      "value": "1118"
+    },
+    {
+      "text": "E3 Saxo Classic",
+      "value": "1038"
+    },
+    {
+      "text": "European Continental Championships ME - ITT",
+      "value": "2536"
+    },
+    {
+      "text": "European Continental Championships ME - Road Race",
+      "value": "2538"
+    },
+    {
+      "text": "European Continental Championships MU - ITT",
+      "value": "7253"
+    },
+    {
+      "text": "European Continental Championships MU - Road Race",
+      "value": "1786"
+    },
+    {
+      "text": "Fl\u00e8che du Sud",
+      "value": "1342"
+    },
+    {
+      "text": "G.P. Palio del Recioto",
+      "value": "1430"
+    },
+    {
+      "text": "G.P. Sportivi Sovilla-La Piccola SanRemo",
+      "value": "1760"
+    },
+    {
+      "text": "Gent-Wevelgem/Grote Prijs A. Noyelle-Ieper",
+      "value": "2568"
+    },
+    {
+      "text": "Gent-Wevelgem/Kattekoers-Ieper",
+      "value": "1450"
+    },
+    {
+      "text": "Giro d'Italia",
+      "value": "1039"
+    },
+    {
+      "text": "Giro del Belvedere",
+      "value": "1438"
+    },
+    {
+      "text": "Giro dell'Emilia",
+      "value": "1074"
+    },
+    {
+      "text": "Giro della Lunigiana",
+      "value": "1090"
+    },
+    {
+      "text": "Giro della Regione Friuli Venezia Giulia",
+      "value": "1434"
+    },
+    {
+      "text": "Giro della Toscana - Memorial Alfredo Martini",
+      "value": "2349"
+    },
+    {
+      "text": "GP Adria Mobil",
+      "value": "1959"
+    },
+    {
+      "text": "GP Capodarco - Comunit\u00e0 di Capodarco",
+      "value": "1363"
+    },
+    {
+      "text": "GP Dell'Arno",
+      "value": "1587"
+    },
+    {
+      "text": "GP G\u00e9n\u00e9ral Patton",
+      "value": "1812"
+    },
+    {
+      "text": "GP Izola",
+      "value": "1871"
+    },
+    {
+      "text": "GP Kranj",
+      "value": "1671"
+    },
+    {
+      "text": "GP Laguna Porec",
+      "value": "1886"
+    },
+    {
+      "text": "Gran Premio Citt\u00e0 di Lugano",
+      "value": "1151"
+    },
+    {
+      "text": "Gran Premio citt\u00e0 di Peccioli - Coppa Sabatini",
+      "value": "1134"
+    },
+    {
+      "text": "Gran Premio Miguel Indurain",
+      "value": "4486"
+    },
+    {
+      "text": "Gran Premio Sportivi di Poggiana - Trofeo Bonin Costruzioni - Gran premio Pasta Zara",
+      "value": "1431"
+    },
+    {
+      "text": "Grand Prix Cycliste de Montr\u00e9al",
+      "value": "1057"
+    },
+    {
+      "text": "Grand Prix Cycliste de Qu\u00e9bec",
+      "value": "1055"
+    },
+    {
+      "text": "Grand Prix Priessnitz spa",
+      "value": "1774"
+    },
+    {
+      "text": "Guido Reybrouck Classic",
+      "value": "2036"
+    },
+    {
+      "text": "Il Lombardia",
+      "value": "1026"
+    },
+    {
+      "text": "Int. RAIFFEISEN Grand Prix Judendorf-Stra\u00dfengel",
+      "value": "1597"
+    },
+    {
+      "text": "Int. Raiffeisen Grand Prix Judendorf/Stra\u00dfengel",
+      "value": "1597"
+    },
+    {
+      "text": "Istarsko Proljece - Istrian Spring Trophy",
+      "value": "1545"
+    },
+    {
+      "text": "Itzulia Basque Country",
+      "value": "1060"
+    },
+    {
+      "text": "Ja\u00e9n Paraiso Interior",
+      "value": "5859"
+    },
+    {
+      "text": "Japan Cup Cycle Road Race",
+      "value": "1093"
+    },
+    {
+      "text": "La Fl\u00e8che Wallonne",
+      "value": "1027"
+    },
+    {
+      "text": "La Vuelta ciclista a Espa\u00f1a",
+      "value": "1051"
+    },
+    {
+      "text": "Li\u00e8ge-Bastogne-Li\u00e8ge",
+      "value": "1047"
+    },
+    {
+      "text": "Mediterranean Games - Road Race",
+      "value": "3088"
+    },
+    {
+      "text": "Milano - Torino",
+      "value": "1080"
+    },
+    {
+      "text": "Milano-Sanremo",
+      "value": "1031"
+    },
+    {
+      "text": "Montichiari - Roncone",
+      "value": "2679"
+    },
+    {
+      "text": "National Championships Slovenia - ITT",
+      "value": "1596"
+    },
+    {
+      "text": "National Championships Slovenia ME - ITT",
+      "value": "1596"
+    },
+    {
+      "text": "National Championships Slovenia ME - Road Race",
+      "value": "2239"
+    },
+    {
+      "text": "National Championships Slovenia MJ - ITT",
+      "value": "3073"
+    },
+    {
+      "text": "National Championships Slovenia MJ - Road Race",
+      "value": "2279"
+    },
+    {
+      "text": "Olympic Games Road Race",
+      "value": "1053"
+    },
+    {
+      "text": "Paris - Nice",
+      "value": "1058"
+    },
+    {
+      "text": "Paris - Roubaix Juniors",
+      "value": "1056"
+    },
+    {
+      "text": "Paris-Roubaix",
+      "value": "1036"
+    },
+    {
+      "text": "Piccolo Giro di Lombardia",
+      "value": "1328"
+    },
+    {
+      "text": "Ronde van Vlaanderen - Tour des Flandres ME",
+      "value": "1023"
+    },
+    {
+      "text": "Ronde van Vlaanderen Beloften",
+      "value": "1020"
+    },
+    {
+      "text": "Santos Tour Down Under",
+      "value": "1066"
+    },
+    {
+      "text": "Strade Bianche",
+      "value": "1192"
+    },
+    {
+      "text": "Tf GD Dorigo MO Biemmereti MO Cristiano Floriani MO Ferramenta Mazzero",
+      "value": "1558"
+    },
+    {
+      "text": "Tirreno-Adriatico",
+      "value": "1025"
+    },
+    {
+      "text": "Tour de France",
+      "value": "1049"
+    },
+    {
+      "text": "Tour de Hongrie",
+      "value": "2091"
+    },
+    {
+      "text": "Tour de l'Avenir",
+      "value": "1018"
+    },
+    {
+      "text": "Tour du Pays de Vaud",
+      "value": "1194"
+    },
+    {
+      "text": "Tour of Croatia",
+      "value": "1962"
+    },
+    {
+      "text": "Tour of Slovenia",
+      "value": "1241"
+    },
+    {
+      "text": "Tre Valli Varesine",
+      "value": "1077"
+    },
+    {
+      "text": "Trofej Pore\u010d - Pore\u010d Trophy",
+      "value": "1442"
+    },
+    {
+      "text": "Trofej Umag - Umag Trophy",
+      "value": "1709"
+    },
+    {
+      "text": "Trofeo Buffoni",
+      "value": "1696"
+    },
+    {
+      "text": "Trofeo Citta di Loano",
+      "value": "1526"
+    },
+    {
+      "text": "Trofeo comune di Vertova Memorial Pietro Merelli",
+      "value": "1559"
+    },
+    {
+      "text": "Trofeo Edil C",
+      "value": "1362"
+    },
+    {
+      "text": "Trofeo Emilio Paganessi",
+      "value": "1689"
+    },
+    {
+      "text": "UAE Tour",
+      "value": "2327"
+    },
+    {
+      "text": "UEC Road European Championships MJ - ITT",
+      "value": "1814"
+    },
+    {
+      "text": "UEC Road European Championships MJ - Road Race",
+      "value": "1817"
+    },
+    {
+      "text": "Volta a la Comunitat Valenciana",
+      "value": "1101"
+    },
+    {
+      "text": "Volta ao Algarve em Bicicleta",
+      "value": "1251"
+    },
+    {
+      "text": "Volta Ciclista a Catalunya",
+      "value": "1037"
+    },
+    {
+      "text": "Vuelta a Andalucia Ruta Ciclista Del Sol",
+      "value": "1191"
+    },
+    {
+      "text": "World Championships - Mixed Relay TTT",
+      "value": "4938"
+    },
+    {
+      "text": "World Championships ME - ITT",
+      "value": "1062"
+    },
+    {
+      "text": "World Championships ME - Road Race",
+      "value": "1021"
+    },
+    {
+      "text": "World Championships MJ - Road Race",
+      "value": "2353"
+    },
+    {
+      "text": "World Championships MU - Road Race",
+      "value": "1460"
+    },
+    {
+      "text": "ZLM tour",
+      "value": "1461"
+    }
+  ],
+  "results": [
+    {
+      "date": "2025-06-15",
+      "rank": 2,
+      "stage_url": "race/dauphine/2025/kom",
+      "stage_name": " Crit\u00e9rium du Dauphin\u00e9 | Mountains classification",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": null,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2025-06-15",
+      "rank": 1,
+      "stage_url": "race/dauphine/2025/points",
+      "stage_name": " Crit\u00e9rium du Dauphin\u00e9 | Points classification",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": null,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2025-06-15",
+      "rank": 1,
+      "stage_url": "race/dauphine/2025/gc",
+      "stage_name": " Crit\u00e9rium du Dauphin\u00e9 | General classification",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": null,
+      "pcs_points": 250,
+      "uci_points": 500.0
+    },
+    {
+      "date": "2025-06-15",
+      "rank": 3,
+      "stage_url": "race/dauphine/2025/stage-8",
+      "stage_name": "Crit\u00e9rium du Dauphin\u00e9 | Stage 8",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 133.3,
+      "pcs_points": 18,
+      "uci_points": 30.0
+    },
+    {
+      "date": "2025-06-14",
+      "rank": 1,
+      "stage_url": "race/dauphine/2025/stage-7",
+      "stage_name": "Crit\u00e9rium du Dauphin\u00e9 | Stage 7",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 131.6,
+      "pcs_points": 50,
+      "uci_points": 60.0
+    },
+    {
+      "date": "2025-06-13",
+      "rank": 1,
+      "stage_url": "race/dauphine/2025/stage-6",
+      "stage_name": "Crit\u00e9rium du Dauphin\u00e9 | Stage 6",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 126.7,
+      "pcs_points": 50,
+      "uci_points": 60.0
+    },
+    {
+      "date": "2025-06-12",
+      "rank": 22,
+      "stage_url": "race/dauphine/2025/stage-5",
+      "stage_name": "Crit\u00e9rium du Dauphin\u00e9 | Stage 5",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 183.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2025-06-11",
+      "rank": 4,
+      "stage_url": "race/dauphine/2025/stage-4",
+      "stage_name": "Crit\u00e9rium du Dauphin\u00e9 | Stage 4 (ITT)",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 17.4,
+      "pcs_points": 13,
+      "uci_points": 25.0
+    },
+    {
+      "date": "2025-06-10",
+      "rank": 44,
+      "stage_url": "race/dauphine/2025/stage-3",
+      "stage_name": "Crit\u00e9rium du Dauphin\u00e9 | Stage 3",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 207.2,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2025-06-09",
+      "rank": 40,
+      "stage_url": "race/dauphine/2025/stage-2",
+      "stage_name": "Crit\u00e9rium du Dauphin\u00e9 | Stage 2",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 204.6,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2025-06-08",
+      "rank": 1,
+      "stage_url": "race/dauphine/2025/stage-1",
+      "stage_name": "Crit\u00e9rium du Dauphin\u00e9 | Stage 1",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 195.8,
+      "pcs_points": 50,
+      "uci_points": 60.0
+    },
+    {
+      "date": "2025-04-27",
+      "rank": 1,
+      "stage_url": "race/liege-bastogne-liege/2025/result",
+      "stage_name": " Li\u00e8ge-Bastogne-Li\u00e8ge",
+      "nationality": "BE",
+      "class": "1.UWT",
+      "distance": 252.0,
+      "pcs_points": 275,
+      "uci_points": 800.0
+    },
+    {
+      "date": "2025-04-23",
+      "rank": 1,
+      "stage_url": "race/la-fleche-wallonne/2025/result",
+      "stage_name": " La Fl\u00e8che Wallonne",
+      "nationality": "BE",
+      "class": "1.UWT",
+      "distance": 205.1,
+      "pcs_points": 225,
+      "uci_points": 400.0
+    },
+    {
+      "date": "2025-04-20",
+      "rank": 2,
+      "stage_url": "race/amstel-gold-race/2025/result",
+      "stage_name": " Amstel Gold Race",
+      "nationality": "NL",
+      "class": "1.UWT",
+      "distance": 255.9,
+      "pcs_points": 150,
+      "uci_points": 400.0
+    },
+    {
+      "date": "2025-04-13",
+      "rank": 2,
+      "stage_url": "race/paris-roubaix/2025/result",
+      "stage_name": " Paris-Roubaix",
+      "nationality": "FR",
+      "class": "1.UWT",
+      "distance": 259.2,
+      "pcs_points": 200,
+      "uci_points": 640.0
+    },
+    {
+      "date": "2025-04-06",
+      "rank": 1,
+      "stage_url": "race/ronde-van-vlaanderen/2025/result",
+      "stage_name": " Ronde van Vlaanderen - Tour des Flandres ME",
+      "nationality": "BE",
+      "class": "1.UWT",
+      "distance": 268.9,
+      "pcs_points": 275,
+      "uci_points": 800.0
+    },
+    {
+      "date": "2025-03-22",
+      "rank": 3,
+      "stage_url": "race/milano-sanremo/2025/result",
+      "stage_name": " Milano-Sanremo",
+      "nationality": "IT",
+      "class": "1.UWT",
+      "distance": 289.0,
+      "pcs_points": 150,
+      "uci_points": 520.0
+    },
+    {
+      "date": "2025-03-08",
+      "rank": 1,
+      "stage_url": "race/strade-bianche/2025/result",
+      "stage_name": " Strade Bianche",
+      "nationality": "IT",
+      "class": "1.UWT",
+      "distance": 213.0,
+      "pcs_points": 225,
+      "uci_points": 400.0
+    },
+    {
+      "date": "2025-02-23",
+      "rank": 2,
+      "stage_url": "race/uae-tour/2025/points",
+      "stage_name": " UAE Tour | Points classification",
+      "nationality": "AE",
+      "class": "2.UWT",
+      "distance": null,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2025-02-23",
+      "rank": 1,
+      "stage_url": "race/uae-tour/2025/gc",
+      "stage_name": " UAE Tour | General classification",
+      "nationality": "AE",
+      "class": "2.UWT",
+      "distance": null,
+      "pcs_points": 250,
+      "uci_points": 300.0
+    },
+    {
+      "date": "2025-02-23",
+      "rank": 1,
+      "stage_url": "race/uae-tour/2025/stage-7",
+      "stage_name": "UAE Tour | Stage 7",
+      "nationality": "AE",
+      "class": "2.UWT",
+      "distance": 176.0,
+      "pcs_points": 50,
+      "uci_points": 40.0
+    },
+    {
+      "date": "2025-02-22",
+      "rank": 43,
+      "stage_url": "race/uae-tour/2025/stage-6",
+      "stage_name": "UAE Tour | Stage 6",
+      "nationality": "AE",
+      "class": "2.UWT",
+      "distance": 165.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2025-02-21",
+      "rank": 36,
+      "stage_url": "race/uae-tour/2025/stage-5",
+      "stage_name": "UAE Tour | Stage 5",
+      "nationality": "AE",
+      "class": "2.UWT",
+      "distance": 160.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2025-02-20",
+      "rank": 46,
+      "stage_url": "race/uae-tour/2025/stage-4",
+      "stage_name": "UAE Tour | Stage 4",
+      "nationality": "AE",
+      "class": "2.UWT",
+      "distance": 181.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2025-02-19",
+      "rank": 1,
+      "stage_url": "race/uae-tour/2025/stage-3",
+      "stage_name": "UAE Tour | Stage 3",
+      "nationality": "AE",
+      "class": "2.UWT",
+      "distance": 181.0,
+      "pcs_points": 50,
+      "uci_points": 40.0
+    },
+    {
+      "date": "2025-02-18",
+      "rank": 3,
+      "stage_url": "race/uae-tour/2025/stage-2",
+      "stage_name": "UAE Tour | Stage 2 (ITT)",
+      "nationality": "AE",
+      "class": "2.UWT",
+      "distance": 12.2,
+      "pcs_points": 18,
+      "uci_points": 20.0
+    },
+    {
+      "date": "2025-02-17",
+      "rank": 10,
+      "stage_url": "race/uae-tour/2025/stage-1",
+      "stage_name": "UAE Tour | Stage 1",
+      "nationality": "AE",
+      "class": "2.UWT",
+      "distance": 138.0,
+      "pcs_points": 1,
+      "uci_points": 1.0
+    },
+    {
+      "date": "2024-10-12",
+      "rank": 1,
+      "stage_url": "race/il-lombardia/2024/result",
+      "stage_name": " Il Lombardia",
+      "nationality": "IT",
+      "class": "1.UWT",
+      "distance": 255.0,
+      "pcs_points": 275,
+      "uci_points": 800.0
+    },
+    {
+      "date": "2024-10-08",
+      "rank": 991,
+      "stage_url": "race/tre-valli-varesine/2024/result",
+      "stage_name": " Tre Valli Varesine",
+      "nationality": "IT",
+      "class": "1.Pro",
+      "distance": 168.33,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-10-05",
+      "rank": 1,
+      "stage_url": "race/giro-dell-emilia/2024/result",
+      "stage_name": " Giro dell'Emilia",
+      "nationality": "IT",
+      "class": "1.Pro",
+      "distance": 215.3,
+      "pcs_points": 125,
+      "uci_points": 200.0
+    },
+    {
+      "date": "2024-09-29",
+      "rank": 1,
+      "stage_url": "race/world-championship/2024/result",
+      "stage_name": " World Championships ME - Road Race",
+      "nationality": "CH",
+      "class": "WC",
+      "distance": 273.9,
+      "pcs_points": 350,
+      "uci_points": 900.0
+    },
+    {
+      "date": "2024-09-15",
+      "rank": 1,
+      "stage_url": "race/gp-montreal/2024/result",
+      "stage_name": " Grand Prix Cycliste de Montr\u00e9al",
+      "nationality": "CA",
+      "class": "1.UWT",
+      "distance": 209.1,
+      "pcs_points": 225,
+      "uci_points": 500.0
+    },
+    {
+      "date": "2024-09-13",
+      "rank": 7,
+      "stage_url": "race/gp-quebec/2024/result",
+      "stage_name": " Grand Prix Cycliste de Qu\u00e9bec",
+      "nationality": "CA",
+      "class": "1.UWT",
+      "distance": 201.6,
+      "pcs_points": 60,
+      "uci_points": 150.0
+    },
+    {
+      "date": "2024-07-21",
+      "rank": 2,
+      "stage_url": "race/tour-de-france/2024/kom",
+      "stage_name": " Tour de France | Mountains classification",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": null,
+      "pcs_points": 25,
+      "uci_points": 150.0
+    },
+    {
+      "date": "2024-07-21",
+      "rank": 4,
+      "stage_url": "race/tour-de-france/2024/points",
+      "stage_name": " Tour de France | Points classification",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": null,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-07-21",
+      "rank": 1,
+      "stage_url": "race/tour-de-france/2024/gc",
+      "stage_name": " Tour de France | General classification",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": null,
+      "pcs_points": 500,
+      "uci_points": 1300.0
+    },
+    {
+      "date": "2024-07-21",
+      "rank": 1,
+      "stage_url": "race/tour-de-france/2024/stage-21",
+      "stage_name": "Tour de France | Stage 21 (ITT)",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 33.7,
+      "pcs_points": 100,
+      "uci_points": 210.0
+    },
+    {
+      "date": "2024-07-20",
+      "rank": 1,
+      "stage_url": "race/tour-de-france/2024/stage-20",
+      "stage_name": "Tour de France | Stage 20",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 132.8,
+      "pcs_points": 100,
+      "uci_points": 210.0
+    },
+    {
+      "date": "2024-07-19",
+      "rank": 1,
+      "stage_url": "race/tour-de-france/2024/stage-19",
+      "stage_name": "Tour de France | Stage 19",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 144.6,
+      "pcs_points": 100,
+      "uci_points": 210.0
+    },
+    {
+      "date": "2024-07-18",
+      "rank": 44,
+      "stage_url": "race/tour-de-france/2024/stage-18",
+      "stage_name": "Tour de France | Stage 18",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 179.5,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-07-17",
+      "rank": 27,
+      "stage_url": "race/tour-de-france/2024/stage-17",
+      "stage_name": "Tour de France | Stage 17",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 177.8,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-07-16",
+      "rank": 37,
+      "stage_url": "race/tour-de-france/2024/stage-16",
+      "stage_name": "Tour de France | Stage 16",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 188.6,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-07-14",
+      "rank": 1,
+      "stage_url": "race/tour-de-france/2024/stage-15",
+      "stage_name": "Tour de France | Stage 15",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 197.7,
+      "pcs_points": 100,
+      "uci_points": 210.0
+    },
+    {
+      "date": "2024-07-13",
+      "rank": 1,
+      "stage_url": "race/tour-de-france/2024/stage-14",
+      "stage_name": "Tour de France | Stage 14",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 151.9,
+      "pcs_points": 100,
+      "uci_points": 210.0
+    },
+    {
+      "date": "2024-07-12",
+      "rank": 9,
+      "stage_url": "race/tour-de-france/2024/stage-13",
+      "stage_name": "Tour de France | Stage 13",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 165.3,
+      "pcs_points": 14,
+      "uci_points": 35.0
+    },
+    {
+      "date": "2024-07-11",
+      "rank": 23,
+      "stage_url": "race/tour-de-france/2024/stage-12",
+      "stage_name": "Tour de France | Stage 12",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 203.6,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-07-10",
+      "rank": 2,
+      "stage_url": "race/tour-de-france/2024/stage-11",
+      "stage_name": "Tour de France | Stage 11",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 211.0,
+      "pcs_points": 70,
+      "uci_points": 150.0
+    },
+    {
+      "date": "2024-07-09",
+      "rank": 29,
+      "stage_url": "race/tour-de-france/2024/stage-10",
+      "stage_name": "Tour de France | Stage 10",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 187.3,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-07-07",
+      "rank": 44,
+      "stage_url": "race/tour-de-france/2024/stage-9",
+      "stage_name": "Tour de France | Stage 9",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 199.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-07-06",
+      "rank": 13,
+      "stage_url": "race/tour-de-france/2024/stage-8",
+      "stage_name": "Tour de France | Stage 8",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 183.4,
+      "pcs_points": 4,
+      "uci_points": 15.0
+    },
+    {
+      "date": "2024-07-05",
+      "rank": 2,
+      "stage_url": "race/tour-de-france/2024/stage-7",
+      "stage_name": "Tour de France | Stage 7 (ITT)",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 25.3,
+      "pcs_points": 70,
+      "uci_points": 150.0
+    },
+    {
+      "date": "2024-07-04",
+      "rank": 34,
+      "stage_url": "race/tour-de-france/2024/stage-6",
+      "stage_name": "Tour de France | Stage 6",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 163.5,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-07-03",
+      "rank": 35,
+      "stage_url": "race/tour-de-france/2024/stage-5",
+      "stage_name": "Tour de France | Stage 5",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 177.4,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-07-02",
+      "rank": 1,
+      "stage_url": "race/tour-de-france/2024/stage-4",
+      "stage_name": "Tour de France | Stage 4",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 139.6,
+      "pcs_points": 100,
+      "uci_points": 210.0
+    },
+    {
+      "date": "2024-07-01",
+      "rank": 38,
+      "stage_url": "race/tour-de-france/2024/stage-3",
+      "stage_name": "Tour de France | Stage 3",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 230.8,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-06-30",
+      "rank": 14,
+      "stage_url": "race/tour-de-france/2024/stage-2",
+      "stage_name": "Tour de France | Stage 2",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 199.2,
+      "pcs_points": 2,
+      "uci_points": 10.0
+    },
+    {
+      "date": "2024-06-29",
+      "rank": 4,
+      "stage_url": "race/tour-de-france/2024/stage-1",
+      "stage_name": "Tour de France | Stage 1",
+      "nationality": "FR",
+      "class": "2.UWT",
+      "distance": 206.0,
+      "pcs_points": 40,
+      "uci_points": 90.0
+    },
+    {
+      "date": "2024-05-26",
+      "rank": 1,
+      "stage_url": "race/giro-d-italia/2024/kom",
+      "stage_name": " Giro d'Italia | Mountains classification",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": null,
+      "pcs_points": 80,
+      "uci_points": 180.0
+    },
+    {
+      "date": "2024-05-26",
+      "rank": 5,
+      "stage_url": "race/giro-d-italia/2024/points",
+      "stage_name": " Giro d'Italia | Points classification",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": null,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-05-26",
+      "rank": 1,
+      "stage_url": "race/giro-d-italia/2024/gc",
+      "stage_name": " Giro d'Italia | General classification",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": null,
+      "pcs_points": 400,
+      "uci_points": 1100.0
+    },
+    {
+      "date": "2024-05-26",
+      "rank": 74,
+      "stage_url": "race/giro-d-italia/2024/stage-21",
+      "stage_name": "Giro d'Italia | Stage 21",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 125.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-05-25",
+      "rank": 1,
+      "stage_url": "race/giro-d-italia/2024/stage-20",
+      "stage_name": "Giro d'Italia | Stage 20",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 184.0,
+      "pcs_points": 80,
+      "uci_points": 180.0
+    },
+    {
+      "date": "2024-05-24",
+      "rank": 21,
+      "stage_url": "race/giro-d-italia/2024/stage-19",
+      "stage_name": "Giro d'Italia | Stage 19",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 157.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-05-23",
+      "rank": 30,
+      "stage_url": "race/giro-d-italia/2024/stage-18",
+      "stage_name": "Giro d'Italia | Stage 18",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 178.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-05-22",
+      "rank": 2,
+      "stage_url": "race/giro-d-italia/2024/stage-17",
+      "stage_name": "Giro d'Italia | Stage 17",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 159.0,
+      "pcs_points": 50,
+      "uci_points": 130.0
+    },
+    {
+      "date": "2024-05-21",
+      "rank": 1,
+      "stage_url": "race/giro-d-italia/2024/stage-16",
+      "stage_name": "Giro d'Italia | Stage 16",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 118.4,
+      "pcs_points": 80,
+      "uci_points": 180.0
+    },
+    {
+      "date": "2024-05-19",
+      "rank": 1,
+      "stage_url": "race/giro-d-italia/2024/stage-15",
+      "stage_name": "Giro d'Italia | Stage 15",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 222.0,
+      "pcs_points": 80,
+      "uci_points": 180.0
+    },
+    {
+      "date": "2024-05-18",
+      "rank": 2,
+      "stage_url": "race/giro-d-italia/2024/stage-14",
+      "stage_name": "Giro d'Italia | Stage 14 (ITT)",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 31.2,
+      "pcs_points": 50,
+      "uci_points": 130.0
+    },
+    {
+      "date": "2024-05-17",
+      "rank": 20,
+      "stage_url": "race/giro-d-italia/2024/stage-13",
+      "stage_name": "Giro d'Italia | Stage 13",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 179.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-05-16",
+      "rank": 13,
+      "stage_url": "race/giro-d-italia/2024/stage-12",
+      "stage_name": "Giro d'Italia | Stage 12",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 193.0,
+      "pcs_points": 3,
+      "uci_points": 10.0
+    },
+    {
+      "date": "2024-05-15",
+      "rank": 27,
+      "stage_url": "race/giro-d-italia/2024/stage-11",
+      "stage_name": "Giro d'Italia | Stage 11",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 207.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-05-14",
+      "rank": 17,
+      "stage_url": "race/giro-d-italia/2024/stage-10",
+      "stage_name": "Giro d'Italia | Stage 10",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 142.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-05-12",
+      "rank": 27,
+      "stage_url": "race/giro-d-italia/2024/stage-9",
+      "stage_name": "Giro d'Italia | Stage 9",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 214.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-05-11",
+      "rank": 1,
+      "stage_url": "race/giro-d-italia/2024/stage-8",
+      "stage_name": "Giro d'Italia | Stage 8",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 152.0,
+      "pcs_points": 80,
+      "uci_points": 180.0
+    },
+    {
+      "date": "2024-05-10",
+      "rank": 1,
+      "stage_url": "race/giro-d-italia/2024/stage-7",
+      "stage_name": "Giro d'Italia | Stage 7 (ITT)",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 40.6,
+      "pcs_points": 80,
+      "uci_points": 180.0
+    },
+    {
+      "date": "2024-05-09",
+      "rank": 18,
+      "stage_url": "race/giro-d-italia/2024/stage-6",
+      "stage_name": "Giro d'Italia | Stage 6",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 180.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-05-08",
+      "rank": 29,
+      "stage_url": "race/giro-d-italia/2024/stage-5",
+      "stage_name": "Giro d'Italia | Stage 5",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 178.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-05-07",
+      "rank": 30,
+      "stage_url": "race/giro-d-italia/2024/stage-4",
+      "stage_name": "Giro d'Italia | Stage 4",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 190.0,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-05-06",
+      "rank": 46,
+      "stage_url": "race/giro-d-italia/2024/stage-3",
+      "stage_name": "Giro d'Italia | Stage 3",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 166.3,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-05-05",
+      "rank": 1,
+      "stage_url": "race/giro-d-italia/2024/stage-2",
+      "stage_name": "Giro d'Italia | Stage 2",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 161.0,
+      "pcs_points": 80,
+      "uci_points": 180.0
+    },
+    {
+      "date": "2024-05-04",
+      "rank": 3,
+      "stage_url": "race/giro-d-italia/2024/stage-1",
+      "stage_name": "Giro d'Italia | Stage 1",
+      "nationality": "IT",
+      "class": "2.UWT",
+      "distance": 140.0,
+      "pcs_points": 35,
+      "uci_points": 95.0
+    },
+    {
+      "date": "2024-04-21",
+      "rank": 1,
+      "stage_url": "race/liege-bastogne-liege/2024/result",
+      "stage_name": " Li\u00e8ge-Bastogne-Li\u00e8ge",
+      "nationality": "BE",
+      "class": "1.UWT",
+      "distance": 254.5,
+      "pcs_points": 275,
+      "uci_points": 800.0
+    },
+    {
+      "date": "2024-03-24",
+      "rank": 1,
+      "stage_url": "race/volta-a-catalunya/2024/stage-7-kom",
+      "stage_name": "Volta Ciclista a Catalunya | Mountains classification",
+      "nationality": "ES",
+      "class": "2.UWT",
+      "distance": null,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-03-24",
+      "rank": 1,
+      "stage_url": "race/volta-a-catalunya/2024/stage-7-points",
+      "stage_name": "Volta Ciclista a Catalunya | Points classification",
+      "nationality": "ES",
+      "class": "2.UWT",
+      "distance": null,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-03-24",
+      "rank": 1,
+      "stage_url": "race/volta-a-catalunya/2024/gc",
+      "stage_name": " Volta Ciclista a Catalunya | General classification",
+      "nationality": "ES",
+      "class": "2.UWT",
+      "distance": null,
+      "pcs_points": 250,
+      "uci_points": 400.0
+    },
+    {
+      "date": "2024-03-24",
+      "rank": 1,
+      "stage_url": "race/volta-a-catalunya/2024/stage-7",
+      "stage_name": "Volta Ciclista a Catalunya | Stage 7",
+      "nationality": "ES",
+      "class": "2.UWT",
+      "distance": 145.3,
+      "pcs_points": 50,
+      "uci_points": 50.0
+    },
+    {
+      "date": "2024-03-23",
+      "rank": 1,
+      "stage_url": "race/volta-a-catalunya/2024/stage-6",
+      "stage_name": "Volta Ciclista a Catalunya | Stage 6",
+      "nationality": "ES",
+      "class": "2.UWT",
+      "distance": 154.7,
+      "pcs_points": 50,
+      "uci_points": 50.0
+    },
+    {
+      "date": "2024-03-22",
+      "rank": 31,
+      "stage_url": "race/volta-a-catalunya/2024/stage-5",
+      "stage_name": "Volta Ciclista a Catalunya | Stage 5",
+      "nationality": "ES",
+      "class": "2.UWT",
+      "distance": 167.3,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-03-21",
+      "rank": 25,
+      "stage_url": "race/volta-a-catalunya/2024/stage-4",
+      "stage_name": "Volta Ciclista a Catalunya | Stage 4",
+      "nationality": "ES",
+      "class": "2.UWT",
+      "distance": 169.2,
+      "pcs_points": 0,
+      "uci_points": 0
+    },
+    {
+      "date": "2024-03-20",
+      "rank": 1,
+      "stage_url": "race/volta-a-catalunya/2024/stage-3",
+      "stage_name": "Volta Ciclista a Catalunya | Stage 3",
+      "nationality": "ES",
+      "class": "2.UWT",
+      "distance": 176.7,
+      "pcs_points": 50,
+      "uci_points": 50.0
+    },
+    {
+      "date": "2024-03-19",
+      "rank": 1,
+      "stage_url": "race/volta-a-catalunya/2024/stage-2",
+      "stage_name": "Volta Ciclista a Catalunya | Stage 2",
+      "nationality": "ES",
+      "class": "2.UWT",
+      "distance": 186.5,
+      "pcs_points": 50,
+      "uci_points": 50.0
+    },
+    {
+      "date": "2024-03-18",
+      "rank": 2,
+      "stage_url": "race/volta-a-catalunya/2024/stage-1",
+      "stage_name": "Volta Ciclista a Catalunya | Stage 1",
+      "nationality": "ES",
+      "class": "2.UWT",
+      "distance": 173.9,
+      "pcs_points": 30,
+      "uci_points": 30.0
+    },
+    {
+      "date": "2024-03-16",
+      "rank": 3,
+      "stage_url": "race/milano-sanremo/2024/result",
+      "stage_name": " Milano-Sanremo",
+      "nationality": "IT",
+      "class": "1.UWT",
+      "distance": 288.0,
+      "pcs_points": 150,
+      "uci_points": 520.0
+    },
+    {
+      "date": "2024-03-02",
+      "rank": 1,
+      "stage_url": "race/strade-bianche/2024/result",
+      "stage_name": " Strade Bianche",
+      "nationality": "IT",
+      "class": "1.UWT",
+      "distance": 215.0,
+      "pcs_points": 225,
+      "uci_points": 400.0
+    },
+    {
+      "date": "2023-10-07",
+      "rank": 1,
+      "stage_url": "race/il-lombardia/2023/result",
+      "stage_name": " Il Lombardia",
+      "nationality": "IT",
+      "class": "1.UWT",
+      "distance": 238.0,
+      "pcs_points": 275,
+      "uci_points": 800.0
+    },
+    {
+      "date": "2023-10-03",
+      "rank": 5,
+      "stage_url": "race/tre-valli-varesine/2023/result",
+      "stage_name": " Tre Valli Varesine",
+      "nationality": "IT",
+      "class": "1.Pro",
+      "distance": 196.54,
+      "pcs_points": 45,
+      "uci_points": 85.0
+    },
+    {
+      "date": "2023-09-30",
+      "rank": 2,
+      "stage_url": "race/giro-dell-emilia/2023/result",
+      "stage_name": " Giro dell'Emilia",
+      "nationality": "IT",
+      "class": "1.Pro",
+      "distance": 204.1,
+      "pcs_points": 85,
+      "uci_points": 150.0
+    },
+    {
+      "date": "2023-09-14",
+      "rank": 3,
+      "stage_url": "race/gp-citta-di-peccioli/2023/result",
+      "stage_name": " Gran Premio citt\u00e0 di Peccioli - Coppa Sabatini",
+      "nationality": "IT",
+      "class": "1.Pro",
+      "distance": 198.9,
+      "pcs_points": 60,
+      "uci_points": 125.0
+    },
+    {
+      "date": "2023-09-13",
+      "rank": 4,
+      "stage_url": "race/giro-di-toscana/2023/result",
+      "stage_name": " Giro della Toscana - Memorial Alfredo Martini",
+      "nationality": "IT",
+      "class": "1.1",
+      "distance": 191.55,
+      "pcs_points": 32,
+      "uci_points": 60.0
+    },
+    {
+      "date": "2023-08-11",
+      "rank": 21,
+      "stage_url": "race/world-championship-itt/2023/result",
+      "stage_name": " World Championships ME - ITT",
+      "nationality": "GB",
+      "class": "WC",
+      "distance": 47.8,
+      "pcs_points": 10,
+      "uci_points": 3.0
+    }
+  ],
+  "seasons_select": [
+    {
+      "text": "-",
+      "value": null
+    },
+    {
+      "text": "2025",
+      "value": "2025"
+    },
+    {
+      "text": "2024",
+      "value": "2024"
+    },
+    {
+      "text": "2023",
+      "value": "2023"
+    },
+    {
+      "text": "2022",
+      "value": "2022"
+    },
+    {
+      "text": "2021",
+      "value": "2021"
+    },
+    {
+      "text": "2020",
+      "value": "2020"
+    },
+    {
+      "text": "2019",
+      "value": "2019"
+    },
+    {
+      "text": "2018",
+      "value": "2018"
+    },
+    {
+      "text": "2017",
+      "value": "2017"
+    },
+    {
+      "text": "2016",
+      "value": "2016"
+    },
+    {
+      "text": "2015",
+      "value": "2015"
+    }
+  ],
+  "stage_types_select": [
+    {
+      "text": "-",
+      "value": null
+    },
+    {
+      "text": "Stage",
+      "value": "1"
+    },
+    {
+      "text": "Prologue",
+      "value": "2"
+    },
+    {
+      "text": "Time Trial",
+      "value": "3"
+    },
+    {
+      "text": "General classification",
+      "value": "4"
+    },
+    {
+      "text": "Points classification",
+      "value": "5"
+    },
+    {
+      "text": "Youth classification",
+      "value": "6"
+    },
+    {
+      "text": "Mountains classification",
+      "value": "7"
+    },
+    {
+      "text": "One day race",
+      "value": "8"
+    },
+    {
+      "text": "Criterium",
+      "value": "9"
+    },
+    {
+      "text": "Teams classification",
+      "value": "10"
+    }
+  ]
+}

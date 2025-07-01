@@ -47,6 +47,20 @@ class Race(Scraper):
 
         :return: Name of the race, e.g. ``Tour de France``.
         """
+        # Try new structure first
+        h1_element = self.html.css_first("h1")
+        if h1_element:
+            text = h1_element.text()
+            if "»" in text:
+                parts = text.split("»")
+                if len(parts) > 1:
+                    race_name = parts[1].strip()
+                    # Remove edition number if present (e.g., "109th Tour de France" -> "Tour de France")
+                    import re
+                    race_name = re.sub(r'^\d+(?:st|nd|rd|th)\s+', '', race_name)
+                    return race_name
+        
+        # Fallback to original selector
         display_name_html = self.html.css_first(".page-title > .main > h1")
         if not display_name_html:
             raise ExpectedParsingError("Race name unavailable.")
@@ -58,6 +72,14 @@ class Race(Scraper):
 
         :return: Whether given race is one day race.
         """
+        # Check for stage tables first
+        stage_tables = self.html.css("table.basic")
+        for table in stage_tables:
+            table_text = table.text()
+            if "Stage" in table_text and ("Date" in table_text or "Day" in table_text):
+                return False
+        
+        # Fallback to original method
         titles = self.html.css("div > div > h3")
         titles = [] if not titles else titles
         for title_html in titles:
@@ -71,6 +93,27 @@ class Race(Scraper):
 
         :return: 2 chars long country code in uppercase.
         """
+        # Try new structure first - look for flag in page title area
+        page_title = self.html.css_first(".page-title")
+        if page_title:
+            flag_elements = page_title.css("span[class*='flag']")
+            for flag_elem in flag_elements:
+                flag_class = flag_elem.attributes.get("class", "")
+                # Look for flag classes like "flag fr w32" or "flag fr"
+                parts = flag_class.split()
+                if len(parts) >= 2 and parts[0] == "flag" and len(parts[1]) == 2:
+                    return parts[1].upper()
+        
+        # Fallback to original method
+        flag_elements = self.html.css("span[class*='flag']")
+        for flag_elem in flag_elements:
+            flag_class = flag_elem.attributes.get("class", "")
+            # Look for flag classes like "flag fr" or "flag gb"
+            parts = flag_class.split()
+            if len(parts) >= 2 and parts[0] == "flag":
+                return parts[1].upper()
+        
+        # Fallback to original selector
         nationality_html = self.html.css_first(".page-title > .main > span.flag")
         if not nationality_html:
             raise ExpectedParsingError("Race nationality unavailable.")
@@ -83,6 +126,16 @@ class Race(Scraper):
 
         :return: Edition as int.
         """
+        # Try new structure first - look for edition in H1
+        h1_element = self.html.css_first("h1")
+        if h1_element:
+            text = h1_element.text()
+            import re
+            edition_match = re.search(r'(\d+)(?:st|nd|rd|th)', text)
+            if edition_match:
+                return int(edition_match.group(1))
+        
+        # Fallback to original selector
         edition_html = self.html.css_first(".page-title > .main > span + font")
         if edition_html is not None:
             return int(edition_html.text()[:-2])
@@ -94,6 +147,18 @@ class Race(Scraper):
 
         :return: Startdate in ``YYYY-MM-DD`` format.
         """
+        # Try new structure first - keyvalue list
+        keyvalue_list = self.html.css_first('ul.list.keyvalueList')
+        if keyvalue_list:
+            for li in keyvalue_list.css('li'):
+                title_elem = li.css_first('.title')
+                value_elem = li.css_first('.value')
+                if title_elem and value_elem:
+                    title = title_elem.text().strip().rstrip(':')
+                    if title == 'Startdate':
+                        return value_elem.text().strip()
+        
+        # Fallback to original method
         startdate_html = self.html.css_first(".infolist > li > div:nth-child(2)")
         if not startdate_html:
             raise ExpectedParsingError("Race startdate unavailable (race may not have occurred yet).")
@@ -105,6 +170,18 @@ class Race(Scraper):
 
         :return: Enddate in ``YYYY-MM-DD`` format.
         """
+        # Try new structure first - keyvalue list
+        keyvalue_list = self.html.css_first('ul.list.keyvalueList')
+        if keyvalue_list:
+            for li in keyvalue_list.css('li'):
+                title_elem = li.css_first('.title')
+                value_elem = li.css_first('.value')
+                if title_elem and value_elem:
+                    title = title_elem.text().strip().rstrip(':')
+                    if title == 'Enddate':
+                        return value_elem.text().strip()
+        
+        # Fallback to original method
         enddate_elements = self.html.css(".infolist > li > div:nth-child(2)")
         if len(enddate_elements) < 2:
             raise ExpectedParsingError("Race enddate unavailable (race may not have occurred yet).")
@@ -117,6 +194,18 @@ class Race(Scraper):
 
         :return: Race category e.g. ``Men Elite``.
         """
+        # Try new structure first - keyvalue list
+        keyvalue_list = self.html.css_first('ul.list.keyvalueList')
+        if keyvalue_list:
+            for li in keyvalue_list.css('li'):
+                title_elem = li.css_first('.title')
+                value_elem = li.css_first('.value')
+                if title_elem and value_elem:
+                    title = title_elem.text().strip().rstrip(':')
+                    if title == 'Category':
+                        return value_elem.text().strip()
+        
+        # Fallback to original method
         category_elements = self.html.css(".infolist > li > div:nth-child(2)")
         if len(category_elements) < 3:
             raise ExpectedParsingError("Race category unavailable (race may not have occurred yet).")
@@ -129,6 +218,18 @@ class Race(Scraper):
 
         :return: UCI Tour of the race e.g. ``UCI Worldtour``.
         """
+        # Try new structure first - keyvalue list
+        keyvalue_list = self.html.css_first('ul.list.keyvalueList')
+        if keyvalue_list:
+            for li in keyvalue_list.css('li'):
+                title_elem = li.css_first('.title')
+                value_elem = li.css_first('.value')
+                if title_elem and value_elem:
+                    title = title_elem.text().strip().rstrip(':')
+                    if title == 'UCI Tour':
+                        return value_elem.text().strip()
+        
+        # Fallback to original method
         uci_tour_elements = self.html.css(".infolist > li > div:nth-child(2)")
         if len(uci_tour_elements) < 4:
             raise ExpectedParsingError("UCI Tour unavailable (race may not have occurred yet).")
@@ -173,10 +274,15 @@ class Race(Scraper):
             return []
 
         fields = parse_table_fields_args(args, available_fields)
-        stages_table_html = self.html.css_first(
-            "div:not(.mg_r2) > div > \
-            span > table.basic"
-        )
+        
+        # Find the stages table - look for table with Stage column
+        stages_table_html = None
+        for table in self.html.css("table.basic"):
+            table_text = table.text()
+            if "Stage" in table_text and ("Date" in table_text or "Day" in table_text):
+                stages_table_html = table
+                break
+        
         if not stages_table_html:
             return []
         # remove rest day table rows
@@ -231,10 +337,15 @@ class Race(Scraper):
 
         fields = parse_table_fields_args(args, available_fields)
         orig_fields = fields
-        winners_html = self.html.css(
-            "div:not(.mg_r2) > div > \
-            span > table.basic"
-        )[1]
+        
+        # Find the winners table - look for table with Stage and Winner columns
+        winners_html = None
+        for table in self.html.css("table.basic"):
+            table_text = table.text()
+            if "Stage" in table_text and "Winner" in table_text:
+                winners_html = table
+                break
+        
         if not winners_html:
             return []
         # remove rest day table rows

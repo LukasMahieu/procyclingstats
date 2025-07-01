@@ -104,7 +104,12 @@ class FixturesUtils:
                 # get HTML of scraper object from fixtures
                 html = self.get_html_fixture(url)
                 # add new scraper object that is ready for parsing to the list
-                objects_to_test.append(scraper_class(url, html, False))
+                scraper_obj = scraper_class.__new__(scraper_class)
+                # Convert relative URL to absolute URL for proper relative_url() method
+                from procyclingstats.scraper import Scraper
+                abs_url = f"{Scraper.BASE_URL}{url}"
+                scraper_obj._Scraper__init_with_url(abs_url, html, False)
+                objects_to_test.append(scraper_obj)
         return objects_to_test
 
     def get_urls_from_fixtures_dir(self, file_type: str) -> List[str]:

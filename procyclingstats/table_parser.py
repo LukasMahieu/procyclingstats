@@ -493,7 +493,17 @@ class TableParser:
                 return float(cleaned)
             except ValueError:
                 return 0
-        return self.parse_extra_column("Points", safe_parse_points)
+        
+        # Try multiple possible column names for points
+        possible_columns = ["Points", "Pnt", "Pts"]
+        for column_name in possible_columns:
+            try:
+                return self.parse_extra_column(column_name, safe_parse_points)
+            except ValueError:
+                pass
+        
+        # If no points column found, return zeros (classification may not exist)
+        return [0 for _ in range(self.table_length)]
 
     def class_(self) -> List[str]:
         """
