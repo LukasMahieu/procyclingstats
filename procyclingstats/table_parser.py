@@ -409,8 +409,13 @@ class TableParser:
         profiles = []
         for icon_e in icons_elements:
             classes = icon_e.attributes["class"]
-            if classes and len(classes.split(" ")) >= 3:
-                profiles.append(classes.split(" ")[-1])
+            if classes:
+                class_list = classes.split(" ")
+                # Look for profile class (p1, p2, p3, p4, p5)
+                for cls in class_list:
+                    if cls.startswith("p") and len(cls) == 2 and cls[1].isdigit():
+                        profiles.append(cls)
+                        break
         return profiles
 
     def season(self) -> List[Optional[int]]:
