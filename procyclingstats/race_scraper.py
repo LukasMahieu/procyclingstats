@@ -386,13 +386,12 @@ class Race(Scraper):
 
     def final_5k_stats(self, *args: str) -> List[Dict[str, Any]]:
         """
-        Parses final 5k statistics from HTML (available only on stage races).
-        When race is one day race, empty list is returned.
+        Parses final 5k statistics from HTML (available on both stage races and one-day races).
 
         :param args: Fields that should be contained in returned table. When
             no args are passed, all fields are parsed.
 
-            - rank: Position in the ranking (1, 2, 3, ...).
+            - rank: Position in the ranking (1, 2, 3, ...) for stage races, or "1" for one-day races.
             - profile_icon: Stage difficulty profile (p1, p2, p3, p4, p5).
             - stage_name: Stage name with destination.
             - stage_url: Relative URL to the stage.
@@ -411,9 +410,6 @@ class Race(Scraper):
             "avg_gradient",
         )
         
-        if self.is_one_day_race():
-            return []
-
         fields = parse_table_fields_args(args, available_fields)
         
         # Create new scraper instance with final-5k URL
