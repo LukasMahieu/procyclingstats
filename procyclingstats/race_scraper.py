@@ -383,3 +383,97 @@ class Race(Scraper):
             table_parser.extend_table("stage_name", stage_names)
 
         return table_parser.table
+
+    def final_5k_stats(self, *args: str) -> List[Dict[str, Any]]:
+        """
+        Parses final 5k statistics from HTML (available only on stage races).
+        When race is one day race, empty list is returned.
+
+        :param args: Fields that should be contained in returned table. When
+            no args are passed, all fields are parsed.
+
+            - rank: Position in the ranking (1, 2, 3, ...).
+            - profile_icon: Stage difficulty profile (p1, p2, p3, p4, p5).
+            - stage_name: Stage name with destination.
+            - stage_url: Relative URL to the stage.
+            - vertical_meters: Vertical meters climbed in final 5k.
+            - avg_gradient: Average gradient percentage in final 5k.
+
+        :raises ValueError: When one of args is of invalid value.
+        :return: Table with wanted fields.
+        """
+        available_fields = (
+            "rank",
+            "profile_icon", 
+            "stage_name",
+            "stage_url",
+            "vertical_meters",
+            "avg_gradient",
+        )
+        
+        if self.is_one_day_race():
+            return []
+
+        fields = parse_table_fields_args(args, available_fields)
+        
+        # Create new scraper instance with final-5k URL
+        from .scraper import Scraper
+        final_5k_url = f"{self.relative_url()}/route/final-5k"
+        final_5k_scraper = Scraper(final_5k_url)
+        
+        # Find the final 5k statistics table
+        final_5k_table_html = None
+        for table in final_5k_scraper.html.css("table.basic"):
+            table_text = table.text()
+            if "Vertical meters" in table_text and "Stage" in table_text:
+                final_5k_table_html = table
+                break
+        
+        if not final_5k_table_html:
+            return []
+        
+        # Keep all rows including hidden ones (show more functionality)
+        
+        table_parser = TableParser(final_5k_table_html)
+        
+        # Parse the fields that don't need special handling
+        casual_f_to_parse = [f for f in fields if f in ("stage_name", "stage_url")]
+        table_parser.parse(casual_f_to_parse)
+        
+        # Add rank if needed
+        if "rank" in fields:
+            ranks = table_parser.parse_extra_column(0, str)
+            table_parser.extend_table("rank", ranks)
+        
+        # Add profile icon if needed
+        if "profile_icon" in fields:
+            profile_icons = []
+            for row in final_5k_table_html.css("tbody > tr"):
+                icon_elem = row.css_first("span.icon.profile")
+                if icon_elem:
+                    icon_class = icon_elem.attributes.get("class")
+                    if icon_class:
+                        # Extract profile level (p1, p2, p3, p4, p5)
+                        for part in icon_class.split():
+                            if part.startswith("p") and part[1:].isdigit():
+                                profile_icons.append(part)
+                                break
+                        else:
+                            profile_icons.append(None)
+                    else:
+                        profile_icons.append(None)
+                else:
+                    profile_icons.append(None)
+            table_parser.extend_table("profile_icon", profile_icons)
+        
+        # Add vertical meters if needed
+        if "vertical_meters" in fields:
+            vertical_meters = table_parser.parse_extra_column(3, str)
+            table_parser.extend_table("vertical_meters", vertical_meters)
+        
+        # Add average gradient if needed
+        if "avg_gradient" in fields:
+            avg_gradient = table_parser.parse_extra_column(4, str)
+            table_parser.extend_table("avg_gradient", avg_gradient)
+        
+        return table_parser.table

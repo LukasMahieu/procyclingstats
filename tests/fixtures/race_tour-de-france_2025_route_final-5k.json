@@ -1,0 +1,170 @@
+[
+  {
+    "stage_name": "Stage 14 to Luchon-Superbagn\u00e8res",
+    "stage_url": "race/tour-de-france/2025/stage-14",
+    "rank": "1",
+    "profile_icon": "p5",
+    "vertical_meters": "414",
+    "avg_gradient": "8.3"
+  },
+  {
+    "stage_name": "Stage 16 to Mont Ventoux",
+    "stage_url": "race/tour-de-france/2025/stage-16",
+    "rank": "2",
+    "profile_icon": "p5",
+    "vertical_meters": "410",
+    "avg_gradient": "8.2"
+  },
+  {
+    "stage_name": "Stage 13 (ITT) to Peyragudes",
+    "stage_url": "race/tour-de-france/2025/stage-13",
+    "rank": "3",
+    "profile_icon": "p5",
+    "vertical_meters": "398",
+    "avg_gradient": "8.0"
+  },
+  {
+    "stage_name": "Stage 12 to Hautacam",
+    "stage_url": "race/tour-de-france/2025/stage-12",
+    "rank": "4",
+    "profile_icon": "p5",
+    "vertical_meters": "393",
+    "avg_gradient": "7.9"
+  },
+  {
+    "stage_name": "Stage 18 to Courchevel (Col de la Loze)",
+    "stage_url": "race/tour-de-france/2025/stage-18",
+    "rank": "5",
+    "profile_icon": "p5",
+    "vertical_meters": "338",
+    "avg_gradient": "6.8"
+  },
+  {
+    "stage_name": "Stage 19 to La Plagne",
+    "stage_url": "race/tour-de-france/2025/stage-19",
+    "rank": "6",
+    "profile_icon": "p5",
+    "vertical_meters": "331",
+    "avg_gradient": "6.6"
+  },
+  {
+    "stage_name": "Stage 10 to Le Mont-Dore Puy de Sancy",
+    "stage_url": "race/tour-de-france/2025/stage-10",
+    "rank": "7",
+    "profile_icon": "p3",
+    "vertical_meters": "259",
+    "avg_gradient": "5.2"
+  },
+  {
+    "stage_name": "Stage 7 to M\u00fbr-de-Bretagne (Guerl\u00e9dan)",
+    "stage_url": "race/tour-de-france/2025/stage-7",
+    "rank": "8",
+    "profile_icon": "p3",
+    "vertical_meters": "171",
+    "avg_gradient": "3.4"
+  },
+  {
+    "stage_name": "Stage 6 to Vire Normandie",
+    "stage_url": "race/tour-de-france/2025/stage-6",
+    "rank": "9",
+    "profile_icon": "p3",
+    "vertical_meters": "129",
+    "avg_gradient": "2.6"
+  },
+  {
+    "stage_name": "Stage 8 to Laval (Espace Mayenne)",
+    "stage_url": "race/tour-de-france/2025/stage-8",
+    "rank": "10",
+    "profile_icon": "p1",
+    "vertical_meters": "74",
+    "avg_gradient": "1.5"
+  },
+  {
+    "stage_name": "Stage 2 to Boulogne-sur-Mer",
+    "stage_url": "race/tour-de-france/2025/stage-2",
+    "rank": "11",
+    "profile_icon": "p3",
+    "vertical_meters": "59",
+    "avg_gradient": "1.2"
+  },
+  {
+    "stage_name": "Stage 4 to Rouen",
+    "stage_url": "race/tour-de-france/2025/stage-4",
+    "rank": "12",
+    "profile_icon": "p2",
+    "vertical_meters": "38",
+    "avg_gradient": "0.8"
+  },
+  {
+    "stage_name": "Stage 15 to Carcassonne",
+    "stage_url": "race/tour-de-france/2025/stage-15",
+    "rank": "13",
+    "profile_icon": "p2",
+    "vertical_meters": "34",
+    "avg_gradient": "0.7"
+  },
+  {
+    "stage_name": "Stage 20 to Pontarlier",
+    "stage_url": "race/tour-de-france/2025/stage-20",
+    "rank": "14",
+    "profile_icon": "p2",
+    "vertical_meters": "33",
+    "avg_gradient": "0.7"
+  },
+  {
+    "stage_name": "Stage 9 to Ch\u00e2teauroux",
+    "stage_url": "race/tour-de-france/2025/stage-9",
+    "rank": "15",
+    "profile_icon": "p1",
+    "vertical_meters": "29",
+    "avg_gradient": "0.6"
+  },
+  {
+    "stage_name": "Stage 11 to Toulouse",
+    "stage_url": "race/tour-de-france/2025/stage-11",
+    "rank": "16",
+    "profile_icon": "p1",
+    "vertical_meters": "26",
+    "avg_gradient": "0.5"
+  },
+  {
+    "stage_name": "Stage 1 to Lille M\u00e9tropole",
+    "stage_url": "race/tour-de-france/2025/stage-1",
+    "rank": "17",
+    "profile_icon": "p2",
+    "vertical_meters": "18",
+    "avg_gradient": "0.4"
+  },
+  {
+    "stage_name": "Stage 3 to Dunkerque",
+    "stage_url": "race/tour-de-france/2025/stage-3",
+    "rank": "18",
+    "profile_icon": "p2",
+    "vertical_meters": "14",
+    "avg_gradient": "0.3"
+  },
+  {
+    "stage_name": "Stage 21 to Paris (Champs-\u00c9lys\u00e9es)",
+    "stage_url": "race/tour-de-france/2025/stage-21",
+    "rank": "19",
+    "profile_icon": "p1",
+    "vertical_meters": "10",
+    "avg_gradient": "0.2"
+  },
+  {
+    "stage_name": "Stage 5 (ITT) to Caen",
+    "stage_url": "race/tour-de-france/2025/stage-5",
+    "rank": "20",
+    "profile_icon": "p1",
+    "vertical_meters": "8",
+    "avg_gradient": "0.2"
+  },
+  {
+    "stage_name": "Stage 17 to Valence",
+    "stage_url": "race/tour-de-france/2025/stage-17",
+    "rank": "21",
+    "profile_icon": "p1",
+    "vertical_meters": "6",
+    "avg_gradient": "0.1"
+  }
+]
