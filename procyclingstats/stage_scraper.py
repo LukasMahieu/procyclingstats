@@ -706,6 +706,11 @@ class Stage(Scraper):
         
         :param html_table: HTML table to filter.
         """
+        # Check if this is a teams table by looking at headers
+        headers = html_table.css('thead th')
+        header_texts = [h.text().strip() for h in headers] if headers else []
+        is_teams_table = "Team" in header_texts and "Class" in header_texts
+        
         for row in html_table.css("tbody > tr"):
             columns = row.css("td")
             # Remove empty rows or rows with colspan (like notes/comments)
@@ -716,6 +721,11 @@ class Stage(Scraper):
             elif len(columns) > 7:
                 rider_name_col = row.css_first(".ridername")
                 if rider_name_col and rider_name_col.text().strip() == "":
+                    row.remove()
+            # For teams tables, remove rows that don't have nationality flags
+            elif is_teams_table:
+                flag_in_row = row.css('.flag')
+                if not flag_in_row:
                     row.remove()
 
     def _table_html(
