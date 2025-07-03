@@ -387,7 +387,21 @@ class Stage(Scraper):
         # Handle cancelled stages with no results table
         if not categories:
             return []
-        results_table_html = categories[0]
+        
+        # Find the main results table (the one with time elements, not DNF/DNS table)
+        results_table_html = None
+        for table in categories:
+            tbody = table.css_first("tbody")
+            if tbody and tbody.css("tr"):
+                # Check if this table has time elements (indicates main results)
+                time_elements = table.css(".time")
+                if time_elements:
+                    results_table_html = table
+                    break
+        
+        # Fallback to first table if no table with time elements found
+        if results_table_html is None:
+            results_table_html = categories[0]
         # Results table is empty
         if not results_table_html or not results_table_html.css_first("tbody > tr"):
             return []
@@ -428,10 +442,7 @@ class Stage(Scraper):
                     row.pop("rider_url")
         else:
             # remove rows that aren't results
-            for row in results_table_html.css("tbody > tr"):
-                columns = row.css("td")
-                if len(columns) <= 2 and columns[0].text() == "":
-                    row.remove()
+            self._filter_table_rows(results_table_html)
             table_parser = TableParser(results_table_html)
             table_parser.parse(fields)
             table = table_parser.table
@@ -689,6 +700,24 @@ class Stage(Scraper):
                     return ""
         return ""
 
+    def _filter_table_rows(self, html_table: Node) -> None:
+        """
+        Remove non-data rows from table (empty rows, colspan rows, etc.).
+        
+        :param html_table: HTML table to filter.
+        """
+        for row in html_table.css("tbody > tr"):
+            columns = row.css("td")
+            # Remove empty rows or rows with colspan (like notes/comments)
+            if (len(columns) <= 2 and columns[0].text() == "") or \
+               (len(columns) == 1 and columns[0].attributes.get("colspan")):
+                row.remove()
+            # Remove rows where rider name column is empty (usually index 7 for .ridername class)
+            elif len(columns) > 7:
+                rider_name_col = row.css_first(".ridername")
+                if rider_name_col and rider_name_col.text().strip() == "":
+                    row.remove()
+
     def _table_html(
         self, table: Literal["stage", "gc", "points", "kom", "youth", "teams"]
     ) -> Optional[Node]:
@@ -710,30 +739,36 @@ class Stage(Scraper):
                 if table == "stage":
                     # Stage results: has Time column and many riders (usually 150+)
                     if "Time" in header_texts and len(rows) > 100:
+                        self._filter_table_rows(html_table)
                         return html_table
                 elif table == "gc":
                     # GC results: has "Time won/lost" or similar time-related column and many riders
                     if ("Time won/lost" in header_texts or "Time" in header_texts) and len(rows) > 100:
                         # Make sure it's not the stage results table by checking for time won/lost
                         if "Time won/lost" in header_texts:
+                            self._filter_table_rows(html_table)
                             return html_table
                 elif table == "points":
                     # Points classification: has "Pnt" column and fewer riders (usually first classification table)
                     if "Pnt" in header_texts and len(rows) < 100:
+                        self._filter_table_rows(html_table)
                         return html_table
                 elif table == "kom":
                     # KOM classification: has "Pnt" column, similar to points but might be different table
                     if "Pnt" in header_texts and len(rows) < 100:
                         # Skip if this is the same table we'd return for points
                         # This is a simplification - in practice KOM might be a separate table or not exist
+                        self._filter_table_rows(html_table)
                         return html_table
                 elif table == "youth":
                     # Youth classification: has "Time" column and moderate number of riders (20-50 typically)
                     if "Time" in header_texts and "Time won/lost" in header_texts and 20 <= len(rows) <= 100:
+                        self._filter_table_rows(html_table)
                         return html_table
                 elif table == "teams":
                     # Teams table: has "Team" as a main column (not just in rider info) and "Class" column
                     if "Team" in header_texts and "Class" in header_texts and len(rows) < 50:
+                        self._filter_table_rows(html_table)
                         return html_table
         
         # Fallback to original method
@@ -766,6 +801,8 @@ class Stage(Scraper):
             "rank",
             "rider_name",
             "rider_url",
+            "team_name",
+            "team_url", 
             "pcs_points",
             "uci_points",
             "bonus",
@@ -788,37 +825,133 @@ class Stage(Scraper):
         riders_table = riders_elements.css_first("table")
         teams_elements = HTMLParser(results_table_html.html)  # type: ignore
         teams_table = teams_elements.css_first("table")
-        # remove unwanted rows from both tables
-        riders_table.unwrap_tags(["tr.team"])
-        teams_table.unwrap_tags(["tr:not(.team)"])
-        teams_parser = TableParser(teams_table)
-        teams_parser.parse(team_fields_to_parse)
-        riders_parser = TableParser(riders_table)
-        riders_parser.parse(rider_fields_to_parse)
+        
+        # Check if there are separate team rows (older format)
+        team_rows = results_table_html.css("tr.team")
+        if team_rows:
+            # Use the original logic for older format with separate team rows
+            riders_table.unwrap_tags(["tr.team"])
+            teams_table.unwrap_tags(["tr:not(.team)"])
+            teams_parser = TableParser(teams_table)
+            teams_parser.parse(team_fields_to_parse)
+            riders_parser = TableParser(riders_table)
+            riders_parser.parse(rider_fields_to_parse)
+        else:
+            # Handle newer format where all rows are rider rows
+            # Extract team information from rider rows (first rider per team has team time)
+            riders_parser = TableParser(riders_table)
+            riders_parser.parse(rider_fields_to_parse)
+            
+            # Create teams data from riders data
+            teams_data = []
+            seen_teams = set()
+            
+            for rider_row in riders_parser.table:
+                team_name = rider_row.get('team_name', '')
+                team_url = rider_row.get('team_url', '')
+                rider_rank = rider_row.get('rank')
+                
+                if team_name and team_name not in seen_teams:
+                    seen_teams.add(team_name)
+                    team_entry = {'rank': rider_rank}  # Use the first rider's rank as team rank
+                    
+                    if 'team_name' in team_fields_to_parse:
+                        team_entry['team_name'] = team_name
+                    if 'team_url' in team_fields_to_parse:
+                        team_entry['team_url'] = team_url
+                        
+                    teams_data.append(team_entry)
+            
+            # Create a mock teams_parser with the teams data
+            class MockTeamsParser:
+                def __init__(self, teams_data):
+                    self.table = teams_data
+                    
+                def parse_extra_column(self, col_name, formatter):
+                    # For TTT, we need to extract team times from rider data
+                    # The first rider of each team should have the team time
+                    times = []
+                    for team_entry in self.table:
+                        team_name = team_entry.get('team_name', '')
+                        # Find first rider for this team and get their time
+                        for rider_row in riders_parser.table:
+                            if rider_row.get('team_name') == team_name:
+                                # Parse the rider's time from the HTML
+                                time_value = self._get_team_time_from_riders(team_name, riders_table)
+                                times.append(formatter(time_value) if time_value else None)
+                                break
+                        else:
+                            times.append(None)
+                    return times
+                    
+                def _get_team_time_from_riders(self, team_name, riders_table):
+                    # Find the first rider from this team and extract their time
+                    for row in riders_table.css('tbody > tr'):
+                        team_cell = row.css_first('.cu600')
+                        time_cell = row.css_first('.time')
+                        if team_cell and time_cell:
+                            if team_name in team_cell.text():
+                                time_text = time_cell.text().strip()
+                                return time_text if time_text and time_text != ',,' else '0:00:00'
+                    return '0:00:00'
+                    
+                def extend_table(self, field_name, values):
+                    for i, value in enumerate(values):
+                        if i < len(self.table):
+                            self.table[i][field_name] = value
+            
+            teams_parser = MockTeamsParser(teams_data)
 
         # add time of every rider to the table
         if "time" in fields:
-            team_times = teams_parser.parse_extra_column("Time", format_time)
-            # riders extra times from second HTML table column, if there is no
-            # extra time, time is set to None
-            riders_extra_times = riders_parser.parse_extra_column(
-                1,
-                lambda x: format_time(x.split("+")[1])
-                if len(x.split("+")) >= 2
-                else "0:00:00",
-            )
-
-            riders_parser.extend_table("rider_time", riders_extra_times)
-            teams_parser.extend_table("time", team_times)
-
-            table = join_tables(riders_parser.table, teams_parser.table, "rank")
-            # add team times and rider_extra times together and remove
-            # rider_time field from table
-            for row in table:
-                rider_extra_time = row.pop("rider_time")
-                row["time"] = add_times(row["time"], rider_extra_time)
+            if team_rows:
+                # Original logic for older format
+                team_times = teams_parser.parse_extra_column("Time", format_time)
+                riders_extra_times = riders_parser.parse_extra_column(
+                    1,
+                    lambda x: format_time(x.split("+")[1])
+                    if len(x.split("+")) >= 2
+                    else "0:00:00",
+                )
+                riders_parser.extend_table("rider_time", riders_extra_times)
+                teams_parser.extend_table("time", team_times)
+                
+                table = join_tables(riders_parser.table, teams_parser.table, "rank")
+                for row in table:
+                    rider_extra_time = row.pop("rider_time")
+                    row["time"] = add_times(row["time"], rider_extra_time)
+            else:
+                # For newer format, handle time differently
+                # We need to join by team and assign team time to all riders
+                team_times_dict = {}
+                for team_entry in teams_parser.table:
+                    team_name = team_entry.get('team_name', '')
+                    # Extract team time from the first rider of this team
+                    for row in results_table_html.css('tbody > tr'):
+                        team_cell = row.css_first('.cu600')
+                        time_cell = row.css_first('.time')
+                        if team_cell and time_cell and team_name in team_cell.text():
+                            time_text = time_cell.text().strip()
+                            if time_text and time_text != ',,':
+                                team_times_dict[team_name] = format_time(time_text)
+                            else:
+                                team_times_dict[team_name] = format_time('0:00:00')
+                            break
+                
+                # Add team time to each rider
+                table = riders_parser.table
+                for row in table:
+                    team_name = row.get('team_name', '')
+                    if team_name in team_times_dict:
+                        row['time'] = team_times_dict[team_name]
+                    else:
+                        row['time'] = format_time('0:00:00')
         else:
-            table = join_tables(riders_parser.table, teams_parser.table, "rank")
+            if team_rows:
+                table = join_tables(riders_parser.table, teams_parser.table, "rank")
+            else:
+                # For newer format without time, just use riders table
+                table = riders_parser.table
         # sort by name for consistent testing results (url is in fields by
         # default)
         table.sort(key=lambda x: x["rider_url"])
