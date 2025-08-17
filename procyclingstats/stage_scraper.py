@@ -96,10 +96,11 @@ class Stage(Scraper):
         if page_title:
             text = page_title.text()
             import re
-            distance_match = re.search(r'(\d+(?:\.\d+)?)\s*km', text)
+
+            distance_match = re.search(r"(\d+(?:\.\d+)?)\s*km", text)
             if distance_match:
                 return float(distance_match.group(1))
-        
+
         # Fallback to original method
         distance = self._stage_info_by_label("Distance")
         if distance and distance.strip() != "-":
@@ -140,7 +141,7 @@ class Stage(Scraper):
                 return "ITT"
             if "TTT" in text:
                 return "TTT"
-        
+
         # Fallback to original structure
         stage_name_html = self.html.css_first(".sub > .blue")
         stage_name2_html = self.html.css_first("div.main > h1")
@@ -178,10 +179,11 @@ class Stage(Scraper):
         if temp_str and temp_str.strip() != "-":
             # Extract number from strings like "30 °C"
             import re
-            temp_match = re.search(r'(\d+(?:\.\d+)?)', temp_str)
+
+            temp_match = re.search(r"(\d+(?:\.\d+)?)", temp_str)
             if temp_match:
                 return float(temp_match.group(1))
-        
+
         # Fallback to original labels
         temp_str1 = self._stage_info_by_label("Avg. temp")
         temp_str2 = self._stage_info_by_label("Average temp")
@@ -215,15 +217,17 @@ class Stage(Scraper):
         date = self._stage_info_by_label("Datename")
         if date and date.strip():
             return convert_date(date.split(", ")[0])
-            
+
         # Try original method
         date = self._stage_info_by_label("Date")
         if date and date.strip():
             return convert_date(date.split(", ")[0])
-        
+
         # Fallback: For now, raise an error indicating date is unavailable
         # In future, this could be enhanced to extract date from other sources
-        raise ExpectedParsingError("Stage date unavailable from current HTML structure.")
+        raise ExpectedParsingError(
+            "Stage date unavailable from current HTML structure."
+        )
 
     def departure(self) -> str:
         """
@@ -267,19 +271,14 @@ class Stage(Scraper):
         profile_score = self._stage_info_by_label("ProfileScore")
         if profile_score and profile_score.strip():
             return int(profile_score)
-        
+
         # Fallback to original label
         profile_score = self._stage_info_by_label("Profile")
-<<<<<<< HEAD
         if profile_score:
             try:
                 return safe_int_parse(profile_score)
             except ValueError:
                 return None
-=======
-        if profile_score and profile_score.strip():
-            return int(profile_score)
->>>>>>> 6880856106f692a2bf16c592527c550a3219ef7b
         return None
 
     def pcs_points_scale(self) -> str:
@@ -402,7 +401,7 @@ class Stage(Scraper):
         # Handle cancelled stages with no results table
         if not categories:
             return []
-        
+
         # Find the main results table (the one with time elements, not DNF/DNS table)
         results_table_html = None
         for table in categories:
@@ -413,7 +412,7 @@ class Stage(Scraper):
                 if time_elements:
                     results_table_html = table
                     break
-        
+
         # Fallback to first table if no table with time elements found
         if results_table_html is None:
             results_table_html = categories[0]
@@ -703,7 +702,7 @@ class Stage(Scraper):
                 title_text = title_elem.text().strip().rstrip(":")
                 if label == title_text:
                     return value_elem.text().strip()
-        
+
         # Fallback to original structure
         for row in self.html.css("ul.infolist > li"):
             row_text = row.text(separator="\n").split("\n")
@@ -718,19 +717,20 @@ class Stage(Scraper):
     def _filter_table_rows(self, html_table: Node) -> None:
         """
         Remove non-data rows from table (empty rows, colspan rows, etc.).
-        
+
         :param html_table: HTML table to filter.
         """
         # Check if this is a teams table by looking at headers
-        headers = html_table.css('thead th')
+        headers = html_table.css("thead th")
         header_texts = [h.text().strip() for h in headers] if headers else []
         is_teams_table = "Team" in header_texts and "Class" in header_texts
-        
+
         for row in html_table.css("tbody > tr"):
             columns = row.css("td")
             # Remove empty rows or rows with colspan (like notes/comments)
-            if (len(columns) <= 2 and columns[0].text() == "") or \
-               (len(columns) == 1 and columns[0].attributes.get("colspan")):
+            if (len(columns) <= 2 and columns[0].text() == "") or (
+                len(columns) == 1 and columns[0].attributes.get("colspan")
+            ):
                 row.remove()
             # Remove rows where rider name column is empty (usually index 7 for .ridername class)
             elif len(columns) > 7:
@@ -739,7 +739,7 @@ class Stage(Scraper):
                     row.remove()
             # For teams tables, remove rows that don't have nationality flags
             elif is_teams_table:
-                flag_in_row = row.css('.flag')
+                flag_in_row = row.css(".flag")
                 if not flag_in_row:
                     row.remove()
 
@@ -756,10 +756,10 @@ class Stage(Scraper):
         tables = self.html.css("table.results")
         if tables:
             for i, html_table in enumerate(tables):
-                headers = html_table.css('thead th')
+                headers = html_table.css("thead th")
                 header_texts = [h.text().strip() for h in headers]
-                rows = html_table.css('tbody tr')
-                
+                rows = html_table.css("tbody tr")
+
                 # Identify table type by headers and content
                 if table == "stage":
                     # Stage results: has Time column and many riders (usually 150+)
@@ -768,7 +768,9 @@ class Stage(Scraper):
                         return html_table
                 elif table == "gc":
                     # GC results: has "Time won/lost" or similar time-related column and many riders
-                    if ("Time won/lost" in header_texts or "Time" in header_texts) and len(rows) > 100:
+                    if (
+                        "Time won/lost" in header_texts or "Time" in header_texts
+                    ) and len(rows) > 100:
                         # Make sure it's not the stage results table by checking for time won/lost
                         if "Time won/lost" in header_texts:
                             self._filter_table_rows(html_table)
@@ -787,15 +789,23 @@ class Stage(Scraper):
                         return html_table
                 elif table == "youth":
                     # Youth classification: has "Time" column and moderate number of riders (20-50 typically)
-                    if "Time" in header_texts and "Time won/lost" in header_texts and 20 <= len(rows) <= 100:
+                    if (
+                        "Time" in header_texts
+                        and "Time won/lost" in header_texts
+                        and 20 <= len(rows) <= 100
+                    ):
                         self._filter_table_rows(html_table)
                         return html_table
                 elif table == "teams":
                     # Teams table: has "Team" as a main column (not just in rider info) and "Class" column
-                    if "Team" in header_texts and "Class" in header_texts and len(rows) < 50:
+                    if (
+                        "Team" in header_texts
+                        and "Class" in header_texts
+                        and len(rows) < 50
+                    ):
                         self._filter_table_rows(html_table)
                         return html_table
-        
+
         # Fallback to original method
         categories = self.html.css(".result-cont")
         for i, element in enumerate(self.html.css("ul.restabs > li > a")):
@@ -827,7 +837,7 @@ class Stage(Scraper):
             "rider_name",
             "rider_url",
             "team_name",
-            "team_url", 
+            "team_url",
             "pcs_points",
             "uci_points",
             "bonus",
@@ -850,7 +860,7 @@ class Stage(Scraper):
         riders_table = riders_elements.css_first("table")
         teams_elements = HTMLParser(results_table_html.html)  # type: ignore
         teams_table = teams_elements.css_first("table")
-        
+
         # Check if there are separate team rows (older format)
         team_rows = results_table_html.css("tr.team")
         if team_rows:
@@ -866,65 +876,75 @@ class Stage(Scraper):
             # Extract team information from rider rows (first rider per team has team time)
             riders_parser = TableParser(riders_table)
             riders_parser.parse(rider_fields_to_parse)
-            
+
             # Create teams data from riders data
             teams_data = []
             seen_teams = set()
-            
+
             for rider_row in riders_parser.table:
-                team_name = rider_row.get('team_name', '')
-                team_url = rider_row.get('team_url', '')
-                rider_rank = rider_row.get('rank')
-                
+                team_name = rider_row.get("team_name", "")
+                team_url = rider_row.get("team_url", "")
+                rider_rank = rider_row.get("rank")
+
                 if team_name and team_name not in seen_teams:
                     seen_teams.add(team_name)
-                    team_entry = {'rank': rider_rank}  # Use the first rider's rank as team rank
-                    
-                    if 'team_name' in team_fields_to_parse:
-                        team_entry['team_name'] = team_name
-                    if 'team_url' in team_fields_to_parse:
-                        team_entry['team_url'] = team_url
-                        
+                    team_entry = {
+                        "rank": rider_rank
+                    }  # Use the first rider's rank as team rank
+
+                    if "team_name" in team_fields_to_parse:
+                        team_entry["team_name"] = team_name
+                    if "team_url" in team_fields_to_parse:
+                        team_entry["team_url"] = team_url
+
                     teams_data.append(team_entry)
-            
+
             # Create a mock teams_parser with the teams data
             class MockTeamsParser:
                 def __init__(self, teams_data):
                     self.table = teams_data
-                    
+
                 def parse_extra_column(self, col_name, formatter):
                     # For TTT, we need to extract team times from rider data
                     # The first rider of each team should have the team time
                     times = []
                     for team_entry in self.table:
-                        team_name = team_entry.get('team_name', '')
+                        team_name = team_entry.get("team_name", "")
                         # Find first rider for this team and get their time
                         for rider_row in riders_parser.table:
-                            if rider_row.get('team_name') == team_name:
+                            if rider_row.get("team_name") == team_name:
                                 # Parse the rider's time from the HTML
-                                time_value = self._get_team_time_from_riders(team_name, riders_table)
-                                times.append(formatter(time_value) if time_value else None)
+                                time_value = self._get_team_time_from_riders(
+                                    team_name, riders_table
+                                )
+                                times.append(
+                                    formatter(time_value) if time_value else None
+                                )
                                 break
                         else:
                             times.append(None)
                     return times
-                    
+
                 def _get_team_time_from_riders(self, team_name, riders_table):
                     # Find the first rider from this team and extract their time
-                    for row in riders_table.css('tbody > tr'):
-                        team_cell = row.css_first('.cu600')
-                        time_cell = row.css_first('.time')
+                    for row in riders_table.css("tbody > tr"):
+                        team_cell = row.css_first(".cu600")
+                        time_cell = row.css_first(".time")
                         if team_cell and time_cell:
                             if team_name in team_cell.text():
                                 time_text = time_cell.text().strip()
-                                return time_text if time_text and time_text != ',,' else '0:00:00'
-                    return '0:00:00'
-                    
+                                return (
+                                    time_text
+                                    if time_text and time_text != ",,"
+                                    else "0:00:00"
+                                )
+                    return "0:00:00"
+
                 def extend_table(self, field_name, values):
                     for i, value in enumerate(values):
                         if i < len(self.table):
                             self.table[i][field_name] = value
-            
+
             teams_parser = MockTeamsParser(teams_data)
 
         # add time of every rider to the table
@@ -940,7 +960,7 @@ class Stage(Scraper):
                 )
                 riders_parser.extend_table("rider_time", riders_extra_times)
                 teams_parser.extend_table("time", team_times)
-                
+
                 table = join_tables(riders_parser.table, teams_parser.table, "rank")
                 for row in table:
                     rider_extra_time = row.pop("rider_time")
@@ -950,27 +970,27 @@ class Stage(Scraper):
                 # We need to join by team and assign team time to all riders
                 team_times_dict = {}
                 for team_entry in teams_parser.table:
-                    team_name = team_entry.get('team_name', '')
+                    team_name = team_entry.get("team_name", "")
                     # Extract team time from the first rider of this team
-                    for row in results_table_html.css('tbody > tr'):
-                        team_cell = row.css_first('.cu600')
-                        time_cell = row.css_first('.time')
+                    for row in results_table_html.css("tbody > tr"):
+                        team_cell = row.css_first(".cu600")
+                        time_cell = row.css_first(".time")
                         if team_cell and time_cell and team_name in team_cell.text():
                             time_text = time_cell.text().strip()
-                            if time_text and time_text != ',,':
+                            if time_text and time_text != ",,":
                                 team_times_dict[team_name] = format_time(time_text)
                             else:
-                                team_times_dict[team_name] = format_time('0:00:00')
+                                team_times_dict[team_name] = format_time("0:00:00")
                             break
-                
+
                 # Add team time to each rider
                 table = riders_parser.table
                 for row in table:
-                    team_name = row.get('team_name', '')
+                    team_name = row.get("team_name", "")
                     if team_name in team_times_dict:
-                        row['time'] = team_times_dict[team_name]
+                        row["time"] = team_times_dict[team_name]
                     else:
-                        row['time'] = format_time('0:00:00')
+                        row["time"] = format_time("0:00:00")
         else:
             if team_rows:
                 table = join_tables(riders_parser.table, teams_parser.table, "rank")

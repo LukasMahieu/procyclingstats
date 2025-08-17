@@ -308,7 +308,15 @@ class TableParser:
 
         :return: List of all climb URLs from table.
         """
-        return self._filter_a_elements("location", True)
+        climb_urls = self._filter_a_elements("location", True)
+        # Handle mismatch between table rows and climb elements
+        if len(climb_urls) != self.table_length:
+            # Pad with empty strings if we have fewer climb URLs than table rows
+            while len(climb_urls) < self.table_length:
+                climb_urls.append("")
+            # Truncate if we have more climb URLs than table rows
+            climb_urls = climb_urls[:self.table_length]
+        return climb_urls
 
     def climb_name(self) -> List[str]:
         """
@@ -317,7 +325,15 @@ class TableParser:
 
         :return: List of all climb names from table.
         """
-        return self._filter_a_elements("location", False)
+        climb_names = self._filter_a_elements("location", False)
+        # Handle mismatch between table rows and climb elements
+        if len(climb_names) != self.table_length:
+            # Pad with empty strings if we have fewer climb names than table rows
+            while len(climb_names) < self.table_length:
+                climb_names.append("")
+            # Truncate if we have more climb names than table rows
+            climb_names = climb_names[:self.table_length]
+        return climb_names
 
     def race_url(self) -> List[str]:
         """
