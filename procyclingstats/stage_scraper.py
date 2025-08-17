@@ -11,6 +11,7 @@ from .utils import (
     format_time,
     join_tables,
     parse_table_fields_args,
+    safe_int_parse,
 )
 
 
@@ -134,7 +135,10 @@ class Stage(Scraper):
         """
         vert_meters = self._stage_info_by_label("Vertical meters")
         if vert_meters:
-            return int(vert_meters)
+            try:
+                return safe_int_parse(vert_meters)
+            except ValueError:
+                return None
         return None
 
     def avg_temperature(self) -> Optional[float]:
@@ -159,7 +163,10 @@ class Stage(Scraper):
         """
         race_ranking = self._stage_info_by_label("Race ranking")
         if race_ranking and race_ranking.lower() != "n/a":
-            return int(race_ranking)
+            try:
+                return safe_int_parse(race_ranking)
+            except ValueError:
+                return None
         return None
 
     def date(self) -> str:
@@ -201,7 +208,7 @@ class Stage(Scraper):
 
         :return: Race startlist quality score.
         """
-        return int(self._stage_info_by_label("Startlist quality score"))
+        return safe_int_parse(self._stage_info_by_label("Startlist quality score"))
 
     def profile_score(self) -> Optional[int]:
         """
@@ -211,7 +218,10 @@ class Stage(Scraper):
         """
         profile_score = self._stage_info_by_label("Profile")
         if profile_score:
-            return int(profile_score)
+            try:
+                return safe_int_parse(profile_score)
+            except ValueError:
+                return None
         return None
 
     def pcs_points_scale(self) -> str:

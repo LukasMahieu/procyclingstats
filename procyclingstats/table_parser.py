@@ -5,7 +5,7 @@ import re
 from selectolax.parser import Node
 
 from .errors import ExpectedParsingError, UnexpectedParsingError
-from .utils import add_times, format_time
+from .utils import add_times, format_time, safe_int_parse
 
 
 class TableParser:
@@ -337,7 +337,7 @@ class TableParser:
 
     def age(self) -> List[Optional[int]]:
         ages_elements = self.html_table.css(".age")
-        return [int(age_e.text()) if age_e.text() else None for age_e in ages_elements]
+        return [safe_int_parse(age_e.text()) if age_e.text() else None for age_e in ages_elements]
 
     def nationality(self) -> List[str]:
         flags_elements = self.html_table.css(".flag")
@@ -424,9 +424,9 @@ class TableParser:
         seasons = []
         for season_e in seasons_elements:
             season_e_text = season_e.text()
-            if season_e_text.isnumeric():
-                seasons.append(int(season_e_text))
-            else:
+            try:
+                seasons.append(safe_int_parse(season_e_text))
+            except ValueError:
                 seasons.append(None)
         return seasons
 
@@ -453,7 +453,7 @@ class TableParser:
 
     def prev_rank(self) -> List[Optional[int]]:
         try:
-            return self.parse_extra_column("Prev", lambda x: int(x) if x else None)
+            return self.parse_extra_column("Prev", lambda x: safe_int_parse(x) if x else None)
         except ValueError:
             return [None for _ in range(self.table_length)]
 
@@ -474,11 +474,11 @@ class TableParser:
 
     def pcs_points(self) -> List[Optional[int]]:
         try:
-            return self.parse_extra_column("Pnt", lambda x: int(x) if x else 0)
+            return self.parse_extra_column("Pnt", lambda x: safe_int_parse(x) if x else 0)
         except ValueError:
             try:
                 return self.parse_extra_column(
-                    "PCS points", lambda x: int(x) if x and x.isdigit() else 0
+                    "PCS points", lambda x: safe_int_parse(x) if x else 0
                 )
             except ValueError:
                 return [0 for _ in range(self.table_length)]
@@ -506,13 +506,13 @@ class TableParser:
         return self.parse_extra_column("Class", str)
 
     def first_places(self) -> List[Optional[int]]:
-        return self.parse_extra_column("Wins", lambda x: int(x) if x.isnumeric() else 0)
+        return self.parse_extra_column("Wins", lambda x: safe_int_parse(x) if x and x.strip() else 0)
 
     def second_places(self) -> List[Optional[int]]:
-        return self.parse_extra_column("2nd", lambda x: int(x) if x.isnumeric() else 0)
+        return self.parse_extra_column("2nd", lambda x: safe_int_parse(x) if x and x.strip() else 0)
 
     def third_places(self) -> List[Optional[int]]:
-        return self.parse_extra_column("3rd", lambda x: int(x) if x.isnumeric() else 0)
+        return self.parse_extra_column("3rd", lambda x: safe_int_parse(x) if x and x.strip() else 0)
 
     def distance(self) -> List[float]:
         def safe_parse_distance(x):

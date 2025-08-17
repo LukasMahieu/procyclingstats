@@ -200,3 +200,29 @@ def parse_table_fields_args(args: Tuple[str],
     if args:
         return list(args)
     return list(available_fields)
+
+def safe_int_parse(value: str) -> int:
+    """
+    Safely parse integer from string that may contain parenthetical information.
+    
+    Examples:
+    - "1711" -> 1711
+    - "1711 (1369)" -> 1711  
+    - "42 (abc)" -> 42
+    - "n/a" -> raises ValueError
+    - "" -> raises ValueError
+    
+    :param value: String value to parse
+    :return: Parsed integer
+    :raises ValueError: When value cannot be parsed to integer
+    """
+    if not value or not value.strip():
+        raise ValueError("Empty value")
+    
+    # Clean and extract the main number (before any parentheses)
+    cleaned = value.strip().split("(")[0].strip()
+    
+    if not cleaned or cleaned.lower() == "n/a":
+        raise ValueError("No valid integer found")
+    
+    return int(cleaned)
