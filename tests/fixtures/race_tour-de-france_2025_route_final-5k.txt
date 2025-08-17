@@ -1,0 +1,425 @@
+<!DOCTYPE HTML><html>
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2MNJ20S7SJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2MNJ20S7SJ');
+</script>
+<title>Final 5k</title> 
+<base href="https://www.procyclingstats.com/race.php" /> 
+<link rel="canonical" href="https://www.procyclingstats.com/race/tour-de-france/2025/route/final-5k" /> 
+<script>  var r89 = r89 || {      callAds: [],   pushAd: function(id, name, config) { r89.callAds.push([id, name, config]); }    };  </script>
+  <script async src="https://tags.refinery89.com/procyclingstats.js"></script><meta name="robots" content="noindex">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8"> 
+<meta name="facebook-domain-verification" content="tjwn3jyjupm0t1j8e0sgis3c80x88r" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="v3_scripts_v22.js"></script> 
+<link rel="stylesheet" type="text/css" href="v3_site_v63.css" />
+<link rel="stylesheet" type="text/css" href="v3_site_b33.css" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">  
+<link rel="apple-touch-icon" sizes="180x180" href="images/pcs-logos/icon3/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/pcs-logos/icon3/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/pcs-logos/icon3/favicon-16x16.png">
+<link rel="shortcut icon" type="image/x-icon" href="images/pcs-logos/icon3/favicon.ico" />
+</head>
+<body>
+<div class="wrapper"><header>
+<div class="cont">
+<a class="logo" href="index.php"></a>
+<div class="search"><form action="search.php" class="msearch"><input type="hidden"  id="term" /><input type="text" name="term" id="search" data-page="race" data-url="race/-id-/route/final-5k" placeholder="search" autocomplete="off" /></form></div> 
+<div class="mob-logo"><a class="logo mobile" href="index.php"></a></div>
+<div class="nav"><span class="mob_topnav"><font class="burger_menu"></font><ul class="topnav">
+<li class="" ><a class="menu" href="index.php">Home</a></li>
+<li class="" ><a class="menu" href="races.php">Races<span class="more" href="">&#x25BC;</span></a>
+<ul><li><a  href="race/tour-de-france">Tour de France</a></li>
+<li><a  href="race/giro-d-italia">Giro d'Italia</a></li>
+<li><a  href="race/vuelta-a-espana">La Vuelta ciclista a España</a></li>
+<li><a  href="race/world-championship">World Championships</a></li>
+<li><a  href="race/milano-sanremo">Milano-Sanremo</a></li>
+<li><a  href="race/amstel-gold-race">Amstel Gold Race</a></li>
+<li><a  href="race/tirreno-adriatico">Tirreno-Adriatico</a></li>
+<li><a  href="race/liege-bastogne-liege">Liège-Bastogne-Liège</a></li>
+<li><a  href="race/il-lombardia">Il Lombardia</a></li>
+<li><a  href="race/la-fleche-wallone">La Flèche Wallonne</a></li>
+<li><a  href="race/paris-nice">Paris - Nice</a></li>
+<li><a  href="race/paris-roubaix">Paris-Roubaix</a></li>
+<li><a  href="race/volta-a-catalunya">Volta Ciclista a Catalunya</a></li>
+<li><a  href="race/dauphine">Critérium du Dauphiné</a></li>
+<li><a  href="race/ronde-van-vlaanderen">Tour des Flandres</a></li>
+<li><a  href="race/gent-wevelgem">Gent-Wevelgem in Flanders Fields</a></li>
+<li><a  href="race/san-sebastian">Clásica Ciclista San Sebastián</a></li>
+</ul></li>
+<li class="" ><a class="menu" href="teams.php">Teams<span class="more" href="">&#x25BC;</span></a>
+<ul><li><a  href="team/xds-astana-team-2025">XDS Astana Team</a></li>
+<li><a  href="team/uae-team-emirates-xrg-2025">UAE Team Emirates - XRG</a></li>
+<li><a  href="team/team-visma-lease-a-bike-2025">Team Visma | Lease a Bike</a></li>
+<li><a  href="team/team-picnic-postnl-2025">Team Picnic PostNL</a></li>
+<li><a  href="team/team-jayco-alula-2025">Team Jayco AlUla</a></li>
+<li><a  href="team/soudal-quick-step-2025">Soudal Quick-Step</a></li>
+<li><a  href="team/red-bull-bora-hansgrohe-2025">Red Bull - BORA - hansgrohe</a></li>
+<li><a  href="team/movistar-team-2025">Movistar Team</a></li>
+<li><a  href="team/lidl-trek-2025">Lidl - Trek</a></li>
+<li><a  href="team/ineos-grenadiers-2025">INEOS Grenadiers</a></li>
+<li><a  href="team/groupama-fdj-2025">Groupama - FDJ</a></li>
+<li><a  href="team/ef-education-easypost-2025">EF Education - EasyPost</a></li>
+<li><a  href="team/decathlon-ag2r-la-mondiale-2025">Decathlon AG2R La Mondiale Team</a></li>
+<li><a  href="team/cofidis-2025">Cofidis</a></li>
+<li><a  href="team/bahrain-victorious-2025">Bahrain - Victorious</a></li>
+<li><a  href="team/arkea-b-b-hotels-2025">Arkéa - B&B Hotels</a></li>
+<li><a  href="team/alpecin-deceuninck-2025">Alpecin - Deceuninck</a></li>
+<li><a  href="team/intermarche-wanty-2025">Intermarché - Wanty</a></li>
+</ul></li>
+<li class="" ><a class="menu" href="rankings.php">Rankings</a></li>
+<li class="" ><a class="menu" href="statistics.php">Statistics<span class="more" href="">&#x25BC;</span></a>
+<ul><li><a  href="statistics">Overview</a></li>
+<li><a  href="statistics/riders">Riders</a></li>
+<li><a  href="statistics/teams">Teams</a></li>
+<li><a  href="statistics/grandtours">Grand tours</a></li>
+</ul></li>
+<li class="" ><a class="menu" href="game.php">Game</a></li>
+<li class="tour yellow" ><a class="menu" href="race/tour-de-france/2025">Tour<span class="more" href="">&#x25BC;</span></a>
+<ul><li><a  href="race/tour-de-france/2025/startlist">Startlist</a></li>
+<li><a  href="race/tour-de-france/results/palmares">Palmares</a></li>
+<li><a  href="race/tour-de-france/2025/startlist/top-competitors">Top competitors</a></li>
+<li><a  href="race/tour-de-france/2025/startlist/top-gc-riders">Final GC favorites</a></li>
+<li><a  href="race/tour-de-france/2025/route/stage-profiles">Stage profiles</a></li>
+<li><a  href="race/tour-de-france/2025/teams/top-teams">Best teams</a></li>
+<li><a  href="race/tour-de-france/2025/startlist/form">Riders form</a></li>
+<li><a  href="race/tour-de-france/2025/route/collection-of-statistics">Route statistics</a></li>
+</ul></li>
+<li class="" ><a class="menu" href="quiz.php">Quiz</a></li>
+<li class="" ><a class="menu" href="riders.php">More<span class="more" href="">&#x25BC;</span></a>
+<ul><li><a  href="riders">Riders</a></li>
+<li><a  href="info/contact">Contact us</a></li>
+<li><a  href="info/countdown-to-4-billion-pageviews">Countdown to 4 billion pageviews</a></li>
+<li><a  href="favorite500.php">Favorite500</a></li>
+<li><a  href="info/about-us">About us</a></li>
+<li><a  href="info/sitemap">Sitemap</a></li>
+<li><a  href="info/profile-score-explained">Profile Score</a></li>
+<li><a  href="info/terminology-list">Terminology list</a></li>
+</ul></li>
+<li class="account" ><a class="menu" href="account.php">Account<span class="more" href="">&#x25BC;</span></a>
+<ul><li><a  href="account/overview">My account</a></li>
+<li><a  href="account/follow-riders">My riders</a></li>
+</ul></li>
+<li class="small" ><a class="menu" href="">Road<span class="more" href="">&#x25BC;</span></a>
+<ul><li><a  href="https://cx.procyclingstats.com">Cross</a></li>
+</ul></li>
+<li class="language small" ><a class="menu" href=""><span class="flag gb" style=""></span></a></li>
+<ul></span></div></div></header><div class="content"><div class="SelectNavCont"><div class="selectNav" ><form style="display: block; float: left; "><select style="max-width: 200px; " onChange="window.location.href=this.value; "><option value="race/tour-de-france/2025//route/final-5k" selected>- stage -</option>
+<option value="race/tour-de-france/2025/stage-1/route/final-5k" >Stage 1 | Lille Métropole - Lille Métropole</option>
+<option value="race/tour-de-france/2025/stage-2/route/final-5k" >Stage 2 | Lauwin-Planque - Boulogne-sur-Mer</option>
+<option value="race/tour-de-france/2025/stage-3/route/final-5k" >Stage 3 | Valenciennes - Dunkerque</option>
+<option value="race/tour-de-france/2025/stage-4/route/final-5k" >Stage 4 | Amiens Métropole - Rouen</option>
+<option value="race/tour-de-france/2025/stage-5/route/final-5k" >Stage 5 (ITT) | Caen - Caen</option>
+<option value="race/tour-de-france/2025/stage-6/route/final-5k" >Stage 6 | Bayeux - Vire Normandie</option>
+<option value="race/tour-de-france/2025/stage-7/route/final-5k" >Stage 7 | Saint-Malo - Mûr-de-Bretagne (Guerlédan)</option>
+<option value="race/tour-de-france/2025/stage-8/route/final-5k" >Stage 8 | Saint-Méen-le-Grand - Laval (Espace Mayenne)</option>
+<option value="race/tour-de-france/2025/stage-9/route/final-5k" >Stage 9 | Chinon - Châteauroux</option>
+<option value="race/tour-de-france/2025/stage-10/route/final-5k" >Stage 10 | Ennezat - Le Mont-Dore Puy de Sancy</option>
+<option value="race/tour-de-france/2025/stage-11/route/final-5k" >Stage 11 | Toulouse - Toulouse</option>
+<option value="race/tour-de-france/2025/stage-12/route/final-5k" >Stage 12 | Auch - Hautacam</option>
+<option value="race/tour-de-france/2025/stage-13/route/final-5k" >Stage 13 (ITT) | Loudenvielle - Peyragudes</option>
+<option value="race/tour-de-france/2025/stage-14/route/final-5k" >Stage 14 | Pau - Luchon-Superbagnères</option>
+<option value="race/tour-de-france/2025/stage-15/route/final-5k" >Stage 15 | Muret - Carcassonne</option>
+<option value="race/tour-de-france/2025/stage-16/route/final-5k" >Stage 16 | Montpellier - Mont Ventoux</option>
+<option value="race/tour-de-france/2025/stage-17/route/final-5k" >Stage 17 | Bollène - Valence</option>
+<option value="race/tour-de-france/2025/stage-18/route/final-5k" >Stage 18 | Vif - Courchevel (Col de la Loze)</option>
+<option value="race/tour-de-france/2025/stage-19/route/final-5k" >Stage 19 | Albertville - La Plagne</option>
+<option value="race/tour-de-france/2025/stage-20/route/final-5k" >Stage 20 | Nantua - Pontarlier</option>
+<option value="race/tour-de-france/2025/stage-21/route/final-5k" >Stage 21 | Mantes-la-Ville - Paris (Champs-Élysées)</option>
+</select></form><div class="clear"></div></div><div class="selectNav" ><a class="desk" href="race/tour-de-france/2024/route/final-5k">2024</a><form style="display: block; float: left; "><select style="max-width: 200px; " onChange="window.location.href=this.value; "><option value="race/tour-de-france/2026/route/final-5k" >2026</option>
+<option value="race/tour-de-france/2025/route/final-5k" selected>2025</option>
+<option value="race/tour-de-france/2024/route/final-5k" >2024</option>
+<option value="race/tour-de-france/2023/route/final-5k" >2023</option>
+<option value="race/tour-de-france/2022/route/final-5k" >2022</option>
+<option value="race/tour-de-france/2021/route/final-5k" >2021</option>
+<option value="race/tour-de-france/2020/route/final-5k" >2020</option>
+<option value="race/tour-de-france/2019/route/final-5k" >2019</option>
+<option value="race/tour-de-france/2018/route/final-5k" >2018</option>
+<option value="race/tour-de-france/2017/route/final-5k" >2017</option>
+<option value="race/tour-de-france/2016/route/final-5k" >2016</option>
+<option value="race/tour-de-france/2015/route/final-5k" >2015</option>
+<option value="race/tour-de-france/2014/route/final-5k" >2014</option>
+<option value="race/tour-de-france/2013/route/final-5k" >2013</option>
+<option value="race/tour-de-france/2012/route/final-5k" >2012</option>
+<option value="race/tour-de-france/2011/route/final-5k" >2011</option>
+<option value="race/tour-de-france/2010/route/final-5k" >2010</option>
+<option value="race/tour-de-france/2009/route/final-5k" >2009</option>
+<option value="race/tour-de-france/2008/route/final-5k" >2008</option>
+<option value="race/tour-de-france/2007/route/final-5k" >2007</option>
+<option value="race/tour-de-france/2006/route/final-5k" >2006</option>
+<option value="race/tour-de-france/2005/route/final-5k" >2005</option>
+<option value="race/tour-de-france/2004/route/final-5k" >2004</option>
+<option value="race/tour-de-france/2003/route/final-5k" >2003</option>
+<option value="race/tour-de-france/2002/route/final-5k" >2002</option>
+<option value="race/tour-de-france/2001/route/final-5k" >2001</option>
+<option value="race/tour-de-france/2000/route/final-5k" >2000</option>
+<option value="race/tour-de-france/1999/route/final-5k" >1999</option>
+<option value="race/tour-de-france/1998/route/final-5k" >1998</option>
+<option value="race/tour-de-france/1997/route/final-5k" >1997</option>
+<option value="race/tour-de-france/1996/route/final-5k" >1996</option>
+<option value="race/tour-de-france/1995/route/final-5k" >1995</option>
+<option value="race/tour-de-france/1994/route/final-5k" >1994</option>
+<option value="race/tour-de-france/1993/route/final-5k" >1993</option>
+<option value="race/tour-de-france/1992/route/final-5k" >1992</option>
+<option value="race/tour-de-france/1991/route/final-5k" >1991</option>
+<option value="race/tour-de-france/1990/route/final-5k" >1990</option>
+<option value="race/tour-de-france/1989/route/final-5k" >1989</option>
+<option value="race/tour-de-france/1988/route/final-5k" >1988</option>
+<option value="race/tour-de-france/1987/route/final-5k" >1987</option>
+<option value="race/tour-de-france/1986/route/final-5k" >1986</option>
+<option value="race/tour-de-france/1985/route/final-5k" >1985</option>
+<option value="race/tour-de-france/1984/route/final-5k" >1984</option>
+<option value="race/tour-de-france/1983/route/final-5k" >1983</option>
+<option value="race/tour-de-france/1982/route/final-5k" >1982</option>
+<option value="race/tour-de-france/1981/route/final-5k" >1981</option>
+<option value="race/tour-de-france/1980/route/final-5k" >1980</option>
+<option value="race/tour-de-france/1979/route/final-5k" >1979</option>
+<option value="race/tour-de-france/1978/route/final-5k" >1978</option>
+<option value="race/tour-de-france/1977/route/final-5k" >1977</option>
+<option value="race/tour-de-france/1976/route/final-5k" >1976</option>
+<option value="race/tour-de-france/1975/route/final-5k" >1975</option>
+<option value="race/tour-de-france/1974/route/final-5k" >1974</option>
+<option value="race/tour-de-france/1973/route/final-5k" >1973</option>
+<option value="race/tour-de-france/1972/route/final-5k" >1972</option>
+<option value="race/tour-de-france/1971/route/final-5k" >1971</option>
+<option value="race/tour-de-france/1970/route/final-5k" >1970</option>
+<option value="race/tour-de-france/1969/route/final-5k" >1969</option>
+<option value="race/tour-de-france/1968/route/final-5k" >1968</option>
+<option value="race/tour-de-france/1967/route/final-5k" >1967</option>
+<option value="race/tour-de-france/1966/route/final-5k" >1966</option>
+<option value="race/tour-de-france/1965/route/final-5k" >1965</option>
+<option value="race/tour-de-france/1964/route/final-5k" >1964</option>
+<option value="race/tour-de-france/1963/route/final-5k" >1963</option>
+<option value="race/tour-de-france/1962/route/final-5k" >1962</option>
+<option value="race/tour-de-france/1961/route/final-5k" >1961</option>
+<option value="race/tour-de-france/1960/route/final-5k" >1960</option>
+<option value="race/tour-de-france/1959/route/final-5k" >1959</option>
+<option value="race/tour-de-france/1958/route/final-5k" >1958</option>
+<option value="race/tour-de-france/1957/route/final-5k" >1957</option>
+<option value="race/tour-de-france/1956/route/final-5k" >1956</option>
+<option value="race/tour-de-france/1955/route/final-5k" >1955</option>
+<option value="race/tour-de-france/1954/route/final-5k" >1954</option>
+<option value="race/tour-de-france/1953/route/final-5k" >1953</option>
+<option value="race/tour-de-france/1952/route/final-5k" >1952</option>
+<option value="race/tour-de-france/1951/route/final-5k" >1951</option>
+<option value="race/tour-de-france/1950/route/final-5k" >1950</option>
+<option value="race/tour-de-france/1949/route/final-5k" >1949</option>
+<option value="race/tour-de-france/1948/route/final-5k" >1948</option>
+<option value="race/tour-de-france/1947/route/final-5k" >1947</option>
+<option value="race/tour-de-france/1939/route/final-5k" >1939</option>
+<option value="race/tour-de-france/1938/route/final-5k" >1938</option>
+<option value="race/tour-de-france/1937/route/final-5k" >1937</option>
+<option value="race/tour-de-france/1936/route/final-5k" >1936</option>
+<option value="race/tour-de-france/1935/route/final-5k" >1935</option>
+<option value="race/tour-de-france/1934/route/final-5k" >1934</option>
+<option value="race/tour-de-france/1933/route/final-5k" >1933</option>
+<option value="race/tour-de-france/1932/route/final-5k" >1932</option>
+<option value="race/tour-de-france/1931/route/final-5k" >1931</option>
+<option value="race/tour-de-france/1930/route/final-5k" >1930</option>
+<option value="race/tour-de-france/1929/route/final-5k" >1929</option>
+<option value="race/tour-de-france/1928/route/final-5k" >1928</option>
+<option value="race/tour-de-france/1927/route/final-5k" >1927</option>
+<option value="race/tour-de-france/1926/route/final-5k" >1926</option>
+<option value="race/tour-de-france/1925/route/final-5k" >1925</option>
+<option value="race/tour-de-france/1924/route/final-5k" >1924</option>
+<option value="race/tour-de-france/1923/route/final-5k" >1923</option>
+<option value="race/tour-de-france/1922/route/final-5k" >1922</option>
+<option value="race/tour-de-france/1921/route/final-5k" >1921</option>
+<option value="race/tour-de-france/1920/route/final-5k" >1920</option>
+<option value="race/tour-de-france/1919/route/final-5k" >1919</option>
+<option value="race/tour-de-france/1914/route/final-5k" >1914</option>
+<option value="race/tour-de-france/1913/route/final-5k" >1913</option>
+<option value="race/tour-de-france/1912/route/final-5k" >1912</option>
+<option value="race/tour-de-france/1911/route/final-5k" >1911</option>
+<option value="race/tour-de-france/1910/route/final-5k" >1910</option>
+<option value="race/tour-de-france/1909/route/final-5k" >1909</option>
+<option value="race/tour-de-france/1908/route/final-5k" >1908</option>
+<option value="race/tour-de-france/1907/route/final-5k" >1907</option>
+<option value="race/tour-de-france/1906/route/final-5k" >1906</option>
+<option value="race/tour-de-france/1905/route/final-5k" >1905</option>
+<option value="race/tour-de-france/1904/route/final-5k" >1904</option>
+<option value="race/tour-de-france/1903/route/final-5k" >1903</option>
+</select></form><a class="desk" href="race/tour-de-france/2026/route/final-5k">2026</a><div class="clear"></div></div><div class="clear"></div></div><div class="pagenav-cont"><span><a class="" href="race/tour-de-france/2025/statistics">Statistics</a></span>
+<span><a class="" href="race/tour-de-france/2025/startlist">Startlist<span>&#x25BC;</span></a><ul><li><a href="race/tour-de-france/2025/startlist/startlist">Startlist</a></li>
+<li><a href="race/tour-de-france/2025/startlist/top-competitors">Top competitors</a></li>
+<li><a href="race/tour-de-france/2025/startlist/startlist-quality">Startlist quality</a></li>
+<li><a href="race/tour-de-france/2025/startlist/debutants">Debutants</a></li>
+</ul></span>
+<span><a class="" href="race/tour-de-france/2025/miscellaneous">Miscellaneous</a></span>
+<span><a class="" href="race/tour-de-france/2025/teams">Teams<span>&#x25BC;</span></a><ul><li><a href="race/tour-de-france/2025/teams/teams">Teams</a></li>
+<li><a href="race/tour-de-france/2025/teams/top-teams">Top teams</a></li>
+<li><a href="race/tour-de-france/2025/teams/dropouts">Dropouts</a></li>
+<li><a href="race/tour-de-france/2025/teams/prizemoney">Prizemoney</a></li>
+</ul></span>
+<span><a class="" href="race/tour-de-france/2025/nations">Nations</a></span>
+<span><a class="cur" href="race/tour-de-france/2025/route">Route<span>&#x25BC;</span></a><ul><li><a href="race/tour-de-france/2025/route/stages">Stages</a></li>
+<li><a href="race/tour-de-france/2025/route/stage-profiles">All stage profiles</a></li>
+<li><a href="race/tour-de-france/2025/route/hardest-stages">Hardest stages</a></li>
+<li><a href="race/tour-de-france/2025/route/climbs">Climbs</a></li>
+</ul></span>
+<span><a class="" href="race/tour-de-france/2025/results">Results<span>&#x25BC;</span></a><ul><li><a href="race/tour-de-france/2025/results/start">Winners and leaders</a></li>
+<li><a href="race/tour-de-france/2025/results/won-how">Won how</a></li>
+<li><a href="race/tour-de-france/2025/results/prizemoney-ranking">Prizemoney ranking</a></li>
+<li><a href="race/tour-de-france/2025/results/dropouts">Dropouts</a></li>
+<li><a href="race/tour-de-france/2025/results/fastest-stage">Fastest stages</a></li>
+</ul></span>
+</div><div class="clear"></div>
+<div class="thumbnav"><span><a class="blue" href="race/tour-de-france">Tour de France</a></span><span>&nbsp; &raquo; &nbsp;</span><span><a class="blue" href="race/tour-de-france/2025">2025</a></span><span>&nbsp; &raquo; &nbsp;</span><span><a class="blue" href="race/tour-de-france/2025/route/final-5k">Final 5k</a></span></div>
+<div class="titleCont hasSideNav"><div class="page-title"><div class="title"><span class="flag fr w32"></span><span class="flag c24 fr "></span> <h1><span class="hideIfMobile">2025 &nbsp; &raquo; &nbsp; 112th </span>Tour de France</h1></div><div class="subtitle hide imob block"><h2>2025</h2></div><div class="clear"></div><div class="title-line2 hideIfMobile"><font class="blue">21 Stages</font> &nbsp; &raquo; &nbsp; <font class="red">Lille Métropole &nbsp;&rsaquo;&nbsp; Paris (Champs-Élysées)</font> &nbsp; <font class="red"style="font-weight: normal; ">(3338.8km)</font></div></div><a class="toggleSideMenu" href="">menu</a></div>
+<div class="desktop-ad leaderbord general"></div><div class="mob-ad leaderbord general"></div><div class="top-cont"></div><div class="top-cont-mobile top-cont-mobile-race"></div>
+<div class="page-content "  >
+<h2>Final 5k analysis</h2>
+<div class=""><div class="">
+<h4>Most vertical meters in final 5k</h4><table class=" basic" style="max-width: 500px; " ><thead><tr>
+<th class="w10 ">#</th>
+<th class="w4 "></th>
+<th class="w67 ">Stage</th>
+<th class="w10 ">Vertical meters</th>
+<th class="w10 ">Avg. gradient</th>
+</tr></thead><tbody>
+<tr class=""><td>1</td><td><span class="icon profile p5 mg_rp4 "></span>5</td><td><a  href="race/tour-de-france/2025/stage-14">Stage 14 to Luchon-Superbagnères</a></td><td>414</td><td>8.3</td></tr>
+<tr class=""><td>2</td><td><span class="icon profile p5 mg_rp4 "></span>5</td><td><a  href="race/tour-de-france/2025/stage-16">Stage 16 to Mont Ventoux</a></td><td>410</td><td>8.2</td></tr>
+<tr class=""><td>3</td><td><span class="icon profile p5 mg_rp4 "></span>5</td><td><a  href="race/tour-de-france/2025/stage-13">Stage 13 (ITT) to Peyragudes</a></td><td>398</td><td>8.0</td></tr>
+<tr class=""><td>4</td><td><span class="icon profile p5 mg_rp4 "></span>5</td><td><a  href="race/tour-de-france/2025/stage-12">Stage 12 to Hautacam</a></td><td>393</td><td>7.9</td></tr>
+<tr class=""><td>5</td><td><span class="icon profile p5 mg_rp4 "></span>5</td><td><a  href="race/tour-de-france/2025/stage-18">Stage 18 to Courchevel (Col de la Loze)</a></td><td>338</td><td>6.8</td></tr>
+<tr class="hide"><td>6</td><td><span class="icon profile p5 mg_rp4 "></span>5</td><td><a  href="race/tour-de-france/2025/stage-19">Stage 19 to La Plagne</a></td><td>331</td><td>6.6</td></tr>
+<tr class="hide"><td>7</td><td><span class="icon profile p3 mg_rp4 "></span>3</td><td><a  href="race/tour-de-france/2025/stage-10">Stage 10 to Le Mont-Dore Puy de Sancy</a></td><td>259</td><td>5.2</td></tr>
+<tr class="hide"><td>8</td><td><span class="icon profile p3 mg_rp4 "></span>3</td><td><a  href="race/tour-de-france/2025/stage-7">Stage 7 to Mûr-de-Bretagne (Guerlédan)</a></td><td>171</td><td>3.4</td></tr>
+<tr class="hide"><td>9</td><td><span class="icon profile p3 mg_rp4 "></span>3</td><td><a  href="race/tour-de-france/2025/stage-6">Stage 6 to Vire Normandie</a></td><td>129</td><td>2.6</td></tr>
+<tr class="hide"><td>10</td><td><span class="icon profile p1 mg_rp4 "></span>1</td><td><a  href="race/tour-de-france/2025/stage-8">Stage 8 to Laval (Espace Mayenne)</a></td><td>74</td><td>1.5</td></tr>
+<tr class="hide"><td>11</td><td><span class="icon profile p3 mg_rp4 "></span>3</td><td><a  href="race/tour-de-france/2025/stage-2">Stage 2 to Boulogne-sur-Mer</a></td><td>59</td><td>1.2</td></tr>
+<tr class="hide"><td>12</td><td><span class="icon profile p2 mg_rp4 "></span>2</td><td><a  href="race/tour-de-france/2025/stage-4">Stage 4 to Rouen</a></td><td>38</td><td>0.8</td></tr>
+<tr class="hide"><td>13</td><td><span class="icon profile p2 mg_rp4 "></span>2</td><td><a  href="race/tour-de-france/2025/stage-15">Stage 15 to Carcassonne</a></td><td>34</td><td>0.7</td></tr>
+<tr class="hide"><td>14</td><td><span class="icon profile p2 mg_rp4 "></span>2</td><td><a  href="race/tour-de-france/2025/stage-20">Stage 20 to Pontarlier</a></td><td>33</td><td>0.7</td></tr>
+<tr class="hide"><td>15</td><td><span class="icon profile p1 mg_rp4 "></span>1</td><td><a  href="race/tour-de-france/2025/stage-9">Stage 9 to Châteauroux</a></td><td>29</td><td>0.6</td></tr>
+<tr class="hide"><td>16</td><td><span class="icon profile p1 mg_rp4 "></span>1</td><td><a  href="race/tour-de-france/2025/stage-11">Stage 11 to Toulouse</a></td><td>26</td><td>0.5</td></tr>
+<tr class="hide"><td>17</td><td><span class="icon profile p2 mg_rp4 "></span>2</td><td><a  href="race/tour-de-france/2025/stage-1">Stage 1 to Lille Métropole</a></td><td>18</td><td>0.4</td></tr>
+<tr class="hide"><td>18</td><td><span class="icon profile p2 mg_rp4 "></span>2</td><td><a  href="race/tour-de-france/2025/stage-3">Stage 3 to Dunkerque</a></td><td>14</td><td>0.3</td></tr>
+<tr class="hide"><td>19</td><td><span class="icon profile p1 mg_rp4 "></span>1</td><td><a  href="race/tour-de-france/2025/stage-21">Stage 21 to Paris (Champs-Élysées)</a></td><td>10</td><td>0.2</td></tr>
+<tr class="hide"><td>20</td><td><span class="icon profile p1 mg_rp4 "></span>1</td><td><a  href="race/tour-de-france/2025/stage-5">Stage 5 (ITT) to Caen</a></td><td>8</td><td>0.2</td></tr>
+<tr class="hide"><td>21</td><td><span class="icon profile p1 mg_rp4 "></span>1</td><td><a  href="race/tour-de-france/2025/stage-17">Stage 17 to Valence</a></td><td>6</td><td>0.1</td></tr>
+</tbody></table><a class="show-all" href="">show 16 more lines</a></div>
+<div class="mt50">
+<h4>Historical</h4><div class="fs14">How does the total sum of vertical meters in the final 5k compare to previous editions?</div>
+</div>
+<div class="mt10">
+<ul class="barchart  zero_line nth_label" style=" height: 180px;  max-width: 588px;  "  data-bars="1" data-nth="2">
+<li><div class="bar-cont"><div class="bar bar1 hp31 bg green4" ><span class="fs10"  style="font-size: 10px;" >1198</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2006</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp39 bg green4" ><span class="fs10"  style="font-size: 10px;" >1508</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2007</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp49 bg green4" ><span class="fs10"  style="font-size: 10px;" >1903</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2008</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp40 bg green4" ><span class="fs10"  style="font-size: 10px;" >1547</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2009</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp47 bg green4" ><span class="fs10"  style="font-size: 10px;" >1817</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2010</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp65 bg green4" ><span class="fs10"  style="font-size: 10px;" >2494</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2011</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp47 bg green4" ><span class="fs10"  style="font-size: 10px;" >1803</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2012</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp49 bg green4" ><span class="fs10"  style="font-size: 10px;" >1870</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2013</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp62 bg green4" ><span class="fs10"  style="font-size: 10px;" >2401</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2014</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp78 bg green4" ><span class="fs10"  style="font-size: 10px;" >2988</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2015</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp68 bg green4" ><span class="fs10"  style="font-size: 10px;" >2611</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2016</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp40 bg green4" ><span class="fs10"  style="font-size: 10px;" >1544</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2017</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp54 bg green4" ><span class="fs10"  style="font-size: 10px;" >2093</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2018</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp62 bg green4" ><span class="fs10"  style="font-size: 10px;" >2389</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2019</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp74 bg green4" ><span class="fs10"  style="font-size: 10px;" >2857</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2020</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp47 bg green4" ><span class="fs10"  style="font-size: 10px;" >1827</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2021</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp90 bg green4" ><span class="fs10"  style="font-size: 10px;" >3466</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2022</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp65 bg green4" ><span class="fs10"  style="font-size: 10px;" >2517</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2023</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp52 bg green4" ><span class="fs10"  style="font-size: 10px;" >2007</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2024</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp83 bg magenta3" ><span class="fs10"  style="font-size: 10px;" >3192</span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2025</div></li>
+<li><div class="bar-cont"><div class="bar bar1 hp0 bg green4" ><span class="fs10"  style="font-size: 10px;" ></span></div></div><div class="label fs12"  style="font-size: 11px; font-weight: bold;" >2026</div></li>
+</ul>
+<div class="clear"></div></div>
+</div></div>
+<div class="side-nav  " >
+<a class="backToContent blue fs11 right showIfMobile" href="">back to content</a><div class="clear"></div>
+<ul class="sidenav"><li><div class="sidenavTitle">Menu</div><ul><li class="" data-pro="0"><a href="race/tour-de-france/2025/route/stages">Stages</a></li>
+<li class="" data-pro="0"><a href="race/tour-de-france/2025/route/collection-of-statistics">Collection of statistics</a></li>
+<li class="" data-pro="0"><a href="race/tour-de-france/2025/route/stage-profiles">All stage profiles</a></li>
+<li class="" data-pro="0"><a href="race/tour-de-france/2025/route/overview-map">Overview map</a></li>
+<li class="" data-pro="0"><a href="race/tour-de-france/2025/route/hardest-stages">Hardest stages</a></li>
+<li class="" data-pro="0"><a href="race/tour-de-france/2025/route/longest">Longest stage</a></li>
+<li class="" data-pro="0"><a href="race/tour-de-france/2025/route/climbs">Climbs</a></li>
+<li class="cur" data-pro="0"><a href="race/tour-de-france/2025/route/final-5k">Final 5k</a></li>
+<li class="" data-pro="1"><a href="race/tour-de-france/2025/route/arrivals-departures">Arrivals and departure cities</a></li>
+<li class="" data-pro="1"><a href="race/tour-de-france/2025/route/longest-transitions">Longest transitions</a></li>
+</ul></li></ul></div>
+<div class="clear"></div></div><div class="push"></div></div><div class="footer"><div class="sfa"><ul class="ftr-list"><li class="group"><h3>Grand Tours</h3><ul><li><a href="race/tour-de-france">Tour de France</a></li>
+<li><a href="race/giro-d-italia">Giro d'Italia</a></li>
+<li><a href="race/vuelta-a-espana">Vuelta a España</a></li>
+</ul>
+<h3>Major Tours</h3><ul><li><a href="race/paris-nice">Paris-Nice</a></li>
+<li><a href="race/tirreno-adriatico">Tirreno-Adriatico</a></li>
+<li><a href="race/volta-a-catalunya">Volta a Catalunya</a></li>
+<li><a href="race/tour-de-romandie">Tour de Romandie</a></li>
+<li><a href="race/tour-de-suisse">Tour de Suisse</a></li>
+<li><a href="race/dauphine">Critérium du Dauphiné</a></li>
+<li><a href="race/itzulia-basque-country">Itzulia Basque Country</a></li>
+</ul></li>
+<li class="group"><h3>Monuments</h3><ul><li><a href="race/milano-sanremo">Milano-SanRemo</a></li>
+<li><a href="race/ronde-van-vlaanderen">Ronde van Vlaanderen</a></li>
+<li><a href="race/paris-roubaix">Paris-Roubaix</a></li>
+<li><a href="race/liege-bastogne-liege">Liège-Bastogne-Liège</a></li>
+<li><a href="race/il-lombardia">Il Lombardia</a></li>
+</ul>
+<h3>Championships</h3><ul><li><a href="race/world-championship">World Championships</a></li>
+<li><a href="race/uec-road-european-championships">European Championships</a></li>
+</ul></li>
+<li class="group"><h3>Top classics</h3><ul><li><a href="race/omloop-het-nieuwsblad">Omloop Het Nieuwsblad</a></li>
+<li><a href="race/strade-bianche">Strade Bianche</a></li>
+<li><a href="race/e3-harelbeke">E3 Classic</a></li>
+<li><a href="race/gent-wevelgem">Gent-Wevelgem</a></li>
+<li><a href="race/dwars-door-vlaanderen">Dwars door Vlaanderen</a></li>
+<li><a href="race/eschborn-frankfurt">Eschborn-Frankfurt</a></li>
+<li><a href="race/amstel-gold-race">Amstel Gold Race</a></li>
+<li><a href="race/la-fleche-wallone">La Flèche Wallonne</a></li>
+<li><a href="race/san-sebastian">San Sebastian</a></li>
+<li><a href="race/bretagne-classic">Bretagne Classic</a></li>
+<li><a href="race/gp-quebec">GP Québec</a></li>
+<li><a href="race/gp-montreal">GP Montréal</a></li>
+</ul></li>
+<li class="group"><h3>Popular riders</h3><ul><li><a href="rider/tadej-pogacar">Tadej Pogačar</a></li>
+<li><a href="rider/wout-van-aert">Wout van Aert</a></li>
+<li><a href="rider/remco-evenepoel">Remco Evenepoel</a></li>
+<li><a href="rider/jonas-vingegaard">Jonas Vingegaard</a></li>
+<li><a href="rider/mathieu-van-der-poel">Mathieu van der Poel</a></li>
+<li><a href="rider/mads-pedersen">Mads Pedersen</a></li>
+<li><a href="rider/primoz-roglic">Primož Roglič</a></li>
+<li><a href="rider/marc-hirschi">Marc Hirschi</a></li>
+<li><a href="rider/demi-vollering">Demi Vollering</a></li>
+<li><a href="rider/lotte-kopecky">Lotte Kopecky</a></li>
+<li><a href="rider/katarzyna-niewiadoma">Katarzyna Niewiadoma</a></li>
+<li><a href="rider/evita-muzic">Évita Muzic</a></li>
+</ul></li>
+<li class="group"><h3>Rankings</h3><ul><li><a href="rankings.php">PCS ranking</a></li>
+<li><a href="rankings/me/uci-individual">UCI World Ranking</a></li>
+<li><a href="rankings/me/all-time">Alltime</a></li>
+</ul>
+<h3>Statistics</h3><ul><li><a href="statistics/start/points-per-age">Points per age</a></li>
+<li><a href="statistics/start/latest-injuries">Latest injuries</a></li>
+<li><a href="statistics/riders/youngest-riders">Youngest riders</a></li>
+<li><a href="statistics/grandtours">Grand tour statistics</a></li>
+<li><a href="statistics/monuments">Monument classics</a></li>
+<li><a href="teams/transfers">Latest transfers</a></li>
+<li><a href="favorite500">Favorite 500</a></li>
+</ul></li>
+<li class="group"><h3>Info</h3><ul><li><a href="info/point-scales">Points scales</a></li>
+<li><a href="info/profile-score-explained">Profile scores</a></li>
+<li><a href="reset_password.php">Reset password</a></li>
+<li><a href="info/pcs-game">PCS game</a></li>
+<li><a href="https://www.procyclingstats.com/?cmpscreen">Cookie consent</a></li>
+</ul>
+<h3>About ProCyclingStats</h3><ul><li><a href="info/about-us">About us</a></li>
+<li><a href="info/contact">Contact us</a></li>
+<li><a href="info/cookie-policy">Cookie policy</a></li>
+<li><a href="info/sitemap">Sitemap</a></li>
+<li><a href="info/contributions">Contributions</a></li>
+<li><span>Pageload 0.0174s</span></li>
+</ul></li>
+</ul></div></div></body>
+</html>
+<script src="search_list21.js"></script>

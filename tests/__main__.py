@@ -70,7 +70,8 @@ def run(args: argparse.Namespace, fixturer_path: str = "./tests/fixtures/"):
             # create scraping object from both old and new HTML
             new_scraper_obj = ScraperClass(url)
             old_html = f_utils.get_html_fixture(new_scraper_obj.relative_url())
-            old_scraper_obj = ScraperClass(url, old_html, False)
+            old_scraper_obj = ScraperClass.__new__(ScraperClass)
+            old_scraper_obj._Scraper__init_with_url(url, old_html, False)
 
             try:
                 parsed_obj1 = new_scraper_obj.parse()

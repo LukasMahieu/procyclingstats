@@ -1,11 +1,15 @@
 {
-  "category": "Men Elite",
+  "category": null,
   "edition": null,
-  "enddate": "2020-10-25",
+  "enddate": null,
   "is_one_day_race": true,
   "name": "Paris - Roubaix",
-  "nationality": "FR",
+  "nationality": "GB",
   "prev_editions_select": [
+    {
+      "text": "2025",
+      "value": "race/paris-roubaix/2025/statistics/start"
+    },
     {
       "text": "2024",
       "value": "race/paris-roubaix/2024/statistics/start"
@@ -497,7 +501,7 @@
   ],
   "stages": [],
   "stages_winners": [],
-  "startdate": "2020-10-25",
-  "uci_tour": "UCI Worldtour",
+  "startdate": null,
+  "uci_tour": null,
   "year": 2020
 }

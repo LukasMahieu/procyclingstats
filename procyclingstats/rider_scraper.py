@@ -1,7 +1,7 @@
 import calendar
 from typing import Any, Dict, List, Optional
 import re
-from procyclingstats.errors import UnexpectedParsingError
+from procyclingstats.errors import UnexpectedParsingError, ExpectedParsingError
 
 from .scraper import Scraper
 from .table_parser import TableParser
@@ -39,7 +39,21 @@ class Rider(Scraper):
 
         :return: birthday of the rider in ``YYYY-MM-DD`` format.
         """
+        # Try new structure first
+        info_box = self.html.css_first(".borderbox.left.w65")
+        if info_box:
+            text = info_box.text()
+            import re
+            birth_match = re.search(r'Date of birth:(\d{1,2})(?:st|nd|rd|th)([A-Za-z]+)(\d{4})', text)
+            if birth_match:
+                day, str_month, year = birth_match.groups()
+                month = list(calendar.month_name).index(str_month)
+                return f"{year}-{month}-{day}"
+        
+        # Fallback to original structure
         general_info_html = self.html.css_first(".rdr-info-cont")
+        if not general_info_html:
+            raise ExpectedParsingError("Rider birthdate unavailable.")
         bd_string = general_info_html.text(separator=" ", deep=False)
         bd_list = [item for item in bd_string.split(" ") if item][:3]
         [day, str_month, year] = bd_list
@@ -52,6 +66,19 @@ class Rider(Scraper):
 
         :return: rider's place of birth (town only).
         """
+        # Try new structure first
+        info_box = self.html.css_first(".borderbox.left.w65")
+        if info_box:
+            text = info_box.text()
+            import re
+            place_match = re.search(r'Place of birth:\s*([\w\s,]+)', text)
+            if place_match:
+                full_match = place_match.group(1)
+                # Get just the first part before newlines or other content
+                place_parts = full_match.split('\n')[0].strip()
+                return place_parts
+        
+        # Fallback to original structure
         # normal layout
         try:
             place_of_birth_html = self.html.css_first(
@@ -74,7 +101,16 @@ class Rider(Scraper):
 
         :return: Rider's name.
         """
-        return self.html.css_first(".page-title > .main > h1").text()
+        # Try new structure first
+        h1_element = self.html.css_first("h1")
+        if h1_element:
+            return h1_element.text()
+        
+        # Fallback to original selector
+        name_element = self.html.css_first(".page-title > .main > h1")
+        if not name_element:
+            raise ExpectedParsingError("Rider name unavailable.")
+        return name_element.text()
 
     def weight(self) -> float:
         """
@@ -82,6 +118,16 @@ class Rider(Scraper):
 
         :return: Rider's weigth in kilograms.
         """
+        # Try new structure first
+        info_box = self.html.css_first(".borderbox.left.w65")
+        if info_box:
+            text = info_box.text()
+            import re
+            weight_match = re.search(r'Weight:(\d+)kg', text)
+            if weight_match:
+                return float(weight_match.group(1))
+        
+        # Fallback to original structure
         # normal layout
         try:
             weight_html = self.html.css(".rdr-info-cont > span")[1]
@@ -100,6 +146,16 @@ class Rider(Scraper):
 
         :return: Rider's height in meters.
         """
+        # Try new structure first
+        info_box = self.html.css_first(".borderbox.left.w65")
+        if info_box:
+            text = info_box.text()
+            import re
+            height_match = re.search(r'Height:(\d+\.\d+)m', text)
+            if height_match:
+                return float(height_match.group(1))
+        
+        # Fallback to original structure
         # normal layout
         try:
             height_html = self.html.css_first(".rdr-info-cont > span > span")
@@ -119,11 +175,25 @@ class Rider(Scraper):
         :return: Rider's current nationality as 2 chars long country code in
             uppercase.
         """
+        # Try new structure first - look for flag elements in rider info
+        info_box = self.html.css_first(".borderbox.left.w65")
+        if info_box:
+            flag_elements = info_box.css("span[class*='flag']")
+            for flag_elem in flag_elements:
+                flag_class = flag_elem.attributes.get("class", "")
+                # Look for flag classes like "flag si" or "flag gb"
+                parts = flag_class.split()
+                if len(parts) >= 2 and parts[0] == "flag":
+                    return parts[1].upper()
+        
+        # Fallback to original structure
         # normal layout
         nationality_html = self.html.css_first(".rdr-info-cont > .flag")
         if nationality_html is None:
             # special layout
             nationality_html = self.html.css_first(".rdr-info-cont > span > span")
+        if not nationality_html:
+            raise ExpectedParsingError("Rider nationality unavailable.")
         flag_class = nationality_html.attributes["class"]
         return flag_class.split(" ")[-1].upper()  # type:ignore
 
@@ -133,6 +203,14 @@ class Rider(Scraper):
 
         :return: Relative URL of rider's image. None if image is not available.
         """
+        # Try new structure first - look for rider images
+        imgs = self.html.css("img")
+        for img in imgs:
+            src = img.attributes.get("src", "")
+            if src and "riders/" in src:
+                return src
+        
+        # Fallback to original selector
         image_html = self.html.css_first("div.rdr-img-cont > a > img")
         if not image_html:
             return None
@@ -288,6 +366,8 @@ class Rider(Scraper):
         available_fields = ("season", "points", "rank")
         fields = parse_table_fields_args(args, available_fields)
         points_table_html = self.html.css_first("table.rdr-season-stats")
+        if not points_table_html:
+            return []
         table_parser = TableParser(points_table_html)
         table_parser.parse(fields)
         return table_parser.table
@@ -344,6 +424,8 @@ class Rider(Scraper):
                 casual_fields.remove(field)
 
         results_html = self.html.css_first("#resultsCont > table.rdrResults")
+        if not results_html:
+            return []
         for tr in results_html.css("tbody > tr"):
             if not tr.css("td")[1].text():
                 tr.remove()

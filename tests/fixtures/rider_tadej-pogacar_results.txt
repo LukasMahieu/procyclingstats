@@ -1,0 +1,722 @@
+<!DOCTYPE html><html><head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2MNJ20S7SJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2MNJ20S7SJ');
+</script>
+<title>Results for Tadej  Pogačar</title> 
+<base href="https://www.procyclingstats.com/rider.php"> 
+<link rel="canonical" href="https://www.procyclingstats.com/rider/tadej-pogacar/results/all"> 
+<script>  var r89 = r89 || {      callAds: [],   pushAd: function(id, name, config) { r89.callAds.push([id, name, config]); }    };  </script>
+  <script async="" src="https://tags.refinery89.com/procyclingstats.js"></script><meta name="description" content="Career results for Tadej  Pogačar with filter options on distance, date, type of race and vertical meters.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"> 
+<meta name="facebook-domain-verification" content="tjwn3jyjupm0t1j8e0sgis3c80x88r">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="v3_scripts_v20.js"></script> 
+<link rel="stylesheet" type="text/css" href="v3_site_v63.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">  
+<link rel="apple-touch-icon" sizes="180x180" href="images/pcs-logos/icon3/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/pcs-logos/icon3/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/pcs-logos/icon3/favicon-16x16.png">
+<link rel="shortcut icon" type="image/x-icon" href="images/pcs-logos/icon3/favicon.ico">
+</head>
+<body>
+<div class="wrapper"><header>
+<div class="cont">
+<a class="logo" href="index.php"></a>
+<div class="search"><form action="search.php" class="msearch"><input type="hidden" id="term"><input type="text" name="term" id="search" data-page="rider" data-url="rider/-id-/results/" placeholder="search" autocomplete="off"></form></div> 
+<div class="mob-logo"><a class="logo mobile" href="index.php"></a></div>
+<div class="nav"><span class="mob_topnav"><font class="burger_menu"></font><ul class="topnav">
+<li class=""><a class="menu" href="index.php">Home</a></li>
+<li class=""><a class="menu" href="races.php">Races<span class="more" href="">▼</span></a>
+<ul><li><a href="race/tour-de-france">Tour de France</a></li>
+<li><a href="race/giro-d-italia">Giro d'Italia</a></li>
+<li><a href="race/vuelta-a-espana">La Vuelta ciclista a España</a></li>
+<li><a href="race/world-championship">World Championships</a></li>
+<li><a href="race/milano-sanremo">Milano-Sanremo</a></li>
+<li><a href="race/amstel-gold-race">Amstel Gold Race</a></li>
+<li><a href="race/tirreno-adriatico">Tirreno-Adriatico</a></li>
+<li><a href="race/liege-bastogne-liege">Liège-Bastogne-Liège</a></li>
+<li><a href="race/il-lombardia">Il Lombardia</a></li>
+<li><a href="race/la-fleche-wallone">La Flèche Wallonne</a></li>
+<li><a href="race/paris-nice">Paris - Nice</a></li>
+<li><a href="race/paris-roubaix">Paris-Roubaix</a></li>
+<li><a href="race/volta-a-catalunya">Volta Ciclista a Catalunya</a></li>
+<li><a href="race/dauphine">Critérium du Dauphiné</a></li>
+<li><a href="race/ronde-van-vlaanderen">Tour des Flandres</a></li>
+<li><a href="race/gent-wevelgem">Gent-Wevelgem in Flanders Fields</a></li>
+<li><a href="race/san-sebastian">Clásica Ciclista San Sebastián</a></li>
+</ul></li>
+<li class=""><a class="menu" href="teams.php">Teams<span class="more" href="">▼</span></a>
+<ul><li><a href="team/xds-astana-team-2025">XDS Astana Team</a></li>
+<li><a href="team/uae-team-emirates-xrg-2025">UAE Team Emirates - XRG</a></li>
+<li><a href="team/team-visma-lease-a-bike-2025">Team Visma | Lease a Bike</a></li>
+<li><a href="team/team-picnic-postnl-2025">Team Picnic PostNL</a></li>
+<li><a href="team/team-jayco-alula-2025">Team Jayco AlUla</a></li>
+<li><a href="team/soudal-quick-step-2025">Soudal Quick-Step</a></li>
+<li><a href="team/red-bull-bora-hansgrohe-2025">Red Bull - BORA - hansgrohe</a></li>
+<li><a href="team/movistar-team-2025">Movistar Team</a></li>
+<li><a href="team/lidl-trek-2025">Lidl - Trek</a></li>
+<li><a href="team/ineos-grenadiers-2025">INEOS Grenadiers</a></li>
+<li><a href="team/groupama-fdj-2025">Groupama - FDJ</a></li>
+<li><a href="team/ef-education-easypost-2025">EF Education - EasyPost</a></li>
+<li><a href="team/decathlon-ag2r-la-mondiale-2025">Decathlon AG2R La Mondiale Team</a></li>
+<li><a href="team/cofidis-2025">Cofidis</a></li>
+<li><a href="team/bahrain-victorious-2025">Bahrain - Victorious</a></li>
+<li><a href="team/arkea-b-b-hotels-2025">Arkéa - B&amp;B Hotels</a></li>
+<li><a href="team/alpecin-deceuninck-2025">Alpecin - Deceuninck</a></li>
+<li><a href="team/intermarche-wanty-2025">Intermarché - Wanty</a></li>
+</ul></li>
+<li class=""><a class="menu" href="rankings.php">Rankings</a></li>
+<li class=""><a class="menu" href="statistics.php">Statistics<span class="more" href="">▼</span></a>
+<ul><li><a href="statistics">Overview</a></li>
+<li><a href="statistics/riders">Riders</a></li>
+<li><a href="statistics/teams">Teams</a></li>
+<li><a href="statistics/grandtours">Grand tours</a></li>
+</ul></li>
+<li class=""><a class="menu" href="game.php">Game</a></li>
+<li class="tour yellow"><a class="menu" href="race/tour-de-france/2025">Tour<span class="more" href="">▼</span></a>
+<ul><li><a href="race/tour-de-france/2025/startlist">Startlist</a></li>
+<li><a href="race/tour-de-france/results/palmares">Palmares</a></li>
+<li><a href="race/tour-de-france/2025/startlist/top-competitors">Top competitors</a></li>
+<li><a href="race/tour-de-france/2025/startlist/top-gc-riders">Final GC favorites</a></li>
+<li><a href="race/tour-de-france/2025/route/stage-profiles">Stage profiles</a></li>
+<li><a href="race/tour-de-france/2025/teams/top-teams">Best teams</a></li>
+<li><a href="race/tour-de-france/2025/startlist/form">Riders form</a></li>
+<li><a href="race/tour-de-france/2025/route/collection-of-statistics">Route statistics</a></li>
+</ul></li>
+<li class=""><a class="menu" href="quiz.php">Quiz</a></li>
+<li class=""><a class="menu" href="riders.php">More<span class="more" href="">▼</span></a>
+<ul><li><a href="riders">Riders</a></li>
+<li><a href="info/contact">Contact us</a></li>
+<li><a href="info/countdown-to-4-billion-pageviews">Countdown to 4 billion pageviews</a></li>
+<li><a href="favorite500.php">Favorite500</a></li>
+<li><a href="info/about-us">About us</a></li>
+<li><a href="info/sitemap">Sitemap</a></li>
+<li><a href="info/profile-score-explained">Profile Score</a></li>
+<li><a href="info/terminology-list">Terminology list</a></li>
+</ul></li>
+<li class="account"><a class="menu" href="account.php">Account<span class="more" href="">▼</span></a>
+<ul><li><a href="account/overview">My account</a></li>
+<li><a href="account/follow-riders">My riders</a></li>
+</ul></li>
+<li class="small"><a class="menu" href="">Road<span class="more" href="">▼</span></a>
+<ul><li><a href="https://cx.procyclingstats.com">Cross</a></li>
+</ul></li>
+<li class="language small"><a class="menu" href=""><span class="flag gb" style=""></span></a></li>
+<ul></ul></ul></span></div></div></header><div class="content"><div class="pagenav-cont"><span><a class="" href="rider/tadej-pogacar/start">Overview</a></span>
+<span><a class="" href="rider/tadej-pogacar/statistics">Statistics<span>▼</span></a><ul><li><a href="rider/tadej-pogacar/statistics/overview">Overview</a></li>
+<li><a href="rider/tadej-pogacar/statistics/season-statistics">Statistics by season</a></li>
+<li><a href="rider/tadej-pogacar/statistics/key-events">Key events</a></li>
+<li><a href="rider/tadej-pogacar/statistics/world-map-of-rider-races">World map of rider races</a></li>
+<li><a href="rider/tadej-pogacar/statistics/wins">Wins</a></li>
+<li><a href="rider/tadej-pogacar/statistics/most-starts-by-race">Most starts by race</a></li>
+<li><a href="rider/tadej-pogacar/statistics/grand-tour-starts">Starts and results</a></li>
+<li><a href="rider/tadej-pogacar/statistics/injury-history">Injury history</a></li>
+<li><a href="rider/tadej-pogacar/statistics/fines-and-penalties">Fines &amp; Penalties</a></li>
+</ul></span>
+<span><a class="cur" href="rider/tadej-pogacar/results">Results</a></span>
+<span><a class="" href="rider/tadej-pogacar/calendar">Program</a></span>
+<span><a class="" href="rider/tadej-pogacar/head-to-head">H2H</a></span>
+<span><a class="" href="rider/tadej-pogacar/contribute">More<span>▼</span></a><ul><li><a href="rider/tadej-pogacar/contribute/contribute-info">Contribute info</a></li>
+<li><a href="rider/tadej-pogacar/contribute/submit-program">Submit program</a></li>
+<li><a href="rider/tadej-pogacar/contribute/report">Report</a></li>
+<li><a href="rider/tadej-pogacar/contribute/contribute-social-feeds">Contribute sites / social media</a></li>
+<li><a href="rider/tadej-pogacar/contribute/contribute-family">Family</a></li>
+<li><a href="rider/tadej-pogacar/contribute/embed-rider-results">Embed rider results</a></li>
+</ul></span>
+<span><a class="" href="rider/tadej-pogacar/specialties">Specialties<span>▼</span></a><ul><li><a href="rider/tadej-pogacar/specialties/top-gc-results">Top GC results</a></li>
+<li><a href="rider/tadej-pogacar/specialties/fastest-tt">Fastest TT</a></li>
+</ul></span>
+</div><div class="clear"></div>
+
+<div class="titleCont hasSideNav"><div class="page-title"><div class="title"><span class="flag si w32"></span><span class="flag c24 si "></span> <h1>Tadej  Pogačar</h1></div><span class="arrow">»</span><div class="subtitle"><h2>UAE Team Emirates - XRG</h2></div></div><a class="toggleSideMenu" href="">menu</a></div>
+<div class="desktop-ad leaderbord general"></div><div class="mob-ad leaderbord general"></div><div class="top-cont"></div><div class="top-cont-mobile top-cont-mobile-rider"></div>
+<div class="page-content ">
+<h2>All results</h2>
+<div class=""><div class="">
+<div class="fs14">Career results for Tadej  Pogačar with filter options.</div>
+</div>
+<div class="">
+<form action="rider.php"><input type="hidden" name="id" value="194619">
+<input type="hidden" name="p" value="results">
+<input type="hidden" name="s" value="">
+<ul class="filter "><li class="" data-formtype="select" data-def=""><div class="label">Season</div>
+<div class="input">
+<span class="inputCont"><select name="xseason"><option value="" selected="">-</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+</select></span><select name="pxseason" style="width: 50px;"><option value="equal" selected="">=</option>
+<option value="largerorequal">&gt;=</option>
+<option value="smallerorequal">&lt;=</option>
+<option value="between">Between</option>
+</select></div></li>
+<li class="" data-formtype="select" data-def="date"><div class="label">Sort by </div>
+<div class="input">
+<span class="inputCont"><select name="sort"><option value="date" selected="">Date</option>
+<option value="pnt">PCS points</option>
+<option value="rnk">Result</option>
+<option value="km">Distance</option>
+</select></span></div></li>
+<li class="" data-formtype="select" data-def=""><div class="label">Race</div>
+<div class="input">
+<span class="inputCont"><select name="race"><option value="" selected="">-</option>
+<option value="1071">Amgen Tour of California</option>
+<option value="1033">Amstel Gold Race</option>
+<option value="1048">Bretagne Classic - Ouest-France</option>
+<option value="1965">Cadel Evans Great Ocean Road Race</option>
+<option value="1394">Carpathian Couriers Race U-23</option>
+<option value="1028">Clásica Ciclista San Sebastián</option>
+<option value="1063">Course de la Paix Juniors</option>
+<option value="1034">Critérium du Dauphiné</option>
+<option value="1325">Croatia-Slovenia</option>
+<option value="1028">Donostia San Sebastian Klasikoa</option>
+<option value="1118">Dwars door Vlaanderen - A travers la Flandre ME</option>
+<option value="1038">E3 Saxo Classic</option>
+<option value="2536">European Continental Championships ME - ITT</option>
+<option value="2538">European Continental Championships ME - Road Race</option>
+<option value="7253">European Continental Championships MU - ITT</option>
+<option value="1786">European Continental Championships MU - Road Race</option>
+<option value="1342">Flèche du Sud</option>
+<option value="1430">G.P. Palio del Recioto</option>
+<option value="1760">G.P. Sportivi Sovilla-La Piccola SanRemo</option>
+<option value="2568">Gent-Wevelgem/Grote Prijs A. Noyelle-Ieper</option>
+<option value="1450">Gent-Wevelgem/Kattekoers-Ieper</option>
+<option value="1039">Giro d'Italia</option>
+<option value="1438">Giro del Belvedere</option>
+<option value="1074">Giro dell'Emilia</option>
+<option value="1090">Giro della Lunigiana</option>
+<option value="1434">Giro della Regione Friuli Venezia Giulia</option>
+<option value="2349">Giro della Toscana - Memorial Alfredo Martini</option>
+<option value="1959">GP Adria Mobil</option>
+<option value="1363">GP Capodarco - Comunità di Capodarco</option>
+<option value="1587">GP Dell'Arno</option>
+<option value="1812">GP Général Patton</option>
+<option value="1871">GP Izola</option>
+<option value="1671">GP Kranj</option>
+<option value="1886">GP Laguna Porec</option>
+<option value="1151">Gran Premio Città di Lugano</option>
+<option value="1134">Gran Premio città di Peccioli - Coppa Sabatini</option>
+<option value="4486">Gran Premio Miguel Indurain</option>
+<option value="1431">Gran Premio Sportivi di Poggiana - Trofeo Bonin Costruzioni - Gran premio Pasta Zara</option>
+<option value="1057">Grand Prix Cycliste de Montréal</option>
+<option value="1055">Grand Prix Cycliste de Québec</option>
+<option value="1774">Grand Prix Priessnitz spa</option>
+<option value="2036">Guido Reybrouck Classic</option>
+<option value="1026">Il Lombardia</option>
+<option value="1597">Int. RAIFFEISEN Grand Prix Judendorf-Straßengel</option>
+<option value="1597">Int. Raiffeisen Grand Prix Judendorf/Straßengel</option>
+<option value="1545">Istarsko Proljece - Istrian Spring Trophy</option>
+<option value="1060">Itzulia Basque Country</option>
+<option value="5859">Jaén Paraiso Interior</option>
+<option value="1093">Japan Cup Cycle Road Race</option>
+<option value="1027">La Flèche Wallonne</option>
+<option value="1051">La Vuelta ciclista a España</option>
+<option value="1047">Liège-Bastogne-Liège</option>
+<option value="3088">Mediterranean Games - Road Race</option>
+<option value="1080">Milano - Torino</option>
+<option value="1031">Milano-Sanremo</option>
+<option value="2679">Montichiari - Roncone</option>
+<option value="1596">National Championships Slovenia - ITT</option>
+<option value="1596">National Championships Slovenia ME - ITT</option>
+<option value="2239">National Championships Slovenia ME - Road Race</option>
+<option value="3073">National Championships Slovenia MJ - ITT</option>
+<option value="2279">National Championships Slovenia MJ - Road Race</option>
+<option value="1053">Olympic Games Road Race</option>
+<option value="1058">Paris - Nice</option>
+<option value="1056">Paris - Roubaix Juniors</option>
+<option value="1036">Paris-Roubaix</option>
+<option value="1328">Piccolo Giro di Lombardia</option>
+<option value="1023">Ronde van Vlaanderen - Tour des Flandres ME</option>
+<option value="1020">Ronde van Vlaanderen Beloften</option>
+<option value="1066">Santos Tour Down Under</option>
+<option value="1192">Strade Bianche</option>
+<option value="1558">Tf GD Dorigo MO Biemmereti MO Cristiano Floriani MO Ferramenta Mazzero</option>
+<option value="1025">Tirreno-Adriatico</option>
+<option value="1049">Tour de France</option>
+<option value="2091">Tour de Hongrie</option>
+<option value="1018">Tour de l'Avenir</option>
+<option value="1194">Tour du Pays de Vaud</option>
+<option value="1962">Tour of Croatia</option>
+<option value="1241">Tour of Slovenia</option>
+<option value="1077">Tre Valli Varesine</option>
+<option value="1442">Trofej Poreč - Poreč Trophy</option>
+<option value="1709">Trofej Umag - Umag Trophy</option>
+<option value="1696">Trofeo Buffoni</option>
+<option value="1526">Trofeo Citta di Loano</option>
+<option value="1559">Trofeo comune di Vertova Memorial Pietro Merelli</option>
+<option value="1362">Trofeo Edil C</option>
+<option value="1689">Trofeo Emilio Paganessi</option>
+<option value="2327">UAE Tour</option>
+<option value="1814">UEC Road European Championships MJ - ITT</option>
+<option value="1817">UEC Road European Championships MJ - Road Race</option>
+<option value="1101">Volta a la Comunitat Valenciana</option>
+<option value="1251">Volta ao Algarve em Bicicleta</option>
+<option value="1037">Volta Ciclista a Catalunya</option>
+<option value="1191">Vuelta a Andalucia Ruta Ciclista Del Sol</option>
+<option value="4938">World Championships - Mixed Relay TTT</option>
+<option value="1062">World Championships ME - ITT</option>
+<option value="1021">World Championships ME - Road Race</option>
+<option value="2353">World Championships MJ - Road Race</option>
+<option value="1460">World Championships MU - Road Race</option>
+<option value="1461">ZLM tour</option>
+</select></span></div></li>
+<li class="" data-formtype="text" data-def=""><div class="label">Distance</div>
+<div class="input">
+<span class="inputCont"><input name="km1" type="text" value="" autocomplete="off"></span><select name="pkm1" style="width: 50px;"><option value="equal" selected="">=</option>
+<option value="smallerorequal">&lt;=</option>
+<option value="largerorequal">&gt;=</option>
+<option value="smaller">&lt;</option>
+<option value="larger">&gt;</option>
+<option value="between">Between</option>
+</select></div></li>
+<li class="" data-formtype="select" data-def="0"><div class="label">Page</div>
+<div class="input">
+<span class="inputCont"><select name="offset"><option value="0" selected="">1-100</option>
+<option value="100">101-200</option>
+<option value="200">201-300</option>
+<option value="300">301-400</option>
+<option value="400">401-500</option>
+<option value="500">501-600</option>
+<option value="600">601-642</option>
+</select></span></div></li>
+<li class="" data-formtype="text" data-def=""><div class="label">Top-x results</div>
+<div class="input">
+<span class="inputCont"><input name="topx" type="text" value="" autocomplete="off"></span><select name="ptopx" style="width: 50px;"><option value="smallerorequal" selected="">&lt;=</option>
+<option value="equal">=</option>
+<option value="largerorequal">&gt;=</option>
+<option value="smaller">&lt;</option>
+<option value="larger">&gt;</option>
+<option value="between">Between</option>
+</select></div></li>
+<li class="" data-formtype="select" data-def=""><div class="label">Nation</div>
+<div class="input">
+<span class="inputCont"><select name="znation"><option value="" selected="">-</option>
+<option value="al">Albania</option>
+<option value="dz">Algeria</option>
+<option value="ad">Andorra</option>
+<option value="ao">Angola</option>
+<option value="ar">Argentina</option>
+<option value="au">Australia</option>
+<option value="at">Austria</option>
+<option value="az">Azerbaijan</option>
+<option value="by">Belarus</option>
+<option value="be">Belgium</option>
+<option value="bz">Belize</option>
+<option value="bm">Bermuda</option>
+<option value="bw">Botswana</option>
+<option value="br">Brazil</option>
+<option value="bg">Bulgaria</option>
+<option value="bf">Burkina Faso</option>
+<option value="cm">Cameroon</option>
+<option value="ca">Canada</option>
+<option value="cl">Chile</option>
+<option value="cn">China</option>
+<option value="co">Colombia</option>
+<option value="cr">Costa Rica</option>
+<option value="hr">Croatia</option>
+<option value="cu">Cuba</option>
+<option value="cw">Curaçao</option>
+<option value="cy">Cyprus</option>
+<option value="cz">Czech Republic</option>
+<option value="dk">Denmark</option>
+<option value="do">Dominican Republic</option>
+<option value="ec">Ecuador</option>
+<option value="sv">El Salvador</option>
+<option value="er">Eritrea</option>
+<option value="ee">Estonia</option>
+<option value="et">Ethiopia</option>
+<option value="fi">Finland</option>
+<option value="fr">France</option>
+<option value="ge">Georgia</option>
+<option value="de">Germany</option>
+<option value="gb">Great Britain</option>
+<option value="gr">Greece</option>
+<option value="gt">Guatemala</option>
+<option value="hk">Hongkong</option>
+<option value="hu">Hungary</option>
+<option value="in">India</option>
+<option value="id">Indonesia</option>
+<option value="ir">Iran</option>
+<option value="ie">Ireland</option>
+<option value="il">Israel</option>
+<option value="it">Italy</option>
+<option value="ci">Ivory Coast</option>
+<option value="jp">Japan</option>
+<option value="kz">Kazakhstan</option>
+<option value="ke">Kenya</option>
+<option value="xk">Kosovo</option>
+<option value="kw">Kuwait</option>
+<option value="la">Laos</option>
+<option value="lv">Latvia</option>
+<option value="lb">Lebanon</option>
+<option value="lt">Lithuania</option>
+<option value="lu">Luxembourg</option>
+<option value="my">Malaysia</option>
+<option value="mu">Mauritius</option>
+<option value="mx">Mexico</option>
+<option value="md">Moldova</option>
+<option value="mn">Mongolia</option>
+<option value="me">Montenegro</option>
+<option value="ma">Morocco</option>
+<option value="na">Namibia</option>
+<option value="nl">Netherlands</option>
+<option value="nz">New Zealand</option>
+<option value="mk">North Macedonia</option>
+<option value="no">Norway</option>
+<option value="pk">Pakistan</option>
+<option value="pa">Panama</option>
+<option value="ph">Philippines</option>
+<option value="pl">Poland</option>
+<option value="pt">Portugal</option>
+<option value="pr">Puerto Rico</option>
+<option value="ro">Romania</option>
+<option value="ru">Russia</option>
+<option value="rw">Rwanda</option>
+<option value="rs">Serbia</option>
+<option value="sg">Singapore</option>
+<option value="sk">Slovakia</option>
+<option value="si">Slovenia</option>
+<option value="za">South Africa</option>
+<option value="kr">South Korea</option>
+<option value="es">Spain</option>
+<option value="se">Sweden</option>
+<option value="ch">Switzerland</option>
+<option value="sy">Syria</option>
+<option value="tw">Taiwan</option>
+<option value="th">Thailand</option>
+<option value="tn">Tunisia</option>
+<option value="tr">Türkiye</option>
+<option value="ug">Uganda</option>
+<option value="ua">Ukraine</option>
+<option value="ae">United Arab Emirates</option>
+<option value="us">United States</option>
+<option value="uy">Uruguay</option>
+<option value="uz">Uzbekistan</option>
+<option value="ve">Venezuela</option>
+</select></span></div></li>
+<li class="" data-formtype="select" data-def=""><div class="label">Type</div>
+<div class="input">
+<span class="inputCont"><select name="type"><option value="" selected="">-</option>
+<option value="1">Stage</option>
+<option value="2">Prologue</option>
+<option value="3">Time Trial</option>
+<option value="4">General classification</option>
+<option value="5">Points classification</option>
+<option value="6">Youth classification</option>
+<option value="7">Mountains classification</option>
+<option value="8">One day race</option>
+<option value="9">Criterium</option>
+<option value="10">Teams classification</option>
+</select></span></div></li>
+<li class="" data-formtype="select" data-def=""><div class="label">Continent</div>
+<div class="input">
+<span class="inputCont"><select name="continent"><option value="" selected="">-</option>
+<option value="EU">Europe</option>
+<option value="OC">Oceania</option>
+<option value="AS">Asia</option>
+<option value="NA">North America</option>
+<option value="AF">Africa</option>
+<option value="SA">South America</option>
+<option value="AN">Antarctica</option>
+</select></span></div></li>
+<li class="" data-formtype="select" data-def=""><div class="label">Race level</div>
+<div class="input">
+<span class="inputCont"><select name="level"><option value="" selected="">-</option>
+<option value="pro">Level 1 and higher</option>
+<option value="hc">HC and higher</option>
+<option value="wt">WorldTour</option>
+</select></span></div></li>
+<li class="" data-formtype="text" data-def=""><div class="label">Result</div>
+<div class="input">
+<span class="inputCont"><input name="rnk" type="text" value="" autocomplete="off"></span><select name="prnk" style="width: 50px;"><option value="equal" selected="">=</option>
+<option value="smallerorequal">&lt;=</option>
+<option value="largerorequal">&gt;=</option>
+<option value="smaller">&lt;</option>
+<option value="larger">&gt;</option>
+<option value="between">Between</option>
+</select></div></li>
+<li class="" data-formtype="checkbox" data-def=""><div class="label">Exclude TTT</div>
+<div class="input">
+<span class="inputCont"><input type="hidden" name="exclude_tt" value="0"><input name="exclude_tt" type="checkbox" value="1"></span></div></li>
+<li class="" data-formtype="date" data-def=""><div class="label">Racedate</div>
+<div class="input">
+<span class="inputCont"><input type="text" class="datepickerNormal" name="racedate" value="" autocomplete="off"></span><select name="pracedate" style="width: 50px;"><option value="equal" selected="">=</option>
+<option value="smallerorequal">&lt;=</option>
+<option value="largerorequal">&gt;=</option>
+<option value="between">Between</option>
+</select></div></li>
+<li class="" data-formtype="select" data-def=""><div class="label">Category</div>
+<div class="input">
+<span class="inputCont"><select name="category"><option value="" selected="">-</option>
+<option value="1">ME - Men Elite</option>
+<option value="2">WE - Women Elite</option>
+<option value="3">MU - Men U23</option>
+<option value="4">MJ - Men Juniors</option>
+<option value="6">WJ - Women Juniors</option>
+<option value="0">-</option>
+<option value="7">WU - Women U23</option>
+<option value="8">ME + WE</option>
+<option value="9">MJ + WJ</option>
+<option value="10">MU17</option>
+<option value="11">WU17</option>
+<option value="22">MU17 - 2nd years</option>
+<option value="21">MU17 - 1st years</option>
+<option value="23">WU17 - 1st years</option>
+<option value="24">WU17 - 2nd years</option>
+</select></span></div></li>
+<li class="" data-formtype="" data-def=""><div class="label">ProfileScore</div>
+<div class="input">
+<span class="inputCont"><input name="profile_score" type="text" value="" autocomplete="off"></span><select name="pprofile_score" style="width: 50px;"><option value="largerorequal" selected="">&gt;=</option>
+<option value="smallerorequal">&lt;=</option>
+<option value="between">Between</option>
+</select></div></li>
+<li class="" data-formtype="checkbox" data-def=""><div class="label">Exclude sub GCs</div>
+<div class="input">
+<span class="inputCont"><input type="hidden" name="exclude_gcs" value="0"><input name="exclude_gcs" type="checkbox" value="1"></span></div></li>
+<li class="" data-formtype="" data-def=""><div class="label">Vertical meters</div>
+<div class="input">
+<span class="inputCont"><input name="vert_meters" type="text" value="" autocomplete="off"></span><select name="pvert_meters" style="width: 50px;"><option value="largerorequal" selected="">&gt;=</option>
+<option value="smallerorequal">&lt;=</option>
+<option value="between">Between</option>
+</select></div></li>
+<input name="filter" type="submit" value="Filter"> <a class="fs10 blue clearPageFilter" href="">clear filter</a></ul></form></div>
+<div class="">
+<table class=" basic"><thead><tr>
+<th class="w3 ">#</th>
+<th class="w9 ">Date</th>
+<th class="w5 ">Result</th>
+<th class="w37 ">Race</th>
+<th class="w9 cu600">Class</th>
+<th class="w9 cu600">KMs</th>
+<th class="w9 ">PCS points</th>
+<th class="w9 cu600">UCI points</th>
+<th class="w9 ">Vert. mtr</th>
+</tr></thead><tbody>
+<tr class=""><td>1</td><td>2025-06-15</td><td>2</td><td><span class="flag fr"></span> <a href="race/dauphine/2025/kom">Critérium du Dauphiné | Mountains classification</a></td><td class="cu600">2.UWT</td><td class="cu600"></td><td>-</td><td class="cu600">-</td><td></td></tr>
+<tr class=""><td>2</td><td>2025-06-15</td><td>1</td><td><span class="flag fr"></span> <a href="race/dauphine/2025/points">Critérium du Dauphiné | Points classification</a></td><td class="cu600">2.UWT</td><td class="cu600"></td><td>-</td><td class="cu600">-</td><td></td></tr>
+<tr class=""><td>3</td><td>2025-06-15</td><td>1</td><td><span class="flag fr"></span> <a href="race/dauphine/2025/gc">Critérium du Dauphiné | General classification</a></td><td class="cu600">2.UWT</td><td class="cu600"></td><td>250</td><td class="cu600">500</td><td></td></tr>
+<tr class=""><td>4</td><td>2025-06-15</td><td>3</td><td><span class="flag fr"></span> <a href="race/dauphine/2025/stage-8">Critérium du Dauphiné | Stage 8</a></td><td class="cu600">2.UWT</td><td class="cu600">133.3</td><td>18</td><td class="cu600">30</td><td>3531</td></tr>
+<tr class=""><td>5</td><td>2025-06-14</td><td>1</td><td><span class="flag fr"></span> <a href="race/dauphine/2025/stage-7">Critérium du Dauphiné | Stage 7</a></td><td class="cu600">2.UWT</td><td class="cu600">131.6</td><td>50</td><td class="cu600">60</td><td>4815</td></tr>
+<tr class=""><td>6</td><td>2025-06-13</td><td>1</td><td><span class="flag fr"></span> <a href="race/dauphine/2025/stage-6">Critérium du Dauphiné | Stage 6</a></td><td class="cu600">2.UWT</td><td class="cu600">126.7</td><td>50</td><td class="cu600">60</td><td>2485</td></tr>
+<tr class=""><td>7</td><td>2025-06-12</td><td>22</td><td><span class="flag fr"></span> <a href="race/dauphine/2025/stage-5">Critérium du Dauphiné | Stage 5</a></td><td class="cu600">2.UWT</td><td class="cu600">183</td><td>-</td><td class="cu600">-</td><td>1705</td></tr>
+<tr class=""><td>8</td><td>2025-06-11</td><td>4</td><td><span class="flag fr"></span> <a href="race/dauphine/2025/stage-4">Critérium du Dauphiné | Stage 4 (ITT)</a></td><td class="cu600">2.UWT</td><td class="cu600">17.4</td><td>13</td><td class="cu600">25</td><td>214</td></tr>
+<tr class=""><td>9</td><td>2025-06-10</td><td>44</td><td><span class="flag fr"></span> <a href="race/dauphine/2025/stage-3">Critérium du Dauphiné | Stage 3</a></td><td class="cu600">2.UWT</td><td class="cu600">207.2</td><td>-</td><td class="cu600">-</td><td>3036</td></tr>
+<tr class=""><td>10</td><td>2025-06-09</td><td>40</td><td><span class="flag fr"></span> <a href="race/dauphine/2025/stage-2">Critérium du Dauphiné | Stage 2</a></td><td class="cu600">2.UWT</td><td class="cu600">204.6</td><td>-</td><td class="cu600">-</td><td>2813</td></tr>
+<tr class=""><td>11</td><td>2025-06-08</td><td>1</td><td><span class="flag fr"></span> <a href="race/dauphine/2025/stage-1">Critérium du Dauphiné | Stage 1</a></td><td class="cu600">2.UWT</td><td class="cu600">195.8</td><td>50</td><td class="cu600">60</td><td>2279</td></tr>
+<tr class=""><td>12</td><td>2025-04-27</td><td>1</td><td><span class="flag be"></span> <a href="race/liege-bastogne-liege/2025/result">Liège-Bastogne-Liège</a></td><td class="cu600">1.UWT</td><td class="cu600">252</td><td>275</td><td class="cu600">800</td><td>4365</td></tr>
+<tr class=""><td>13</td><td>2025-04-23</td><td>1</td><td><span class="flag be"></span> <a href="race/la-fleche-wallonne/2025/result">La Flèche Wallonne</a></td><td class="cu600">1.UWT</td><td class="cu600">205.1</td><td>225</td><td class="cu600">400</td><td>3144</td></tr>
+<tr class=""><td>14</td><td>2025-04-20</td><td>2</td><td><span class="flag nl"></span> <a href="race/amstel-gold-race/2025/result">Amstel Gold Race</a></td><td class="cu600">1.UWT</td><td class="cu600">255.9</td><td>150</td><td class="cu600">400</td><td>3200</td></tr>
+<tr class=""><td>15</td><td>2025-04-13</td><td>2</td><td><span class="flag fr"></span> <a href="race/paris-roubaix/2025/result">Paris-Roubaix</a></td><td class="cu600">1.UWT</td><td class="cu600">259.2</td><td>200</td><td class="cu600">640</td><td>1442</td></tr>
+<tr class=""><td>16</td><td>2025-04-06</td><td>1</td><td><span class="flag be"></span> <a href="race/ronde-van-vlaanderen/2025/result">Ronde van Vlaanderen - Tour des Flandres ME</a></td><td class="cu600">1.UWT</td><td class="cu600">268.9</td><td>275</td><td class="cu600">800</td><td>2011</td></tr>
+<tr class=""><td>17</td><td>2025-03-22</td><td>3</td><td><span class="flag it"></span> <a href="race/milano-sanremo/2025/result">Milano-Sanremo</a></td><td class="cu600">1.UWT</td><td class="cu600">289</td><td>150</td><td class="cu600">520</td><td>2217</td></tr>
+<tr class=""><td>18</td><td>2025-03-08</td><td>1</td><td><span class="flag it"></span> <a href="race/strade-bianche/2025/result">Strade Bianche</a></td><td class="cu600">1.UWT</td><td class="cu600">213</td><td>225</td><td class="cu600">400</td><td>3716</td></tr>
+<tr class=""><td>19</td><td>2025-02-23</td><td>2</td><td><span class="flag ae"></span> <a href="race/uae-tour/2025/points">UAE Tour | Points classification</a></td><td class="cu600">2.UWT</td><td class="cu600"></td><td>-</td><td class="cu600">-</td><td></td></tr>
+<tr class=""><td>20</td><td>2025-02-23</td><td>1</td><td><span class="flag ae"></span> <a href="race/uae-tour/2025/gc">UAE Tour | General classification</a></td><td class="cu600">2.UWT</td><td class="cu600"></td><td>250</td><td class="cu600">300</td><td></td></tr>
+<tr class=""><td>21</td><td>2025-02-23</td><td>1</td><td><span class="flag ae"></span> <a href="race/uae-tour/2025/stage-7">UAE Tour | Stage 7</a></td><td class="cu600">2.UWT</td><td class="cu600">176</td><td>50</td><td class="cu600">40</td><td>1310</td></tr>
+<tr class=""><td>22</td><td>2025-02-22</td><td>43</td><td><span class="flag ae"></span> <a href="race/uae-tour/2025/stage-6">UAE Tour | Stage 6</a></td><td class="cu600">2.UWT</td><td class="cu600">165</td><td>-</td><td class="cu600">-</td><td>177</td></tr>
+<tr class=""><td>23</td><td>2025-02-21</td><td>36</td><td><span class="flag ae"></span> <a href="race/uae-tour/2025/stage-5">UAE Tour | Stage 5</a></td><td class="cu600">2.UWT</td><td class="cu600">160</td><td>-</td><td class="cu600">-</td><td>344</td></tr>
+<tr class=""><td>24</td><td>2025-02-20</td><td>46</td><td><span class="flag ae"></span> <a href="race/uae-tour/2025/stage-4">UAE Tour | Stage 4</a></td><td class="cu600">2.UWT</td><td class="cu600">181</td><td>-</td><td class="cu600">-</td><td>976</td></tr>
+<tr class=""><td>25</td><td>2025-02-19</td><td>1</td><td><span class="flag ae"></span> <a href="race/uae-tour/2025/stage-3">UAE Tour | Stage 3</a></td><td class="cu600">2.UWT</td><td class="cu600">181</td><td>50</td><td class="cu600">40</td><td>2027</td></tr>
+<tr class=""><td>26</td><td>2025-02-18</td><td>3</td><td><span class="flag ae"></span> <a href="race/uae-tour/2025/stage-2">UAE Tour | Stage 2 (ITT)</a></td><td class="cu600">2.UWT</td><td class="cu600">12.2</td><td>18</td><td class="cu600">20</td><td>8</td></tr>
+<tr class=""><td>27</td><td>2025-02-17</td><td>10</td><td><span class="flag ae"></span> <a href="race/uae-tour/2025/stage-1">UAE Tour | Stage 1</a></td><td class="cu600">2.UWT</td><td class="cu600">138</td><td>1</td><td class="cu600">1</td><td>1451</td></tr>
+<tr class=""><td>28</td><td>2024-10-12</td><td>1</td><td><span class="flag it"></span> <a href="race/il-lombardia/2024/result">Il Lombardia</a></td><td class="cu600">1.UWT</td><td class="cu600">255</td><td>275</td><td class="cu600">800</td><td>4735</td></tr>
+<tr class=""><td>29</td><td>2024-10-08</td><td>991</td><td><span class="flag it"></span> <a href="race/tre-valli-varesine/2024/result">Tre Valli Varesine</a></td><td class="cu600">1.Pro</td><td class="cu600">168.33</td><td>-</td><td class="cu600">-</td><td>3377</td></tr>
+<tr class=""><td>30</td><td>2024-10-05</td><td>1</td><td><span class="flag it"></span> <a href="race/giro-dell-emilia/2024/result">Giro dell'Emilia</a></td><td class="cu600">1.Pro</td><td class="cu600">215.3</td><td>125</td><td class="cu600">200</td><td>3412</td></tr>
+<tr class=""><td>31</td><td>2024-09-29</td><td>1</td><td><span class="flag ch"></span> <a href="race/world-championship/2024/result">World Championships ME - Road Race</a></td><td class="cu600">WC</td><td class="cu600">273.9</td><td>350</td><td class="cu600">900</td><td>4291</td></tr>
+<tr class=""><td>32</td><td>2024-09-15</td><td>1</td><td><span class="flag ca"></span> <a href="race/gp-montreal/2024/result">Grand Prix Cycliste de Montréal</a></td><td class="cu600">1.UWT</td><td class="cu600">209.1</td><td>225</td><td class="cu600">500</td><td>3899</td></tr>
+<tr class=""><td>33</td><td>2024-09-13</td><td>7</td><td><span class="flag ca"></span> <a href="race/gp-quebec/2024/result">Grand Prix Cycliste de Québec</a></td><td class="cu600">1.UWT</td><td class="cu600">201.6</td><td>60</td><td class="cu600">150</td><td>2508</td></tr>
+<tr class=""><td>34</td><td>2024-07-21</td><td>2</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/kom">Tour de France | Mountains classification</a></td><td class="cu600">2.UWT</td><td class="cu600"></td><td>25</td><td class="cu600">150</td><td></td></tr>
+<tr class=""><td>35</td><td>2024-07-21</td><td>4</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/points">Tour de France | Points classification</a></td><td class="cu600">2.UWT</td><td class="cu600"></td><td>-</td><td class="cu600">-</td><td></td></tr>
+<tr class=""><td>36</td><td>2024-07-21</td><td>1</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/gc">Tour de France | General classification</a></td><td class="cu600">2.UWT</td><td class="cu600"></td><td>500</td><td class="cu600">1300</td><td></td></tr>
+<tr class=""><td>37</td><td>2024-07-21</td><td>1</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-21">Tour de France | Stage 21 (ITT)</a></td><td class="cu600">2.UWT</td><td class="cu600">33.7</td><td>100</td><td class="cu600">210</td><td>720</td></tr>
+<tr class=""><td>38</td><td>2024-07-20</td><td>1</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-20">Tour de France | Stage 20</a></td><td class="cu600">2.UWT</td><td class="cu600">132.8</td><td>100</td><td class="cu600">210</td><td>4748</td></tr>
+<tr class=""><td>39</td><td>2024-07-19</td><td>1</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-19">Tour de France | Stage 19</a></td><td class="cu600">2.UWT</td><td class="cu600">144.6</td><td>100</td><td class="cu600">210</td><td>4512</td></tr>
+<tr class=""><td>40</td><td>2024-07-18</td><td>44</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-18">Tour de France | Stage 18</a></td><td class="cu600">2.UWT</td><td class="cu600">179.5</td><td>-</td><td class="cu600">-</td><td>3123</td></tr>
+<tr class=""><td>41</td><td>2024-07-17</td><td>27</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-17">Tour de France | Stage 17</a></td><td class="cu600">2.UWT</td><td class="cu600">177.8</td><td>-</td><td class="cu600">-</td><td>3091</td></tr>
+<tr class=""><td>42</td><td>2024-07-16</td><td>37</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-16">Tour de France | Stage 16</a></td><td class="cu600">2.UWT</td><td class="cu600">188.6</td><td>-</td><td class="cu600">-</td><td>1176</td></tr>
+<tr class=""><td>43</td><td>2024-07-14</td><td>1</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-15">Tour de France | Stage 15</a></td><td class="cu600">2.UWT</td><td class="cu600">197.7</td><td>100</td><td class="cu600">210</td><td>5071</td></tr>
+<tr class=""><td>44</td><td>2024-07-13</td><td>1</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-14">Tour de France | Stage 14</a></td><td class="cu600">2.UWT</td><td class="cu600">151.9</td><td>100</td><td class="cu600">210</td><td>4050</td></tr>
+<tr class=""><td>45</td><td>2024-07-12</td><td>9</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-13">Tour de France | Stage 13</a></td><td class="cu600">2.UWT</td><td class="cu600">165.3</td><td>14</td><td class="cu600">35</td><td>1884</td></tr>
+<tr class=""><td>46</td><td>2024-07-11</td><td>23</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-12">Tour de France | Stage 12</a></td><td class="cu600">2.UWT</td><td class="cu600">203.6</td><td>-</td><td class="cu600">-</td><td>2253</td></tr>
+<tr class=""><td>47</td><td>2024-07-10</td><td>2</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-11">Tour de France | Stage 11</a></td><td class="cu600">2.UWT</td><td class="cu600">211</td><td>70</td><td class="cu600">150</td><td>4177</td></tr>
+<tr class=""><td>48</td><td>2024-07-09</td><td>29</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-10">Tour de France | Stage 10</a></td><td class="cu600">2.UWT</td><td class="cu600">187.3</td><td>-</td><td class="cu600">-</td><td>888</td></tr>
+<tr class=""><td>49</td><td>2024-07-07</td><td>44</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-9">Tour de France | Stage 9</a></td><td class="cu600">2.UWT</td><td class="cu600">199</td><td>-</td><td class="cu600">-</td><td>2012</td></tr>
+<tr class=""><td>50</td><td>2024-07-06</td><td>13</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-8">Tour de France | Stage 8</a></td><td class="cu600">2.UWT</td><td class="cu600">183.4</td><td>4</td><td class="cu600">15</td><td>2334</td></tr>
+<tr class=""><td>51</td><td>2024-07-05</td><td>2</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-7">Tour de France | Stage 7 (ITT)</a></td><td class="cu600">2.UWT</td><td class="cu600">25.3</td><td>70</td><td class="cu600">150</td><td>283</td></tr>
+<tr class=""><td>52</td><td>2024-07-04</td><td>34</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-6">Tour de France | Stage 6</a></td><td class="cu600">2.UWT</td><td class="cu600">163.5</td><td>-</td><td class="cu600">-</td><td>881</td></tr>
+<tr class=""><td>53</td><td>2024-07-03</td><td>35</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-5">Tour de France | Stage 5</a></td><td class="cu600">2.UWT</td><td class="cu600">177.4</td><td>-</td><td class="cu600">-</td><td>1126</td></tr>
+<tr class=""><td>54</td><td>2024-07-02</td><td>1</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-4">Tour de France | Stage 4</a></td><td class="cu600">2.UWT</td><td class="cu600">139.6</td><td>100</td><td class="cu600">210</td><td>3904</td></tr>
+<tr class=""><td>55</td><td>2024-07-01</td><td>38</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-3">Tour de France | Stage 3</a></td><td class="cu600">2.UWT</td><td class="cu600">230.8</td><td>-</td><td class="cu600">-</td><td>1190</td></tr>
+<tr class=""><td>56</td><td>2024-06-30</td><td>14</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-2">Tour de France | Stage 2</a></td><td class="cu600">2.UWT</td><td class="cu600">199.2</td><td>2</td><td class="cu600">10</td><td>1859</td></tr>
+<tr class=""><td>57</td><td>2024-06-29</td><td>4</td><td><span class="flag fr"></span> <a href="race/tour-de-france/2024/stage-1">Tour de France | Stage 1</a></td><td class="cu600">2.UWT</td><td class="cu600">206</td><td>40</td><td class="cu600">90</td><td>3821</td></tr>
+<tr class=""><td>58</td><td>2024-05-26</td><td>1</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/kom">Giro d'Italia | Mountains classification</a></td><td class="cu600">2.UWT</td><td class="cu600"></td><td>80</td><td class="cu600">180</td><td></td></tr>
+<tr class=""><td>59</td><td>2024-05-26</td><td>5</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/points">Giro d'Italia | Points classification</a></td><td class="cu600">2.UWT</td><td class="cu600"></td><td>-</td><td class="cu600">-</td><td></td></tr>
+<tr class=""><td>60</td><td>2024-05-26</td><td>1</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/gc">Giro d'Italia | General classification</a></td><td class="cu600">2.UWT</td><td class="cu600"></td><td>400</td><td class="cu600">1100</td><td></td></tr>
+<tr class=""><td>61</td><td>2024-05-26</td><td>74</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-21">Giro d'Italia | Stage 21</a></td><td class="cu600">2.UWT</td><td class="cu600">125</td><td>-</td><td class="cu600">-</td><td>676</td></tr>
+<tr class=""><td>62</td><td>2024-05-25</td><td>1</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-20">Giro d'Italia | Stage 20</a></td><td class="cu600">2.UWT</td><td class="cu600">184</td><td>80</td><td class="cu600">180</td><td>4540</td></tr>
+<tr class=""><td>63</td><td>2024-05-24</td><td>21</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-19">Giro d'Italia | Stage 19</a></td><td class="cu600">2.UWT</td><td class="cu600">157</td><td>-</td><td class="cu600">-</td><td>3251</td></tr>
+<tr class=""><td>64</td><td>2024-05-23</td><td>30</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-18">Giro d'Italia | Stage 18</a></td><td class="cu600">2.UWT</td><td class="cu600">178</td><td>-</td><td class="cu600">-</td><td>873</td></tr>
+<tr class=""><td>65</td><td>2024-05-22</td><td>2</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-17">Giro d'Italia | Stage 17</a></td><td class="cu600">2.UWT</td><td class="cu600">159</td><td>50</td><td class="cu600">130</td><td>4087</td></tr>
+<tr class=""><td>66</td><td>2024-05-21</td><td>1</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-16">Giro d'Italia | Stage 16</a></td><td class="cu600">2.UWT</td><td class="cu600">118.4</td><td>80</td><td class="cu600">180</td><td>2151</td></tr>
+<tr class=""><td>67</td><td>2024-05-19</td><td>1</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-15">Giro d'Italia | Stage 15</a></td><td class="cu600">2.UWT</td><td class="cu600">222</td><td>80</td><td class="cu600">180</td><td>5724</td></tr>
+<tr class=""><td>68</td><td>2024-05-18</td><td>2</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-14">Giro d'Italia | Stage 14 (ITT)</a></td><td class="cu600">2.UWT</td><td class="cu600">31.2</td><td>50</td><td class="cu600">130</td><td>250</td></tr>
+<tr class=""><td>69</td><td>2024-05-17</td><td>20</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-13">Giro d'Italia | Stage 13</a></td><td class="cu600">2.UWT</td><td class="cu600">179</td><td>-</td><td class="cu600">-</td><td>202</td></tr>
+<tr class=""><td>70</td><td>2024-05-16</td><td>13</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-12">Giro d'Italia | Stage 12</a></td><td class="cu600">2.UWT</td><td class="cu600">193</td><td>3</td><td class="cu600">10</td><td>2162</td></tr>
+<tr class=""><td>71</td><td>2024-05-15</td><td>27</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-11">Giro d'Italia | Stage 11</a></td><td class="cu600">2.UWT</td><td class="cu600">207</td><td>-</td><td class="cu600">-</td><td>1830</td></tr>
+<tr class=""><td>72</td><td>2024-05-14</td><td>17</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-10">Giro d'Italia | Stage 10</a></td><td class="cu600">2.UWT</td><td class="cu600">142</td><td>-</td><td class="cu600">-</td><td>3029</td></tr>
+<tr class=""><td>73</td><td>2024-05-12</td><td>27</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-9">Giro d'Italia | Stage 9</a></td><td class="cu600">2.UWT</td><td class="cu600">214</td><td>-</td><td class="cu600">-</td><td>1574</td></tr>
+<tr class=""><td>74</td><td>2024-05-11</td><td>1</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-8">Giro d'Italia | Stage 8</a></td><td class="cu600">2.UWT</td><td class="cu600">152</td><td>80</td><td class="cu600">180</td><td>3658</td></tr>
+<tr class=""><td>75</td><td>2024-05-10</td><td>1</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-7">Giro d'Italia | Stage 7 (ITT)</a></td><td class="cu600">2.UWT</td><td class="cu600">40.6</td><td>80</td><td class="cu600">180</td><td>408</td></tr>
+<tr class=""><td>76</td><td>2024-05-09</td><td>18</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-6">Giro d'Italia | Stage 6</a></td><td class="cu600">2.UWT</td><td class="cu600">180</td><td>-</td><td class="cu600">-</td><td>2118</td></tr>
+<tr class=""><td>77</td><td>2024-05-08</td><td>29</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-5">Giro d'Italia | Stage 5</a></td><td class="cu600">2.UWT</td><td class="cu600">178</td><td>-</td><td class="cu600">-</td><td>2197</td></tr>
+<tr class=""><td>78</td><td>2024-05-07</td><td>30</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-4">Giro d'Italia | Stage 4</a></td><td class="cu600">2.UWT</td><td class="cu600">190</td><td>-</td><td class="cu600">-</td><td>2151</td></tr>
+<tr class=""><td>79</td><td>2024-05-06</td><td>46</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-3">Giro d'Italia | Stage 3</a></td><td class="cu600">2.UWT</td><td class="cu600">166.3</td><td>-</td><td class="cu600">-</td><td>865</td></tr>
+<tr class=""><td>80</td><td>2024-05-05</td><td>1</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-2">Giro d'Italia | Stage 2</a></td><td class="cu600">2.UWT</td><td class="cu600">161</td><td>80</td><td class="cu600">180</td><td>2310</td></tr>
+<tr class=""><td>81</td><td>2024-05-04</td><td>3</td><td><span class="flag it"></span> <a href="race/giro-d-italia/2024/stage-1">Giro d'Italia | Stage 1</a></td><td class="cu600">2.UWT</td><td class="cu600">140</td><td>35</td><td class="cu600">95</td><td>1851</td></tr>
+<tr class=""><td>82</td><td>2024-04-21</td><td>1</td><td><span class="flag be"></span> <a href="race/liege-bastogne-liege/2024/result">Liège-Bastogne-Liège</a></td><td class="cu600">1.UWT</td><td class="cu600">254.5</td><td>275</td><td class="cu600">800</td><td>4266</td></tr>
+<tr class=""><td>83</td><td>2024-03-24</td><td>1</td><td><span class="flag es"></span> <a href="race/volta-a-catalunya/2024/stage-7-kom">Volta Ciclista a Catalunya | Mountains classification</a></td><td class="cu600">2.UWT</td><td class="cu600"></td><td>-</td><td class="cu600">-</td><td></td></tr>
+<tr class=""><td>84</td><td>2024-03-24</td><td>1</td><td><span class="flag es"></span> <a href="race/volta-a-catalunya/2024/stage-7-points">Volta Ciclista a Catalunya | Points classification</a></td><td class="cu600">2.UWT</td><td class="cu600"></td><td>-</td><td class="cu600">-</td><td></td></tr>
+<tr class=""><td>85</td><td>2024-03-24</td><td>1</td><td><span class="flag es"></span> <a href="race/volta-a-catalunya/2024/gc">Volta Ciclista a Catalunya | General classification</a></td><td class="cu600">2.UWT</td><td class="cu600"></td><td>250</td><td class="cu600">400</td><td></td></tr>
+<tr class=""><td>86</td><td>2024-03-24</td><td>1</td><td><span class="flag es"></span> <a href="race/volta-a-catalunya/2024/stage-7">Volta Ciclista a Catalunya | Stage 7</a></td><td class="cu600">2.UWT</td><td class="cu600">145.3</td><td>50</td><td class="cu600">50</td><td>2060</td></tr>
+<tr class=""><td>87</td><td>2024-03-23</td><td>1</td><td><span class="flag es"></span> <a href="race/volta-a-catalunya/2024/stage-6">Volta Ciclista a Catalunya | Stage 6</a></td><td class="cu600">2.UWT</td><td class="cu600">154.7</td><td>50</td><td class="cu600">50</td><td>4075</td></tr>
+<tr class=""><td>88</td><td>2024-03-22</td><td>31</td><td><span class="flag es"></span> <a href="race/volta-a-catalunya/2024/stage-5">Volta Ciclista a Catalunya | Stage 5</a></td><td class="cu600">2.UWT</td><td class="cu600">167.3</td><td>-</td><td class="cu600">-</td><td>2243</td></tr>
+<tr class=""><td>89</td><td>2024-03-21</td><td>25</td><td><span class="flag es"></span> <a href="race/volta-a-catalunya/2024/stage-4">Volta Ciclista a Catalunya | Stage 4</a></td><td class="cu600">2.UWT</td><td class="cu600">169.2</td><td>-</td><td class="cu600">-</td><td>1346</td></tr>
+<tr class=""><td>90</td><td>2024-03-20</td><td>1</td><td><span class="flag es"></span> <a href="race/volta-a-catalunya/2024/stage-3">Volta Ciclista a Catalunya | Stage 3</a></td><td class="cu600">2.UWT</td><td class="cu600">176.7</td><td>50</td><td class="cu600">50</td><td>3958</td></tr>
+<tr class=""><td>91</td><td>2024-03-19</td><td>1</td><td><span class="flag es"></span> <a href="race/volta-a-catalunya/2024/stage-2">Volta Ciclista a Catalunya | Stage 2</a></td><td class="cu600">2.UWT</td><td class="cu600">186.5</td><td>50</td><td class="cu600">50</td><td>3470</td></tr>
+<tr class=""><td>92</td><td>2024-03-18</td><td>2</td><td><span class="flag es"></span> <a href="race/volta-a-catalunya/2024/stage-1">Volta Ciclista a Catalunya | Stage 1</a></td><td class="cu600">2.UWT</td><td class="cu600">173.9</td><td>30</td><td class="cu600">30</td><td>2677</td></tr>
+<tr class=""><td>93</td><td>2024-03-16</td><td>3</td><td><span class="flag it"></span> <a href="race/milano-sanremo/2024/result">Milano-Sanremo</a></td><td class="cu600">1.UWT</td><td class="cu600">288</td><td>150</td><td class="cu600">520</td><td>2070</td></tr>
+<tr class=""><td>94</td><td>2024-03-02</td><td>1</td><td><span class="flag it"></span> <a href="race/strade-bianche/2024/result">Strade Bianche</a></td><td class="cu600">1.UWT</td><td class="cu600">215</td><td>225</td><td class="cu600">400</td><td>3669</td></tr>
+<tr class=""><td>95</td><td>2023-10-07</td><td>1</td><td><span class="flag it"></span> <a href="race/il-lombardia/2023/result">Il Lombardia</a></td><td class="cu600">1.UWT</td><td class="cu600">238</td><td>275</td><td class="cu600">800</td><td>4646</td></tr>
+<tr class=""><td>96</td><td>2023-10-03</td><td>5</td><td><span class="flag it"></span> <a href="race/tre-valli-varesine/2023/result">Tre Valli Varesine</a></td><td class="cu600">1.Pro</td><td class="cu600">196.54</td><td>45</td><td class="cu600">85</td><td>3464</td></tr>
+<tr class=""><td>97</td><td>2023-09-30</td><td>2</td><td><span class="flag it"></span> <a href="race/giro-dell-emilia/2023/result">Giro dell'Emilia</a></td><td class="cu600">1.Pro</td><td class="cu600">204.1</td><td>85</td><td class="cu600">150</td><td>3027</td></tr>
+<tr class=""><td>98</td><td>2023-09-14</td><td>3</td><td><span class="flag it"></span> <a href="race/gp-citta-di-peccioli/2023/result">Gran Premio città di Peccioli - Coppa Sabatini</a></td><td class="cu600">1.Pro</td><td class="cu600">198.9</td><td>60</td><td class="cu600">125</td><td>2562</td></tr>
+<tr class=""><td>99</td><td>2023-09-13</td><td>4</td><td><span class="flag it"></span> <a href="race/giro-di-toscana/2023/result">Giro della Toscana - Memorial Alfredo Martini</a></td><td class="cu600">1.1</td><td class="cu600">191.55</td><td>32</td><td class="cu600">60</td><td>2042</td></tr>
+<tr class=""><td>100</td><td>2023-08-11</td><td>21</td><td><span class="flag gb"></span> <a href="race/world-championship-itt/2023/result">World Championships ME - ITT</a></td><td class="cu600">WC</td><td class="cu600">47.8</td><td>10</td><td class="cu600">3</td><td>280</td></tr>
+</tbody></table></div>
+</div></div>
+<div class="side-nav  ">
+<a class="backToContent blue fs11 right showIfMobile" href="">back to content</a><div class="clear"></div>
+<ul class="sidenav"><li><div class="sidenavTitle">Results</div><ul><li class="cur" data-pro="0"><a href="rider/tadej-pogacar/results/all">All results</a></li>
+<li class="" data-pro="1"><a href="rider/tadej-pogacar/results/all-results-premium">All results (premium)</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/subclassification-wins">Wins in subclassifications</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/leader-jerseys">Leader jerseys</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/participations">Participations</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/results-with-special-filters">Results with special filters</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/final-5k-analysis">Top results final 5k analysis</a></li>
+<li class="" data-pro="1"><a href="rider/tadej-pogacar/results/dnfs">DNFs</a></li>
+</ul></li><li><div class="sidenavTitle">GC</div><ul><li class="" data-pro="0"><a href="rider/tadej-pogacar/results/last-gc-results">Last GC results</a></li>
+</ul></li><li><div class="sidenavTitle">TT</div><ul><li class="" data-pro="0"><a href="rider/tadej-pogacar/results/last-tt-results">Last TT results</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/time-lost-on-gc-riders">Time lost on GC riders</a></li>
+</ul></li><li><div class="sidenavTitle">Victories</div><ul><li class="" data-pro="1"><a href="rider/tadej-pogacar/results/solo-victories">Solo victories</a></li>
+<li class="" data-pro="1"><a href="rider/tadej-pogacar/results/won-how">Won how</a></li>
+</ul></li><li><div class="sidenavTitle">Rankings</div><ul><li class="" data-pro="0"><a href="rider/tadej-pogacar/results/pcs-ranking">PCS Ranking</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/pcs-wins">Wins ranking</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/pcs-season-ranking">PCS Season ranking</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/uci-world-ranking">UCI World Ranking</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/all-time-ranking">All time ranking breakdown</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/uci-one-day-races">UCI One day races</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/tt-ranking">Time trial ranking</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/sprinters-ranking">Sprinters ranking</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/one-day-races-ranking">One day races ranking</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/gc-ranking">GC Ranking</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/national-ranking">National ranking</a></li>
+</ul></li><li><div class="sidenavTitle">Breakdowns</div><ul><li class="" data-pro="0"><a href="rider/tadej-pogacar/results/career-points-sprint">Sprint </a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/career-points-climbers">Climber </a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/hills">Hills</a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/career-points-gc">GC </a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/career-points-time-trial">Time trial </a></li>
+<li class="" data-pro="0"><a href="rider/tadej-pogacar/results/career-points-one-day-races">One day races </a></li>
+</ul></li><li><div class="sidenavTitle">National results</div><ul><li class="" data-pro="0"><a href="rider/tadej-pogacar/results/last-results">Latest results</a></li>
+</ul></li></ul></div>
+<div class="clear"></div></div><div class="push"></div></div><div class="footer"><div class="sfa"><ul class="ftr-list"><li class="group"><h3>Grand Tours</h3><ul><li><a href="race/tour-de-france">Tour de France</a></li>
+<li><a href="race/giro-d-italia">Giro d'Italia</a></li>
+<li><a href="race/vuelta-a-espana">Vuelta a España</a></li>
+</ul>
+<h3>Major Tours</h3><ul><li><a href="race/paris-nice">Paris-Nice</a></li>
+<li><a href="race/tirreno-adriatico">Tirreno-Adriatico</a></li>
+<li><a href="race/volta-a-catalunya">Volta a Catalunya</a></li>
+<li><a href="race/tour-de-romandie">Tour de Romandie</a></li>
+<li><a href="race/tour-de-suisse">Tour de Suisse</a></li>
+<li><a href="race/dauphine">Critérium du Dauphiné</a></li>
+<li><a href="race/itzulia-basque-country">Itzulia Basque Country</a></li>
+</ul></li>
+<li class="group"><h3>Monuments</h3><ul><li><a href="race/milano-sanremo">Milano-SanRemo</a></li>
+<li><a href="race/ronde-van-vlaanderen">Ronde van Vlaanderen</a></li>
+<li><a href="race/paris-roubaix">Paris-Roubaix</a></li>
+<li><a href="race/liege-bastogne-liege">Liège-Bastogne-Liège</a></li>
+<li><a href="race/il-lombardia">Il Lombardia</a></li>
+</ul>
+<h3>Championships</h3><ul><li><a href="race/world-championship">World Championships</a></li>
+<li><a href="race/uec-road-european-championships">European Championships</a></li>
+</ul></li>
+<li class="group"><h3>Top classics</h3><ul><li><a href="race/omloop-het-nieuwsblad">Omloop Het Nieuwsblad</a></li>
+<li><a href="race/strade-bianche">Strade Bianche</a></li>
+<li><a href="race/e3-harelbeke">E3 Classic</a></li>
+<li><a href="race/gent-wevelgem">Gent-Wevelgem</a></li>
+<li><a href="race/dwars-door-vlaanderen">Dwars door Vlaanderen</a></li>
+<li><a href="race/eschborn-frankfurt">Eschborn-Frankfurt</a></li>
+<li><a href="race/amstel-gold-race">Amstel Gold Race</a></li>
+<li><a href="race/la-fleche-wallone">La Flèche Wallonne</a></li>
+<li><a href="race/san-sebastian">San Sebastian</a></li>
+<li><a href="race/bretagne-classic">Bretagne Classic</a></li>
+<li><a href="race/gp-quebec">GP Québec</a></li>
+<li><a href="race/gp-montreal">GP Montréal</a></li>
+</ul></li>
+<li class="group"><h3>Popular riders</h3><ul><li><a href="rider/tadej-pogacar">Tadej Pogačar</a></li>
+<li><a href="rider/wout-van-aert">Wout van Aert</a></li>
+<li><a href="rider/remco-evenepoel">Remco Evenepoel</a></li>
+<li><a href="rider/jonas-vingegaard">Jonas Vingegaard</a></li>
+<li><a href="rider/mathieu-van-der-poel">Mathieu van der Poel</a></li>
+<li><a href="rider/mads-pedersen">Mads Pedersen</a></li>
+<li><a href="rider/primoz-roglic">Primož Roglič</a></li>
+<li><a href="rider/marc-hirschi">Marc Hirschi</a></li>
+<li><a href="rider/demi-vollering">Demi Vollering</a></li>
+<li><a href="rider/lotte-kopecky">Lotte Kopecky</a></li>
+<li><a href="rider/katarzyna-niewiadoma">Katarzyna Niewiadoma</a></li>
+<li><a href="rider/evita-muzic">Évita Muzic</a></li>
+</ul></li>
+<li class="group"><h3>Rankings</h3><ul><li><a href="rankings.php">PCS ranking</a></li>
+<li><a href="rankings/me/uci-individual">UCI World Ranking</a></li>
+<li><a href="rankings/me/all-time">Alltime</a></li>
+</ul>
+<h3>Statistics</h3><ul><li><a href="statistics/start/points-per-age">Points per age</a></li>
+<li><a href="statistics/start/latest-injuries">Latest injuries</a></li>
+<li><a href="statistics/riders/youngest-riders">Youngest riders</a></li>
+<li><a href="statistics/grandtours">Grand tour statistics</a></li>
+<li><a href="statistics/monuments">Monument classics</a></li>
+<li><a href="teams/transfers">Latest transfers</a></li>
+<li><a href="favorite500">Favorite 500</a></li>
+</ul></li>
+<li class="group"><h3>Info</h3><ul><li><a href="info/point-scales">Points scales</a></li>
+<li><a href="info/profile-score-explained">Profile scores</a></li>
+<li><a href="reset_password.php">Reset password</a></li>
+<li><a href="info/pcs-game">PCS game</a></li>
+<li><a href="https://www.procyclingstats.com/?cmpscreen">Cookie consent</a></li>
+</ul>
+<h3>About ProCyclingStats</h3><ul><li><a href="info/about-us">About us</a></li>
+<li><a href="info/contact">Contact us</a></li>
+<li><a href="info/cookie-policy">Cookie policy</a></li>
+<li><a href="info/sitemap">Sitemap</a></li>
+<li><a href="info/contributions">Contributions</a></li>
+<li><span>Pageload 0.0195s</span></li>
+</ul></li>
+</ul></div></div>
+
+<script src="search_list21.js"></script>	<script>
+	var riderid = 194619;		$(document).ready(function() { 	RVC(riderid);  	  });
+	</script>
+	</body></html>

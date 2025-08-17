@@ -105,7 +105,7 @@ class Scraper:
 
         :return: Relative URL.
         """
-        return "/".join(self._url.split("/")[3:])
+        return "/".join(self.url.split("/")[3:])
 
     def update_html(self) -> None:
         """
